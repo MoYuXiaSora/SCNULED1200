@@ -1,0 +1,96 @@
+T17A0 000:006.513   SEGGER J-Link V7.86d Log File
+T17A0 000:006.767   DLL Compiled: Mar 15 2023 13:51:13
+T17A0 000:006.775   Logging started @ 2023-04-17 12:31
+T17A0 000:006.781 - 6.784ms
+T17A0 000:006.794 JLINK_SetWarnOutHandler(...)
+T17A0 000:006.803 - 0.012ms
+T17A0 000:006.826 JLINK_OpenEx(...)
+T17A0 000:009.671   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T17A0 000:010.295   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T17A0 000:010.490   Decompressing FW timestamp took 155 us
+T17A0 000:017.609   Hardware: V9.40
+T17A0 000:017.647   S/N: 59402824
+T17A0 000:017.657   OEM: SEGGER
+T17A0 000:017.667   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T17A0 000:019.579   TELNET listener socket opened on port 19021
+T17A0 000:019.751   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T17A0 000:020.507   WEBSRV Webserver running on local port 19080
+T17A0 000:037.253 - 30.445ms returns "O.K."
+T17A0 000:037.298 JLINK_GetEmuCaps()
+T17A0 000:037.306 - 0.011ms returns 0xB9FF7BBF
+T17A0 000:037.319 JLINK_TIF_GetAvailable(...)
+T17A0 000:037.639 - 0.356ms
+T17A0 000:037.715 JLINK_SetErrorOutHandler(...)
+T17A0 000:037.728 - 0.017ms
+T17A0 000:037.792 JLINK_ExecCommand("ProjectFile = "E:\Resourse\LED_circuit_design\LYDD\zk\LY1200_master_20230417(single)\LY1200_APP_master\MDK-ARM\JLinkSettings.ini"", ...). 
+T17A0 000:053.231   Ref file found at: D:\Program Files\Keil_v5\ARM\Segger\JLinkDevices.ref
+T17A0 000:053.328   REF file references invalid XML file: C:\Program Files\SEGGER\JLink_V786d\JLinkDevices.xml
+T17A0 000:053.436 - 15.648ms returns 0x00
+T17A0 000:057.171 JLINK_ExecCommand("Device = STM32F407ZGTx", ...). 
+T17A0 000:061.556   Device "STM32F407ZG" selected.
+T17A0 000:061.970 - 4.787ms returns 0x00
+T17A0 000:061.989 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T17A0 000:062.002 - 0.005ms returns 0x01
+T17A0 000:062.012 JLINK_GetHardwareVersion()
+T17A0 000:062.019 - 0.009ms returns 94000
+T17A0 000:062.034 JLINK_GetDLLVersion()
+T17A0 000:062.040 - 0.009ms returns 78604
+T17A0 000:062.050 JLINK_GetOEMString(...)
+T17A0 000:062.062 JLINK_GetFirmwareString(...)
+T17A0 000:062.071 - 0.012ms
+T17A0 000:071.765 JLINK_GetDLLVersion()
+T17A0 000:071.787 - 0.026ms returns 78604
+T17A0 000:071.798 JLINK_GetCompileDateTime()
+T17A0 000:071.804 - 0.009ms
+T17A0 000:075.059 JLINK_GetFirmwareString(...)
+T17A0 000:075.080 - 0.024ms
+T17A0 000:078.047 JLINK_GetHardwareVersion()
+T17A0 000:078.063 - 0.019ms returns 94000
+T17A0 000:081.389 JLINK_GetSN()
+T17A0 000:081.405 - 0.019ms returns 59402824
+T17A0 000:086.304 JLINK_GetOEMString(...)
+T17A0 000:092.036 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T17A0 000:093.253 - 1.228ms returns 0x00
+T17A0 000:093.275 JLINK_HasError()
+T17A0 000:093.294 JLINK_SetSpeed(10000)
+T17A0 000:093.499 - 0.214ms
+T17A0 000:093.519 JLINK_GetId()
+T17A0 000:096.712   InitTarget() start
+T17A0 000:096.746    J-Link Script File: Executing InitTarget()
+T17A0 000:099.999   SWD selected. Executing JTAG -> SWD switching sequence.
+T17A0 000:106.105   DAP initialized successfully.
+T17A0 000:116.218   InitTarget() end - Took 15.7ms
+T17A0 000:120.116   Found SW-DP with ID 0x2BA01477
+T17A0 000:125.232   DPIDR: 0x2BA01477
+T17A0 000:128.150   CoreSight SoC-400 or earlier
+T17A0 000:131.199   Scanning AP map to find all available APs
+T17A0 000:135.825   AP[1]: Stopped AP scan as end of AP map has been reached
+T17A0 000:139.062   AP[0]: AHB-AP (IDR: 0x24770011)
+T17A0 000:142.161   Iterating through AP map to find AHB-AP to use
+T17A0 000:147.404   AP[0]: Core found
+T17A0 000:154.016   AP[0]: AHB-AP ROM base: 0xE00FF000
+T17A0 000:154.654   
+  ***** Error: 
+T17A0 000:154.670   DAP error while reading AIRCR.
+T17A0 000:211.400   InitTarget() start
+T17A0 000:211.425    J-Link Script File: Executing InitTarget()
+T17A0 000:214.663   SWD selected. Executing JTAG -> SWD switching sequence.
+T17A0 000:220.338   DAP initialized successfully.
+T17A0 000:231.235   InitTarget() end - Took 12.9ms
+T17A0 000:235.393   Found SW-DP with ID 0x2BA01477
+T17A0 000:240.678   DPIDR: 0x2BA01477
+T17A0 000:244.751   CoreSight SoC-400 or earlier
+T17A0 000:248.105   Scanning AP map to find all available APs
+T17A0 000:251.951   AP[1]: Stopped AP scan as end of AP map has been reached
+T17A0 000:254.943   AP[0]: AHB-AP (IDR: 0x24770011)
+T17A0 000:258.150   Iterating through AP map to find AHB-AP to use
+T17A0 000:263.884   AP[0]: Core found
+T17A0 000:267.068   AP[0]: AHB-AP ROM base: 0xE00FF000
+T17A0 000:267.653   
+  ***** Error: 
+T17A0 000:267.711   DAP error while reading AIRCR.
+T17A0 000:267.740 - 174.224ms returns 0x00000000
+T17A0 002:012.115 JLINK_Close()
+T17A0 002:039.406 - 27.331ms
+T17A0 002:039.456   
+T17A0 002:039.468   Closed
