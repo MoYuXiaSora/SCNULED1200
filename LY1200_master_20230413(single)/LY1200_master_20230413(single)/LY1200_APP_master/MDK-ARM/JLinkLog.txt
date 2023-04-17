@@ -1,0 +1,155 @@
+T1C0C 000:175.513   SEGGER J-Link V7.86d Log File
+T1C0C 000:176.243   DLL Compiled: Mar 15 2023 13:51:13
+T1C0C 000:176.251   Logging started @ 2023-04-03 11:55
+T1C0C 000:176.258 - 176.261ms
+T1C0C 000:176.496 JLINK_SetWarnOutHandler(...)
+T1C0C 000:176.690 - 0.198ms
+T1C0C 000:176.702 JLINK_OpenEx(...)
+T1C0C 000:186.978   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T1C0C 000:187.310   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T1C0C 000:188.238   Decompressing FW timestamp took 606 us
+T1C0C 000:195.109   Hardware: V9.40
+T1C0C 000:195.148   S/N: 59402824
+T1C0C 000:195.159   OEM: SEGGER
+T1C0C 000:195.169   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T1C0C 000:197.172   TELNET listener socket opened on port 19021
+T1C0C 000:197.531   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T1C0C 000:198.404   WEBSRV Webserver running on local port 19080
+T1C0C 000:210.899 - 34.217ms returns "O.K."
+T1C0C 000:211.180 JLINK_GetEmuCaps()
+T1C0C 000:211.209 - 0.032ms returns 0xB9FF7BBF
+T1C0C 000:211.263 JLINK_TIF_GetAvailable(...)
+T1C0C 000:211.572 - 0.319ms
+T1C0C 000:211.608 JLINK_SetErrorOutHandler(...)
+T1C0C 000:211.616 - 0.011ms
+T1C0C 000:211.834 JLINK_ExecCommand("ProjectFile = "E:\Resourse\LED_circuit_design\LYDD\zk\LY1200_master_20230325\LY1200_master_20230325\LY1200_APP_master\MDK-ARM\JLinkSettings.ini"", ...). 
+T1C0C 000:252.104   Ref file found at: D:\Program Files\Keil_v5\ARM\Segger\JLinkDevices.ref
+T1C0C 000:252.352   REF file references invalid XML file: C:\Program Files\SEGGER\JLink_V786d\JLinkDevices.xml
+T1C0C 000:252.482 - 40.655ms returns 0x00
+T1C0C 000:252.533 JLINK_ExecCommand("Device = STM32F407ZGTx", ...). 
+T1C0C 000:254.954   Device "STM32F407ZG" selected.
+T1C0C 000:255.576 - 3.042ms returns 0x00
+T1C0C 000:255.609 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T1C0C 000:255.623 - 0.006ms returns 0x01
+T1C0C 000:255.634 JLINK_GetHardwareVersion()
+T1C0C 000:255.641 - 0.010ms returns 94000
+T1C0C 000:255.816 JLINK_GetDLLVersion()
+T1C0C 000:255.830 - 0.017ms returns 78604
+T1C0C 000:255.841 JLINK_GetOEMString(...)
+T1C0C 000:255.857 JLINK_GetFirmwareString(...)
+T1C0C 000:255.867 - 0.013ms
+T1C0C 000:255.886 JLINK_GetDLLVersion()
+T1C0C 000:255.893 - 0.009ms returns 78604
+T1C0C 000:255.902 JLINK_GetCompileDateTime()
+T1C0C 000:255.909 - 0.010ms
+T1C0C 000:255.920 JLINK_GetFirmwareString(...)
+T1C0C 000:255.927 - 0.010ms
+T1C0C 000:255.938 JLINK_GetHardwareVersion()
+T1C0C 000:255.945 - 0.010ms returns 94000
+T1C0C 000:255.955 JLINK_GetSN()
+T1C0C 000:255.962 - 0.010ms returns 59402824
+T1C0C 000:255.972 JLINK_GetOEMString(...)
+T1C0C 000:255.986 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T1C0C 000:257.016 - 1.049ms returns 0x00
+T1C0C 000:257.047 JLINK_HasError()
+T1C0C 000:257.308 JLINK_SetSpeed(10000)
+T1C0C 000:257.475 - 0.176ms
+T1C0C 000:258.209 JLINK_HasError()
+T1C0C 000:258.228 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T1C0C 000:258.236 - 0.011ms returns JLINKARM_RESET_TYPE_NORMAL
+T1C0C 000:258.247 JLINK_Reset()
+T1C0C 000:258.829   InitTarget() start
+T1C0C 000:258.845    J-Link Script File: Executing InitTarget()
+T1C0C 000:259.058   SWD selected. Executing JTAG -> SWD switching sequence.
+T1C0C 000:260.865   DAP initialized successfully.
+T1C0C 000:264.971   InitTarget() end - Took 6.11ms
+T1C0C 000:265.397   Found SW-DP with ID 0x2BA01477
+T1C0C 000:267.408   DPIDR: 0x2BA01477
+T1C0C 000:267.423   CoreSight SoC-400 or earlier
+T1C0C 000:267.434   Scanning AP map to find all available APs
+T1C0C 000:267.975   AP[1]: Stopped AP scan as end of AP map has been reached
+T1C0C 000:268.123   AP[0]: AHB-AP (IDR: 0x24770011)
+T1C0C 000:268.139   Iterating through AP map to find AHB-AP to use
+T1C0C 000:268.826   AP[0]: Core found
+T1C0C 000:268.842   AP[0]: AHB-AP ROM base: 0xE00FF000
+T1C0C 000:269.225   
+  ***** Error: 
+T1C0C 000:269.239   DAP error while reading AIRCR.
+T1C0C 000:321.186   InitTarget() start
+T1C0C 000:321.220    J-Link Script File: Executing InitTarget()
+T1C0C 000:321.618   SWD selected. Executing JTAG -> SWD switching sequence.
+T1C0C 000:323.562   DAP initialized successfully.
+T1C0C 000:326.638   InitTarget() end - Took 5.41ms
+T1C0C 000:327.191   Found SW-DP with ID 0x2BA01477
+T1C0C 000:328.994   DPIDR: 0x2BA01477
+T1C0C 000:329.033   CoreSight SoC-400 or earlier
+T1C0C 000:329.045   Scanning AP map to find all available APs
+T1C0C 000:329.568   AP[1]: Stopped AP scan as end of AP map has been reached
+T1C0C 000:329.585   AP[0]: AHB-AP (IDR: 0x24770011)
+T1C0C 000:329.611   Iterating through AP map to find AHB-AP to use
+T1C0C 000:330.303   AP[0]: Core found
+T1C0C 000:330.320   AP[0]: AHB-AP ROM base: 0xE00FF000
+T1C0C 000:330.792   CPUID register: 0x410FC241. Implementer code: 0x41 (ARM)
+T1C0C 000:330.840   Found Cortex-M4 r0p1, Little endian.
+T1C0C 000:331.343   -- Max. mem block: 0x00010C40
+T1C0C 000:331.803   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T1C0C 000:332.051   CPU_ReadMem(4 bytes @ 0xE0002000)
+T1C0C 000:332.297   FPUnit: 6 code (BP) slots and 2 literal slots
+T1C0C 000:332.313   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T1C0C 000:332.566   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T1C0C 000:332.837   CPU_ReadMem(4 bytes @ 0xE0001000)
+T1C0C 000:333.081   CPU_WriteMem(4 bytes @ 0xE0001000)
+T1C0C 000:333.325   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T1C0C 000:333.566   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T1C0C 000:333.809   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T1C0C 000:334.056   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T1C0C 000:334.301   CoreSight components:
+T1C0C 000:334.316   ROMTbl[0] @ E00FF000
+T1C0C 000:334.328   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T1C0C 000:334.844   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T1C0C 000:335.218   [0][0]: E000E000 CID B105E00D PID 000BB00C SCS-M7
+T1C0C 000:335.236   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T1C0C 000:335.590   [0][1]: E0001000 CID B105E00D PID 003BB002 DWT
+T1C0C 000:335.605   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T1C0C 000:335.970   [0][2]: E0002000 CID B105E00D PID 002BB003 FPB
+T1C0C 000:335.985   CPU_ReadMem(32 bytes @ 0xE0000FE0)
+T1C0C 000:336.366   [0][3]: E0000000 CID B105E00D PID 003BB001 ITM
+T1C0C 000:336.381   CPU_ReadMem(32 bytes @ 0xE0040FE0)
+T1C0C 000:336.819   [0][4]: E0040000 CID B105900D PID 000BB9A1 TPIU
+T1C0C 000:336.837   CPU_ReadMem(32 bytes @ 0xE0041FE0)
+T1C0C 000:337.219   [0][5]: E0041000 CID B105900D PID 000BB925 ETM
+T1C0C 000:337.296   CPU is running
+T1C0C 000:337.640   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T1C0C 000:337.966   CPU is running
+T1C0C 000:337.982   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T1C0C 000:338.231   Reset: Halt core after reset via DEMCR.VC_CORERESET.
+T1C0C 000:338.645   Reset: Reset device via AIRCR.SYSRESETREQ.
+T1C0C 000:338.707   CPU is running
+T1C0C 000:338.721   CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T1C0C 000:392.678   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T1C0C 000:393.051   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T1C0C 000:395.729   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T1C0C 000:401.705   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T1C0C 000:403.947   CPU_WriteMem(4 bytes @ 0xE0002000)
+T1C0C 000:404.256   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T1C0C 000:404.578   CPU_ReadMem(4 bytes @ 0xE0001000)
+T1C0C 000:404.903 - 146.665ms
+T1C0C 000:404.953 JLINK_GetId()
+T1C0C 000:405.225 - 0.280ms returns 0x2BA01477
+T1C0C 000:411.612 JLINK_GetFirmwareString(...)
+T1C0C 000:411.634 - 0.026ms
+T39A8 010:131.129 Looking for J-Link GUI Server exe at: D:\Program Files\Keil_v5\ARM\Segger\JLinkGUIServer.exe
+T39A8 010:131.276 Looking for J-Link GUI Server exe at: C:\Program Files\SEGGER\JLink_V786d\JLinkGUIServer.exe
+T39A8 010:131.363 Forking J-Link GUI Server: C:\Program Files\SEGGER\JLink_V786d\JLinkGUIServer.exe
+T39A8 010:176.378 J-Link GUI Server info: "J-Link GUI server V7.86d "
+T1C0C 016:712.261 JLINK_Close()
+T1C0C 016:712.647   OnDisconnectTarget() start
+T1C0C 016:712.664    J-Link Script File: Executing OnDisconnectTarget()
+T1C0C 016:712.686   CPU_WriteMem(4 bytes @ 0xE0042004)
+T1C0C 016:712.980   CPU_WriteMem(4 bytes @ 0xE0042008)
+T1C0C 016:713.281   OnDisconnectTarget() end - Took 613us
+T1C0C 016:713.300   CPU_ReadMem(4 bytes @ 0xE0001000)
+T1C0C 016:713.587   CPU_WriteMem(4 bytes @ 0xE0001004)
+T1C0C 016:736.724 - 24.490ms
+T1C0C 016:736.758   
+T1C0C 016:736.767   Closed
