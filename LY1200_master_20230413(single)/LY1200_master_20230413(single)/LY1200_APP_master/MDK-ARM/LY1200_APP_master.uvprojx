@@ -420,6 +420,11 @@
               <FilePath>..\Core\Src\algorithm_library.c</FilePath>
             </File>
             <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/gpio.c</FilePath>
+            </File>
+            <File>
               <FileName>menu_module.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\menu_module.c</FilePath>
@@ -433,11 +438,6 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
-            </File>
-            <File>
-              <FileName>gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/gpio.c</FilePath>
             </File>
             <File>
               <FileName>freertos.c</FileName>
@@ -984,14 +984,24 @@
               <FilePath>..\BSP\W25QXX\text.c</FilePath>
             </File>
             <File>
+              <FileName>control_box.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\control_box\control_box.c</FilePath>
+            </File>
+            <File>
               <FileName>esp32c3.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\ESP32C3\esp32c3.c</FilePath>
             </File>
             <File>
-              <FileName>control_box.c</FileName>
+              <FileName>frame.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\control_box\control_box.c</FilePath>
+              <FilePath>..\BSP\ESP32C3\frame.c</FilePath>
+            </File>
+            <File>
+              <FileName>debug32.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\debug32.c</FilePath>
             </File>
           </Files>
         </Group>

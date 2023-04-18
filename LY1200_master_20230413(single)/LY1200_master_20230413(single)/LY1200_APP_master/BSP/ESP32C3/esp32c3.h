@@ -4,6 +4,7 @@
 #include "stdio.h"
 #include "stdint.h"
 #include "math.h"
+#include "frame.h"
 
 //该逻辑遵循CMSIS_RTOS2标识符逻辑
 #define thisOK 0
@@ -18,7 +19,8 @@
 #define BLEGATTSSRVSTART "AT+BLEGATTSSRVSTART\r\n"
 #define BLEADVSTART "AT+BLEADVSTART\r\n"
 #define BLEADVDATA "AT+BLEADVDATA=\"02010606094C5F6C6564030302A0\"\r\n"
-
+#define BLESPPCFG "AT+BLESPPCFG=1,1,6,1,5\r\n"
+#define BLESPP "AT+BLESPP\r\n"
 struct ESP32C3
 {
     /* data */
@@ -29,6 +31,8 @@ struct ESP32C3
 uint8_t esp32c3_Init();
 uint8_t esp32c3_SendCheck(uint8_t *pData, int Size,uint8_t *pCheck);
 uint8_t BleService(uint8_t *pData,uint8_t FrameLength);
-
+uint8_t BlueToothMsgManage(uint8_t *atstr, uint8_t LenthOfAT);
+uint8_t BlueToothSPPManage(uint8_t atstr[], uint8_t LenthOfAT);
+uint8_t BlueFrameManage(uint8_t atstr[], uint8_t LenthOfAT);
 
 #endif  // ESP32C3_H_

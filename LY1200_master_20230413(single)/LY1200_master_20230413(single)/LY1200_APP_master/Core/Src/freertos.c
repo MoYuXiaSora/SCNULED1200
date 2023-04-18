@@ -38,6 +38,7 @@
 #include "TouchGFX_User.h"
 
 #include "test_array.h"
+#include "esp32c3.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -766,7 +767,7 @@ void wirelessTask_Entry(void *argument)
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     {//获取消息成功
 			
-			uint8_t test_array[1]={0x00};//测试数组用完即删除
+			//uint8_t test_array[1]={0x00};//测试数组用完即删除
 			struct UARTEx_FRAME UART3_Frame_Local={
 				.new_Frame_Flag=USART3_OLD_FRAME,
 				.tx_Frame_Flag=HAL_OK,
@@ -777,6 +778,7 @@ void wirelessTask_Entry(void *argument)
 			if(USART3_NEW_FRAME==UART3_Frame_Local.new_Frame_Flag)
 			{//新一帧接收成功
 				//发送接收到的数据
+				BleService(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
 				//Transmit_To_ESP32C3(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
 				//清除接收标志
 				//UART3_Frame_Local=clear_UARTx_Frame();
