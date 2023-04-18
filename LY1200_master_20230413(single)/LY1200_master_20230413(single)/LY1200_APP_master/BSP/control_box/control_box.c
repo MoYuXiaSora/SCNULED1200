@@ -94,6 +94,12 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			key_Parament.value=KEY6_Pin_SET;
 		}break;
 		
+		case BACK_KEY10_Pin:
+		{
+			key_Parament.state=KEY_STATE_SET;
+			key_Parament.value=KEY10_Pin_SET;
+		}break;
+		
 //		case :
 //		{
 //			
