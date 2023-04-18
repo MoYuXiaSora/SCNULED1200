@@ -31,7 +31,9 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "RTE_Components.h"	
+#include "EventRecorder.h"
+#include "EventRecorderConf.h"	
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -68,6 +70,7 @@ void Error_Handler(void);
 #define EFFECT_KEY6_EXTI_IRQn EXTI9_5_IRQn
 #define BACK_KEY10_Pin GPIO_PIN_10
 #define BACK_KEY10_GPIO_Port GPIOF
+#define BACK_KEY10_EXTI_IRQn EXTI15_10_IRQn
 #define EC11_2_KEY0_Pin GPIO_PIN_4
 #define EC11_2_KEY0_GPIO_Port GPIOC
 #define EC11_2_KEY0_EXTI_IRQn EXTI4_IRQn

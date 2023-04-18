@@ -803,6 +803,7 @@ void LCD_Init(void)
 	
 	//LCD_LED=1;
 	LCD_Clear(BLACK);//清屏 可替换为logo
+	//LCD_Clear(RED);//清屏 可替换为logo
 	LCD_BLK_ON();
 }
 

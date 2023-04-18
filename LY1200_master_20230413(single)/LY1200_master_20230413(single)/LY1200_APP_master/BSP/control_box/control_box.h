@@ -42,6 +42,7 @@ struct KNOB
 #define KEY2_Pin_SET 2
 #define KEY3_Pin_SET 3
 #define KEY6_Pin_SET 6
+#define KEY10_Pin_SET 10
 #define KEY_UP_Pin_SET 3
 #define NOKEY_VALUE -1
 

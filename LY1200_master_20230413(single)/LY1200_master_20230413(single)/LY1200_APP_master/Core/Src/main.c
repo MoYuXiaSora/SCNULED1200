@@ -35,6 +35,7 @@
 #include "system_data.h"
 
 #include "bsp.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -122,9 +123,15 @@ int main(void)
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
+	
   LCD_Init();
 	BSP_W25Qx_Init();
 	esp32c3_Init();
+	
+		/* 初始化 EventRecorder 并开启 */
+	EventRecorderInitialize(EventRecordAll, 1U);
+	EventRecorderStart();
+	
   /* USER CODE END 2 */
 
   /* Init scheduler */

@@ -339,6 +339,8 @@ void encoder_EOF(TIM_HandleTypeDef *htim_local,uint8_t *encoder_EOF_direction, i
   *encoder_EOF_direction = ec11_Direction;  //传�?�方�?
   *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //传�?�变化量
 	
+//	if((ec11_Direction>0)&&(*encoder_EOF_Variation<0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
+//	if((ec11_Direction<0)&&(*encoder_EOF_Variation>0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
 	
   __HAL_TIM_SET_COUNTER(htim_local, ENCODER_COUNT_MEDIAN); //计数器�?�重新置�?
 }

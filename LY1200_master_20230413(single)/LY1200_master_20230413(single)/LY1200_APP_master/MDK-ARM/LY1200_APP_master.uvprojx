@@ -16,8 +16,8 @@
         <TargetCommonOption>
           <Device>STM32F407ZGTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.2.0</PackID>
-          <PackURL>http://www.keil.com/pack</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.16.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2001BFFF) IRAM2(0x2001C000-0x2001FFFF) IROM(0x8000000-0x80FFFFF)  CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BSP;../BSP/fan;../BSP/TFT;../BSP/control_box;../BSP/W25QXX;..\BSP\ESP32C3;../TouchGFX/App;../TouchGFX/target/generated;../TouchGFX/target;../middlewares/st/touchgfx/framework/include;../touchgfx/generated/fonts/include;../touchgfx/generated/gui_generated/include;../touchgfx/generated/images/include;../touchgfx/generated/texts/include;../touchgfx/generated/videos/include;../touchgfx/gui/include</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BSP;../BSP/fan;../BSP/TFT;../BSP/control_box;../BSP/W25QXX;../BSP/ESP32C3;../TouchGFX/App;../TouchGFX/target/generated;../TouchGFX/target;../middlewares/st/touchgfx/framework/include;../touchgfx/generated/fonts/include;../touchgfx/generated/gui_generated/include;../touchgfx/generated/images/include;../touchgfx/generated/texts/include;../touchgfx/generated/videos/include;../touchgfx/gui/include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2365,6 +2365,9 @@
         <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
+        <Group>
+          <GroupName>::Compiler</GroupName>
+        </Group>
       </Groups>
     </Target>
   </Targets>
@@ -2378,8 +2381,29 @@
           <targetInfo name="LY1200_APP_master"/>
         </targetInfos>
       </component>
+      <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" Cversion="1.5.1" condition="Cortex-M Device">
+        <package name="ARM_Compiler" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="1.7.2"/>
+        <targetInfos>
+          <targetInfo name="LY1200_APP_master"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="EVR" Cvendor="Keil" Cversion="1.2.0" condition="ARMCC Cortex-M with EVR">
+        <package name="ARM_Compiler" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="1.7.2"/>
+        <targetInfos>
+          <targetInfo name="LY1200_APP_master"/>
+        </targetInfos>
+      </component>
     </components>
-    <files/>
+    <files>
+      <file attr="config" category="header" name="Config\EventRecorderConf.h" version="1.1.0">
+        <instance index="0">RTE\Compiler\EventRecorderConf.h</instance>
+        <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" Cversion="1.5.1" condition="Cortex-M Device"/>
+        <package name="ARM_Compiler" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="1.7.2"/>
+        <targetInfos>
+          <targetInfo name="LY1200_APP_master"/>
+        </targetInfos>
+      </file>
+    </files>
   </RTE>
 
   <LayerInfo>

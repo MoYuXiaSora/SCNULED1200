@@ -600,7 +600,12 @@ void testTask_Entry(void *argument)
   /* Infinite loop */
   for(;;)
   {
-
+		uint8_t i=0;
+		uint8_t j=1;
+		printf("Event Recorder Test! \n");
+//		EventStartG(0);
+		EventStartA(0);
+		//EventRecordItem
 		//uint8_t i = USART3_DMA_Rx_Buffer[0];
 		//测试spi flash
 		//uint8_t ID_test[2]={0x01,0x02};
@@ -739,7 +744,7 @@ void testTask_Entry(void *argument)
 
 		test_info[7] = uxTaskGetStackHighWaterMark(NULL);
     osDelay(100);
-		
+		EventStopA(0);
   }
   /* USER CODE END testTask_Entry */
 }
@@ -777,9 +782,9 @@ void wirelessTask_Entry(void *argument)
 			if(USART3_NEW_FRAME==UART3_Frame_Local.new_Frame_Flag)
 			{//新一帧接收成功
 				//发送接收到的数据
-				//Transmit_To_ESP32C3(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
+				Transmit_To_ESP32C3(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
 				//清除接收标志
-				//UART3_Frame_Local=clear_UARTx_Frame();
+				UART3_Frame_Local=clear_UARTx_Frame();
 				if(USART3_OLD_FRAME==UART3_Frame_Local.new_Frame_Flag)
 				{//清除接收标志成功
 					
@@ -791,7 +796,7 @@ void wirelessTask_Entry(void *argument)
 			}
 			else
 			{//新一帧接收失败 或 无新数据
-				 //Transmit_To_ESP32C3(test_array, sizeof(test_array)/sizeof(test_array[0]));
+				 Transmit_To_ESP32C3(test_array, sizeof(test_array)/sizeof(test_array[0]));
 			}
 
     }
