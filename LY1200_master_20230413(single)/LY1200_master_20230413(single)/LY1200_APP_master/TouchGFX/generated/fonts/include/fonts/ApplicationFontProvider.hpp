@@ -21,7 +21,7 @@ struct Typography
 struct TypographyFontIndex
 {
     static const touchgfx::FontId DEFAULT = 0; // simfang_25_4bpp
-    static const touchgfx::FontId LARGE = 1;   // simfang_40_4bpp
+    static const touchgfx::FontId LARGE = 1;   // simfang_35_4bpp
     static const touchgfx::FontId SMALL = 2;   // simfang_17_4bpp
     static const uint16_t NUMBER_OF_FONTS = 3;
 };

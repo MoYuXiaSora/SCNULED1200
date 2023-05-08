@@ -188,18 +188,20 @@ uint8_t cct_User(struct CCT *cct_Local_app,float *cct_Cold_Out_App, float *cct_W
 
 uint8_t light_Effect_Analysis(float *brightness_Local, uint16_t *color_Temperature_Local, float *cold_Out_App, float *warm_Out_App)
 {
-//    struct CCT *cct_Local_app={
-//        .brightness = *brightness_Local,
-//        .color_Temperature = *color_Temperature_Local,
-//        .cold_Percentage=0,
-//        .warm_Percentage=0,
-//    };
-	
-	  struct CCT *cct_Local_app;
-		cct_Local_app->brightness = *brightness_Local;
-	  cct_Local_app->color_Temperature = *color_Temperature_Local;
-	  cct_Local_app->cold_Percentage=0;
-		cct_Local_app->warm_Percentage=0;
+    float Le_Cold_Ratio=0;
+    float Le_Warm_Ratio=0;
 
-    return cct_analysis(cct_Local_app, cold_Out_App, warm_Out_App);
+    //输入参数检查
+    if((*brightness_Local<0) || (*brightness_Local>1)) return thisERROR;
+    if((*color_Temperature_Local<2700) || (*color_Temperature_Local>6500)) return thisERROR;
+
+    //对输入色温值查表得到冷暖比例
+    Le_Cold_Ratio = cct_Cold_Surface[(*color_Temperature_Local-2700)/50];
+    Le_Warm_Ratio = cct_Warm_Surface[(*color_Temperature_Local-2700)/50];
+
+    //计算冷暖两路输出
+    *cold_Out_App = (Le_Cold_Ratio*(*brightness_Local));
+    *warm_Out_App = (Le_Warm_Ratio*(*brightness_Local));
+
+    return thisOK;
 }

@@ -97,6 +97,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+	//uint16_t* framebuffer = (uint16_t*)0x60000000;  //16 bpp framebuffer
 
   /* USER CODE END Init */
 
@@ -128,7 +129,7 @@ int main(void)
 	BSP_W25Qx_Init();
 	esp32c3_Init();
 	
-		/* åˆå§‹åŒ– EventRecorder å¹¶å¼€å¯ */
+		/* ³õÊ¼»¯ EventRecorder ²¢¿ªÆô */
 	EventRecorderInitialize(EventRecordAll, 1U);
 	EventRecorderStart();
 	

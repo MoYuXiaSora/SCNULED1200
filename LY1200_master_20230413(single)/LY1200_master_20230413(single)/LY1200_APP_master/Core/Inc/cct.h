@@ -8,6 +8,9 @@
 #define thisOK 0
 #define thisERROR -1
 
+#define FLAG_TRUE 1
+#define FLAG_FALSE 0
+
 enum CURVE {
     LINE=0, //直线型
     LOGARITHM,  //对数型
@@ -23,6 +26,7 @@ struct CCT
     enum CURVE curve;  //四种类型 直线型 对数型 指数型 S型
     float cold_Percentage;  //冷色温输出结果 0.0%-100.0%
     float warm_Percentage;  //暖色温输出结果 0.0%-100.0%
+    uint8_t cct_Update_Flag; //是否有新参数更新
     
 };
 

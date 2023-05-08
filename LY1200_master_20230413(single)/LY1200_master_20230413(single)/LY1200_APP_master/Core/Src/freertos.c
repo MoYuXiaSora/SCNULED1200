@@ -38,6 +38,7 @@
 #include "TouchGFX_User.h"
 
 #include "test_array.h"
+#include "esp32c3.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -259,16 +260,19 @@ void StartDefaultTask(void *argument)
   struct SYS_DATA sys_Data_getQueue={
     
   };
+	struct BOX_INPUT box_Data_getQueue={
+		
+	};
 
-  //初始化系统参�?
+  //初始化系统参�??
   if(system_Data_Init()==osOK)
   {
-    //系统参数初始化成�?
+    //系统参数初始化成�??
 
   }
   else
   {
-    //系统参数初始化失�?
+    //系统参数初始化失�??
 
   }
 
@@ -294,8 +298,30 @@ void StartDefaultTask(void *argument)
       
     }
     
+				//获取消息
+    if(osMessageQueueGet(boxInputQueueHandle, (void *)&box_Data_getQueue,NULL,portMAX_DELAY)==osOK)
+    { //获取消息成功
+
+    }
+    else
+    { //获取消息失败
+      
+    }
+
+    //放入消息 
+    if(osMessageQueuePut(boxInputQueueHandle, &box_Data_getQueue,0,portMAX_DELAY)==osOK)
+    { //放入消息成功
+      
+    }
+    else
+    { //放入消息失败
+      
+    }
+		
+		
+		
     
-    HAL_Delay(100);//硬延时等�?100ms 系统初始�?
+    HAL_Delay(100);//硬延时等�??100ms 系统初始�??
     
     //while(osThreadTerminate(defaultTaskHandle)!=osOK);//终止StartDefaultTask线程
 		
@@ -333,8 +359,17 @@ void cctTask_Entry_App(void *argument)
     //获取消息
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     { //获取消息成功
-      //运行 cct_User 将输入的亮度和色温计算为应输出的冷�?�暖两�?�道比例
-      cct_User(&(sys_Data_getQueue.cct_Parament),&(sys_Data_getQueue.cct_Parament.cold_Percentage), &(sys_Data_getQueue.cct_Parament.warm_Percentage));
+      if(sys_Data_getQueue.model_Parament == CCT)
+      {
+        if(sys_Data_getQueue.cct_Parament.cct_Update_Flag == FLAG_TRUE)
+        {
+          //运行 cct_User 将输入的亮度和色温计算为应输出的冷暖两通道比例
+          cct_User(&(sys_Data_getQueue.cct_Parament),&(sys_Data_getQueue.cct_Parament.cold_Percentage), &(sys_Data_getQueue.cct_Parament.warm_Percentage));
+          //清除CCT参数更新标志位
+          sys_Data_getQueue.cct_Parament.cct_Update_Flag = FLAG_FALSE;
+        }
+
+      }
     }
 
     //放入消息 
@@ -367,32 +402,39 @@ void canTask_Entry(void *argument)
     .fan_Parament=0,
   };
 
-  #define DRIVER_TXDATA_LENGTH 16//驱动板发送数据长�?
-  uint8_t driver_TxData[DRIVER_TXDATA_LENGTH]={0};//驱动板发送数据缓�?
+  #define DRIVER_TXDATA_LENGTH 16//驱动板发送数据长�??
+  uint8_t driver_TxData[DRIVER_TXDATA_LENGTH]={0};//驱动板发送数据缓�??
 
   for(;;)
   {
     //获取消息
     if (osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     { //获取消息成功
-      //按照与驱动板协议，将驱动�?�?数据进行CAN格式化编�?
-      switch (sys_Data_getQueue.model_Parament)
+      if(sys_Data_getQueue.driver_Parament.drive_State_Update == driverUPDATE)
       {
-        case CCT:{
-          /* code */
-          driver_Data_Format(sys_Data_getQueue.driver_Parament.drive_Switch,sys_Data_getQueue.cct_Parament.cold_Percentage,sys_Data_getQueue.cct_Parament.warm_Percentage,sys_Data_getQueue.fan_Parament.fan_Ratio,driver_TxData);
-        }break;
-        
-       case LIGHT_EFFECTS:{
-          /* code */
-          driver_Data_Format(sys_Data_getQueue.driver_Parament.drive_Switch,sys_Data_getQueue.LE_Parament.cold_Percentage,sys_Data_getQueue.LE_Parament.warm_Percentage,sys_Data_getQueue.fan_Parament.fan_Ratio,driver_TxData);
-        }break;
+        //按照与驱动板协议，将驱动�??�??数据进行CAN格式化编�??
+        switch (sys_Data_getQueue.model_Parament)
+        {
+          case CCT:{
+            /* code */
+            driver_Data_Format(sys_Data_getQueue.driver_Parament.drive_Switch,sys_Data_getQueue.cct_Parament.cold_Percentage,sys_Data_getQueue.cct_Parament.warm_Percentage,sys_Data_getQueue.fan_Parament.fan_Ratio,driver_TxData);
+          }break;
+          
+        case LIGHT_EFFECTS:{
+            /* code */
+            driver_Data_Format(sys_Data_getQueue.driver_Parament.drive_Switch,sys_Data_getQueue.LE_Parament.cold_Percentage,sys_Data_getQueue.LE_Parament.warm_Percentage,sys_Data_getQueue.fan_Parament.fan_Ratio,driver_TxData);
+          }break;
 
-        default:
-          break;
+          default:
+            break;
+        }
+				//打印输出冷暖比例 测试后删除
+				//printf("%f, %f\n",sys_Data_getQueue.LE_Parament.cold_Percentage,sys_Data_getQueue.LE_Parament.warm_Percentage);
+        //将CAN发�?�数组中的数据进行发�??
+        can_Tx_User(driver_TxData, DRIVER_TXDATA_LENGTH);
+        sys_Data_getQueue.driver_Parament.drive_State_Update = driverSLEEP;
       }
-      //将CAN发�?�数组中的数据进行发�?
-      can_Tx_User(driver_TxData, DRIVER_TXDATA_LENGTH);
+
     }
     //放入消息
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
@@ -429,12 +471,19 @@ void lightEffectTask_Entry(void *argument)
 
   for(;;)
   {
+		EventStartA(1);
     //获取消息
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     { //获取消息成功
-      //运行 lighteffects_Type_Choose 将输入的特效参数计算为应输出的冷、暖两�?�道比例
-
-      lighteffects_Type_Choose(&sys_Data_getQueue.LE_Parament);
+      if(sys_Data_getQueue.model_Parament == LIGHT_EFFECTS)
+      {
+        //运行 lighteffects_Type_Choose 将输入的特效参数计算为应输出的冷、暖两个通道比例
+        lighteffects_Type_Choose(&sys_Data_getQueue.LE_Parament);
+        //唤醒驱动板传输
+        sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;
+        //清除接收到的更新标志位
+			  if(sys_Data_getQueue.LE_Parament.le_Update_Flag == FLAG_TRUE){sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_FALSE;}
+      }
 
     }
 
@@ -445,7 +494,7 @@ void lightEffectTask_Entry(void *argument)
     }
 		
 		test_info[3] = uxTaskGetStackHighWaterMark(NULL);
-		
+		EventStopA(1);
     osDelay(1);
 		
 		
@@ -476,10 +525,8 @@ void menuTask_Entry(void *argument)
 		//获取消息
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     { //获取消息成功
-      
-
 			
-//			//对数值进行处�?
+//			//对数值进行处�??
 //			sys_Data_getQueue.cct_Parament.brightness+=(knob_Data1.variation)/1000.0;
 //			sys_Data_getQueue.cct_Parament.color_Temperature+=(knob_Data2.variation)/1000.0;
     }
@@ -508,7 +555,7 @@ void lcdTransferTask_Entry(void *argument)
   /* Infinite loop */
   for(;;)
   {
-		//lcd_update();//将渲染的图像刷新到LCD屏幕�?
+		//lcd_update();//将渲染的图像刷新到LCD屏幕�??
 		
 		test_info[5] = uxTaskGetStackHighWaterMark(NULL);
 		
@@ -528,10 +575,11 @@ void inputTask_Entry(void *argument)
 {
   /* USER CODE BEGIN inputTask_Entry */
 	
-	struct BOX_INPUT box_Data_getQueue={
+struct BOX_INPUT box_Data_getQueue={
 			.key={
 				.state=KEY_STATE_RESET,
 				.value=NOKEY_VALUE,
+				.clear_Flag = CLEAR_FLAG_OFF,
 			},
 			.knob1={
 				.order_Number=FIRST,
@@ -539,7 +587,8 @@ void inputTask_Entry(void *argument)
 				.variation=0,
 				.mapping_Values=0,
 				.key_State=KEY_STATE_RESET,
-				.knob_State=KNOB_STATE_RESET
+				.knob_State=KNOB_STATE_RESET,
+				.clear_Flag=CLEAR_FLAG_OFF,
 			},
 			.knob2={
 				.order_Number=SECOND,
@@ -547,8 +596,9 @@ void inputTask_Entry(void *argument)
 				.variation=0,
 				.mapping_Values=0,
 				.key_State=KEY_STATE_RESET,
-				.knob_State=KNOB_STATE_RESET
-			}
+				.knob_State=KNOB_STATE_RESET,
+				.clear_Flag=CLEAR_FLAG_OFF,
+			},
 	};
 
   /* Infinite loop */
@@ -565,7 +615,7 @@ void inputTask_Entry(void *argument)
 			{
 
 			}
-			box_Data_getQueue.key = button_scanning();
+			box_Data_getQueue.key = button_scanning(box_Data_getQueue.key.clear_Flag);
     }
     else
     { //获取消息失败
@@ -602,7 +652,7 @@ void testTask_Entry(void *argument)
   {
 		uint8_t i=0;
 		uint8_t j=1;
-		printf("Event Recorder Test! \n");
+		//printf("Event Recorder Test! \n");
 //		EventStartG(0);
 		EventStartA(0);
 		//EventRecordItem
@@ -637,7 +687,7 @@ void testTask_Entry(void *argument)
 //		uint8_t iii=1;
 //		if(iii<0) aa=test_array[1];
 		
-		//初始化写入数组
+		//初始化写入数�?
 //		for(uint16_t i=0;i<SECTOR_SIZE;i++)
 //		{
 //			tx[i]=i;
@@ -650,7 +700,7 @@ void testTask_Entry(void *argument)
 //		{
 //			//擦除扇区
 //			//BSP_W25Qx_Erase_Block(j);
-//			//写扇区
+//			//写扇�?
 //			//BSP_W25Qx_Write(tx, j,sizeof(tx)/sizeof(tx[0]));
 //			//读取扇区
 //			BSP_W25Qx_Read(rx, j, sizeof(rx)/sizeof(rx[0]));
@@ -691,27 +741,41 @@ void testTask_Entry(void *argument)
 //		uint8_t *externalRAM = 0x60000000;
 //		const uint32_t size = 1*1024*1024;
 //		
-//		//write external RAM
-//		for(j = 0; j < size; j++)
+//		uint8_t *bit_RAM = 0x6004B008;
+//		uint8_t *frame_RAM = 0x60000000;
+//		
+//		uint8_t test_ii;
+//		
+//		//1.读取FLASH
+//		BSP_W25Qx_Read((uint8_t *)0x6004B008, 0x00000000, 0x0003FC00);
+//		//比对位图缓冲区与FLASH内容是否�?�?
+//		for(uint32_t numBytes_i = 0;numBytes_i<0x0003FC00;numBytes_i++)
 //		{
-//				externalRAM[j] = 0xFF;
-//		}
-
-//		//write external RAM
-//		for(i = 0; i < size; i++)
-//		{
-//				externalRAM[i] = (i%256);
+//			BSP_W25Qx_Read(&test_ii, numBytes_i, 1);
+//			if(test_ii !=bit_RAM[numBytes_i]) 
+//			{
+//				break;
+//			}
 //		}
 //		
-//		//read external RAM
-//		for(j = 0; j < size; j++)
+//		//2.将位图缓冲区数据写入至渲染区
+//		for(uint32_t numBytes_i = 0;numBytes_i<0x0003FC00;numBytes_i++)
 //		{
-//				if(externalRAM[j] == (j%256)){externalRAM[j]=0x0A;}
-//				else{flag=0xFF;break;}
+//			frame_RAM[numBytes_i]=bit_RAM[numBytes_i];
 //		}
+//		//3.比对位图缓冲区与FLASH内容是否�?�?
+//		for(uint32_t numBytes_i = 0;numBytes_i<0x0003FC00;numBytes_i++)
+//		{
+//			BSP_W25Qx_Read(&test_ii, numBytes_i, 1);
+//			if(test_ii !=bit_RAM[numBytes_i]) 
+//			{
+//				break;
+//			}
+//		}
+
 		
 		/*
-		//外置sram存储全局变量 写入spiflash 测试 两个数组放全局变量中
+		//外置sram存储全局变量 写入spiflash 测试 两个数组放全�?变量�?
 //		__attribute__((section(".RAM3"))) uint8_t rx[4*1024]={1,1,1,1,1,1,1,1,1,1};
 //		__attribute__((section(".RAM3"))) uint8_t tx[4*1024];
 		uint8_t ID_test[2]={0};
@@ -771,7 +835,7 @@ void wirelessTask_Entry(void *argument)
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     {//获取消息成功
 			
-			uint8_t test_array[1]={0x00};//测试数组用完即删除
+			uint8_t test_array[1]={0x00};//测试数组用完即删�?
 			struct UARTEx_FRAME UART3_Frame_Local={
 				.new_Frame_Flag=USART3_OLD_FRAME,
 				.tx_Frame_Flag=HAL_OK,
@@ -782,9 +846,10 @@ void wirelessTask_Entry(void *argument)
 			if(USART3_NEW_FRAME==UART3_Frame_Local.new_Frame_Flag)
 			{//新一帧接收成功
 				//发送接收到的数据
-				Transmit_To_ESP32C3(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
+				BleService(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
+				//Transmit_To_ESP32C3(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
 				//清除接收标志
-				UART3_Frame_Local=clear_UARTx_Frame();
+				//UART3_Frame_Local=clear_UARTx_Frame();
 				if(USART3_OLD_FRAME==UART3_Frame_Local.new_Frame_Flag)
 				{//清除接收标志成功
 					

@@ -23,8 +23,8 @@
 /* USER CODE BEGIN 0 */
 #include "string.h"
 
-#define USART3_DMA_RX_BUFFER_LENGTH 256 //由用户配置DMA缓存区 可更改
-#define USART3_DMA_RX_IT_BUFFER_LENGTH 256 //由用户配置DMA_IT缓存区 可更改
+#define USART3_DMA_RX_BUFFER_LENGTH 256 //���û�����DMA������ �ɸ���
+#define USART3_DMA_RX_IT_BUFFER_LENGTH 256 //���û�����DMA_IT������ �ɸ���
 __attribute__ ((section(".IRAM1"))) static volatile uint8_t USART3_DMA_Rx_Buffer[USART3_DMA_RX_BUFFER_LENGTH];
 __attribute__ ((section(".IRAM1"))) static volatile uint8_t USART3_DMA_Rx_It_Buffer[USART3_DMA_RX_IT_BUFFER_LENGTH];
 
@@ -65,7 +65,7 @@ void MX_USART3_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART3_Init 2 */
-	__HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);//使能idle中断
+	__HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);//ʹ��idle�ж�
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart3,USART3_DMA_Rx_It_Buffer,sizeof(USART3_DMA_Rx_It_Buffer)/sizeof(USART3_DMA_Rx_It_Buffer[0]));
 	__HAL_DMA_DISABLE_IT(&hdma_usart3_rx, DMA_IT_HT);
 	__HAL_DMA_DISABLE_IT(&hdma_usart3_rx, DMA_IT_DME);
@@ -183,7 +183,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 
 
 /**
-  * @brief  使用 USART3 从 pData 中发送 Size 个字节大小的数据到 ESP32C3
+  * @brief  ʹ�� USART3 �� pData �з��� Size ���ֽڴ�С�����ݵ� ESP32C3
   * @note  
   * @param  pData Pointer to data buffer (u8 or u16 data elements).
   * @param  Size  Amount of data elements (u8 or u16) to be received.
@@ -193,20 +193,20 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 struct UARTEx_FRAME Transmit_To_ESP32C3(uint8_t *pData, uint16_t Size)
 {
 	/*
-	* 发送成功返回：HAL_OK
-	* 发送失败返回：HAL_BUSY / HAL_ERROR
+	* ���ͳɹ����أ�HAL_OK
+	* ����ʧ�ܷ��أ�HAL_BUSY / HAL_ERROR
 	*/
 	UART3_Frame.tx_Frame_Flag = HAL_UART_Transmit_IT(&huart3, pData, Size);
   return UART3_Frame;
 }
 
 /**
-  * @brief  使用 USART3_DMA 接收一帧数据到 ESP32C3
+  * @brief  ʹ�� USART3_DMA ����һ֡���ݵ� ESP32C3
   * @note		static struct UARTEx_FRAME UART3_Frame={
-							.new_Frame_Flag=USART3_OLD_FRAME, //是否收到了新一帧 新:USART3_NEW_FRAME 旧:USART3_OLD_FRAME
-							.tx_Frame_Flag=HAL_OK,						//是否成功发送了新一帧 发送成功返回：HAL_OK   发送失败返回：HAL_BUSY / HAL_ERROR
-							.frame_Length=0,									//新一帧数据长度
-							.pData=USART3_DMA_Rx_Buffer				//缓冲区数组地址指针
+							.new_Frame_Flag=USART3_OLD_FRAME, //�Ƿ��յ�����һ֡ ��:USART3_NEW_FRAME ��:USART3_OLD_FRAME
+							.tx_Frame_Flag=HAL_OK,						//�Ƿ�ɹ���������һ֡ ���ͳɹ����أ�HAL_OK   ����ʧ�ܷ��أ�HAL_BUSY / HAL_ERROR
+							.frame_Length=0,									//��һ֡���ݳ���
+							.pData=USART3_DMA_Rx_Buffer				//�����������ַָ��
 						}; 
   * @param  
   * @retval struct UARTEx_FRAME 
@@ -218,12 +218,12 @@ struct UARTEx_FRAME Receive_From_ESP32C3()
 }
 
 /**
-  * @brief  使用 USART3_DMA 接收一帧数据到 ESP32C3
+  * @brief  ʹ�� USART3_DMA ����һ֡���ݵ� ESP32C3
   * @note		static struct UARTEx_FRAME UART3_Frame={
-							.new_Frame_Flag=USART3_OLD_FRAME, //是否收到了新一帧 新:USART3_NEW_FRAME 旧:USART3_OLD_FRAME
-							.tx_Frame_Flag=HAL_OK,						//是否成功发送了新一帧 发送成功返回：HAL_OK   发送失败返回：HAL_BUSY / HAL_ERROR
-							.frame_Length=0,									//新一帧数据长度
-							.pData=USART3_DMA_Rx_Buffer				//缓冲区数组地址指针
+							.new_Frame_Flag=USART3_OLD_FRAME, //�Ƿ��յ�����һ֡ ��:USART3_NEW_FRAME ��:USART3_OLD_FRAME
+							.tx_Frame_Flag=HAL_OK,						//是否成功发�?�了新一�? 发�?�成功返回：HAL_OK   发�?�失败返回：HAL_BUSY / HAL_ERROR
+							.frame_Length=0,									//新一帧数据长�?
+							.pData=USART3_DMA_Rx_Buffer				//缓冲区数组地�?指针
 						}; 
   * @param  
   * @retval struct UARTEx_FRAME 
@@ -231,10 +231,10 @@ struct UARTEx_FRAME Receive_From_ESP32C3()
 **/
 struct UARTEx_FRAME clear_UARTx_Frame()
 {
-	UART3_Frame.new_Frame_Flag=USART3_OLD_FRAME,  //是否收到了新一帧 新:USART3_NEW_FRAME 旧:USART3_OLD_FRAME
-	UART3_Frame.tx_Frame_Flag=HAL_OK,					  	//是否成功发送了新一帧 发送成功返回：HAL_OK   发送失败返回：HAL_BUSY / HAL_ERROR
-	UART3_Frame.frame_Length=0,									  //新一帧数据长度
-	UART3_Frame.pData=USART3_DMA_Rx_Buffer;		   	//缓冲区数组地址指针
+	UART3_Frame.new_Frame_Flag=USART3_OLD_FRAME,  //�Ƿ��յ�����һ֡ ��:USART3_NEW_FRAME ��:USART3_OLD_FRAME
+	UART3_Frame.tx_Frame_Flag=HAL_OK,					  	//�Ƿ�ɹ���������һ֡ ���ͳɹ����أ�HAL_OK   ����ʧ�ܷ��أ�HAL_BUSY / HAL_ERROR
+	UART3_Frame.frame_Length=0,									  //��һ֡���ݳ���
+	UART3_Frame.pData=USART3_DMA_Rx_Buffer;		   	//�����������ַָ��
 	
 	return UART3_Frame;
 }

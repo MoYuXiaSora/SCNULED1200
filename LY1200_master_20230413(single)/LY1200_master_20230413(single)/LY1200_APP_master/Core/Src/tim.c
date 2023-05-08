@@ -203,6 +203,9 @@ void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef* tim_encoderHandle)
     GPIO_InitStruct.Alternate = GPIO_AF2_TIM3;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    /* TIM3 interrupt Init */
+    HAL_NVIC_SetPriority(TIM3_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(TIM3_IRQn);
   /* USER CODE BEGIN TIM3_MspInit 1 */
 
   /* USER CODE END TIM3_MspInit 1 */
@@ -227,6 +230,9 @@ void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef* tim_encoderHandle)
     GPIO_InitStruct.Alternate = GPIO_AF2_TIM4;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    /* TIM4 interrupt Init */
+    HAL_NVIC_SetPriority(TIM4_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(TIM4_IRQn);
   /* USER CODE BEGIN TIM4_MspInit 1 */
 
   /* USER CODE END TIM4_MspInit 1 */
@@ -269,6 +275,8 @@ void HAL_TIM_Encoder_MspDeInit(TIM_HandleTypeDef* tim_encoderHandle)
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_4|GPIO_PIN_5);
 
+    /* TIM3 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(TIM3_IRQn);
   /* USER CODE BEGIN TIM3_MspDeInit 1 */
 
   /* USER CODE END TIM3_MspDeInit 1 */
@@ -287,6 +295,8 @@ void HAL_TIM_Encoder_MspDeInit(TIM_HandleTypeDef* tim_encoderHandle)
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_6|GPIO_PIN_7);
 
+    /* TIM4 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(TIM4_IRQn);
   /* USER CODE BEGIN TIM4_MspDeInit 1 */
 
   /* USER CODE END TIM4_MspDeInit 1 */
@@ -320,11 +330,12 @@ void HAL_TIM_Encoder_MspDeInit(TIM_HandleTypeDef* tim_encoderHandle)
 //  ec11_Variation = ec11_Pulses - ENCODER_COUNT_MEDIAN; //计算脉冲变化�?
 
 //  *encoder_EOF_direction = ec11_Direction;  //传�?�方�?
-//  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //传�?�变化量
+//  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //浼狅拷?锟藉彉鍖栭噺
 
 //	
 //  __HAL_TIM_SET_COUNTER(&htim4, ENCODER_COUNT_MEDIAN); //计数器�?�重新置�?
 //}
+static uint32_t encoder_Frist_Flag = 1;
 
 void encoder_EOF(TIM_HandleTypeDef *htim_local,uint8_t *encoder_EOF_direction, int16_t *encoder_EOF_Variation)
 {
@@ -334,15 +345,24 @@ void encoder_EOF(TIM_HandleTypeDef *htim_local,uint8_t *encoder_EOF_direction, i
 
   ec11_Direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(htim_local);  
   ec11_Pulses = __HAL_TIM_GET_COUNTER(htim_local);	//获取定时器的�?
-  ec11_Variation = ec11_Pulses - ENCODER_COUNT_MEDIAN; //计算脉冲变化�?
+	//娑堥櫎缂栫爜鍣ㄥ垵濮嬮敊璇暟鍊?
+	while((ec11_Pulses==0)&&(encoder_Frist_Flag==1))
+	{
+		soft_Delay(1);
+		__HAL_TIM_SET_COUNTER(htim_local, ENCODER_COUNT_MEDIAN);
+		ec11_Pulses = __HAL_TIM_GET_COUNTER(htim_local);
+	}
+	encoder_Frist_Flag=0;
+  ec11_Variation = ec11_Pulses - ENCODER_COUNT_MEDIAN; //璁＄畻鑴夊啿鍙樺寲锟??
 
   *encoder_EOF_direction = ec11_Direction;  //传�?�方�?
-  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //传�?�变化量
+  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //浼狅拷?锟藉彉鍖栭噺
 	
-//	if((ec11_Direction>0)&&(*encoder_EOF_Variation<0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
-//	if((ec11_Direction<0)&&(*encoder_EOF_Variation>0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
-	
-  __HAL_TIM_SET_COUNTER(htim_local, ENCODER_COUNT_MEDIAN); //计数器�?�重新置�?
+	//if((ec11_Direction>0)&&(*encoder_EOF_Variation<0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
+	//if((ec11_Direction<0)&&(*encoder_EOF_Variation>0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
+	if((ec11_Direction>0)&&(*encoder_EOF_Variation<0)) *encoder_EOF_Variation=0;
+	if((ec11_Direction<0)&&(*encoder_EOF_Variation>0)) *encoder_EOF_Variation=0;
+  __HAL_TIM_SET_COUNTER(htim_local, ENCODER_COUNT_MEDIAN); //璁℃暟鍣拷?锟介噸鏂扮疆锟??
 }
 
 

@@ -28,11 +28,14 @@
 #include <KnobController.hpp> 
 #include "W25Qx.h"
 
-
 using namespace touchgfx;
-static KeyController kc;//静态变量
-static KnobController knc;
+static KeyController kc;//静�?�变�?
+//static KnobController knc;
 
+uint32_t text_i;
+__IO uint16_t *ptr_get;
+__IO uint16_t *ptr_last;
+__IO uint32_t ptr_err;
 #include <touchgfx/hal/OSWrappers.hpp>
 extern "C"{
 	void TouchGFXHAL_TE(void)
@@ -83,14 +86,14 @@ void TouchGFXHAL::initialize()
 		
     Bitmap::removeCache();
     uint16_t* cacheStartAddr = (uint16_t*)0x6004B000;
-    uint32_t cacheSize = 0xB5000; //724KB
+    uint32_t cacheSize = 0xB5000; //741KB
     touchgfx::Bitmap::setCache(cacheStartAddr, cacheSize);
-		//touchgfx::Bitmap::cacheAll();
+		touchgfx::Bitmap::cacheAll();
 	
 		kc.init ();//kc为Key Controller
 	  setButtonController (&kc);
-	  knc.init ();
-	  setButtonController (&knc);
+//	  knc.init ();
+	  //setButtonController (&knc);
 }
 
 /**
@@ -144,51 +147,60 @@ void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
 
 	
 	
-			/*
-			uint16_t local_w,local_h=0;//记录touchgfx瞬时渲染一维数组指针位置
-			uint16_t cout_w,cout_h=0;//局部渲染数组循环计数
-			uint16_t color16=0;//8位转16位临时存储变量
-			uint32_t i = 0;//8位转16位key值
-			//LCD_Address_Set(lcdinfo.x,lcdinfo.y,lcdinfo.w,lcdinfo.h+lcdinfo.y);//1.每区域 设置光标矩形位置
-			for(cout_h=0;cout_h<lcdinfo.h;cout_h++)
-			{
-				//LCD_Address_Set(lcdinfo.x,lcdinfo.y+local_h,lcdinfo.w,lcdinfo.y+local_h);//2.每行刷新 设置光标矩形位置 兼顾性能和撕裂
-				//进行行刷新
-				for(cout_w=0;cout_w<lcdinfo.w;cout_w++)
-				{
-					color16 = lcdinfo.pixels[i];
-					color16 |= ((uint16_t)(lcdinfo.pixels[i+1]) << 8);
-					LCD_Address_Set(lcdinfo.x+cout_w,lcdinfo.y+local_h,lcdinfo.x+cout_w,lcdinfo.y+local_h);//3.设置光标点位置 可完美解决画面撕裂问题 但会降低刷新速度
-					LCD_IO_WriteData(color16);
-					local_w++;
-					i += 2;
-				}
-				local_h++;
-			}
-			local_w=local_h=0;
-			*/
+			
+//			uint16_t local_w,local_h=0;//记录touchgfx瞬时渲染�?维数组指针位�?
+//			uint16_t cout_w,cout_h=0;//�?部渲染数组循环计�?
+//			uint16_t color16=0;//8位转16位临时存储变�?
+//			uint32_t i = 0;//8位转16位key�?
+//			//LCD_Address_Set(lcdinfo.x,lcdinfo.y,lcdinfo.w,lcdinfo.h+lcdinfo.y);//1.每区�? 设置光标矩形位置
+//			for(cout_h=0;cout_h<lcdinfo.h;cout_h++)
+//			{
+//				//LCD_Address_Set(lcdinfo.x,lcdinfo.y+local_h,lcdinfo.w,lcdinfo.y+local_h);//2.每行刷新 设置光标矩形位置 兼顾性能和撕�?
+//				//进行行刷�?
+//				for(cout_w=0;cout_w<lcdinfo.w;cout_w++)
+//				{
+//					color16 = lcdinfo.pixels[i];
+//					color16 |= ((uint16_t)(lcdinfo.pixels[i+1]) << 8);
+//					LCD_Address_Set(lcdinfo.x+cout_w,lcdinfo.y+local_h,lcdinfo.x+cout_w,lcdinfo.y+local_h);//3.设置光标点位�? 可完美解决画面撕裂问�? 但会降低刷新速度
+//					LCD_IO_WriteData(color16);
+//					local_w++;
+//					i += 2;
+//				}
+//				local_h++;
+//			}
+//			local_w=local_h=0;
+//			
+
 	
 	__IO uint16_t *ptr;
-	uint32_t width;
 	uint32_t height;
 
-	LCD_Address_Set(rect.x,rect.y,rect.x+rect.width-1,rect.y+rect.height-1);
+	//LCD_Address_Set(0,0,319,479);
+	//LCD_Address_Set(rect.x,rect.y,rect.x+rect.width-1,rect.y+rect.height-1);
 	
 	for(height = 0;height<rect.height; height++)
-	{
-		ptr = getClientFrameBuffer() + rect.x + (height + rect.y) *480;
-		
+	{		
+		ptr = getClientFrameBuffer() + rect.x + (height + rect.y) * HAL::DISPLAY_WIDTH;
+
+		LCD_Address_Set(rect.x,height+rect.y,rect.x+rect.width-1,rect.y+height);
+		//LCD_Address_Set(0,height,479,height);
+//		
 		LCD_IO_WriteMultipleData_User((uint16_t *)ptr, rect.width);
+//		
+//		text_i=height;
+		
 	}
 	
   TouchGFXGeneratedHAL::flushFrameBuffer(rect);
 }
-
+void* dest_test; 
 bool TouchGFXHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes)
 {
 
+	dest_test = dest;
+	
 	const uint32_t ExflashStart = 0x90000000;
-	const uint32_t ExflashSize = 16*1024*1024;//外置FLASH 16MB
+	const uint32_t ExflashSize = 16*1024*1024;//外置FLASH 16MB 
 	uint32_t dataffset = (uint32_t)src;
 	if((dataffset >= ExflashStart)&&(dataffset < ExflashStart + ExflashSize))
 	{
@@ -201,7 +213,7 @@ bool TouchGFXHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint3
 		return true;		
 	}
 	else
-		return TouchGFXGeneratedHAL::blockCopy(dest, src, numBytes);
+		return HAL::blockCopy(dest, src, numBytes);
 	//return TouchGFXGeneratedHAL::blockCopy(dest, src, numBytes);
 }
 

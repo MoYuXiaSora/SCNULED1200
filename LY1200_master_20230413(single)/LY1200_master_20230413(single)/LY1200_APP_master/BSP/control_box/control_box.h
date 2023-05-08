@@ -28,6 +28,7 @@ struct KNOB
 	int16_t mapping_Values;//旋钮映射后的数值
   uint8_t key_State;  		//旋钮中键状态   0为悬空 1为按下
 	uint8_t knob_State;  		//旋钮旋转状态   0为距离上次读取未被旋转 1为被选转
+	uint8_t clear_Flag;			//清除标志位
 	//int16_t i;//测试使用
 };
 
@@ -41,17 +42,20 @@ struct KNOB
 #define KEY1_Pin_SET 1
 #define KEY2_Pin_SET 2
 #define KEY3_Pin_SET 3
-#define KEY6_Pin_SET 6
+#define KEY6_Pin_SET 6 
 #define KEY10_Pin_SET 10
 #define KEY_UP_Pin_SET 3
 #define NOKEY_VALUE -1
 
+#define CLEAR_FLAG_ON 1
+#define CLEAR_FLAG_OFF 0
 
 struct KEY
 {
     /* data */
   uint8_t state;  		//按键状态 0为无按键被按下 1为存在按键被按下
 	int16_t value;	//不同按键按下对应的键值
+	uint8_t clear_Flag;			//清除标志位
 };
 
 uint8_t knob_Input(struct KNOB *knob_local,uint8_t mapping_Values_Local);
@@ -63,7 +67,7 @@ struct BOX_INPUT
 	struct KNOB knob2;
 	struct KEY key;
 };
-
-struct KEY button_scanning();
-
+struct KEY button_scanning(uint8_t clear_Flag_Local);
+extern uint32_t ScreenMenuNumberGFX;
+extern uint8_t GFXLevels[5];
 #endif  // CONTROL_BOX_H_

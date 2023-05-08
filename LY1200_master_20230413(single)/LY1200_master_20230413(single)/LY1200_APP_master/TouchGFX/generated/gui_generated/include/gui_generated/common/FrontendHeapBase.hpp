@@ -12,8 +12,30 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screencct_screen/ScreenCCTView.hpp>
-#include <gui/screencct_screen/ScreenCCTPresenter.hpp>
+#include <gui/screenmenu_screen/ScreenMenuView.hpp>
+#include <gui/screenmenu_screen/ScreenMenuPresenter.hpp>
+#include <gui/screen1_screen/Screen1View.hpp>
+#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/screenfan_screen/ScreenFanView.hpp>
+#include <gui/screenfan_screen/ScreenFanPresenter.hpp>
+#include <gui/screencurve_screen/ScreenCurveView.hpp>
+#include <gui/screencurve_screen/ScreenCurvePresenter.hpp>
+#include <gui/screeneffect_screen/ScreenEffectView.hpp>
+#include <gui/screeneffect_screen/ScreenEffectPresenter.hpp>
+#include <gui/screeneffectset_screen/ScreenEffectSetView.hpp>
+#include <gui/screeneffectset_screen/ScreenEffectSetPresenter.hpp>
+#include <gui/screencontrol_screen/ScreenControlView.hpp>
+#include <gui/screencontrol_screen/ScreenControlPresenter.hpp>
+#include <gui/screendmx_screen/ScreenDMXView.hpp>
+#include <gui/screendmx_screen/ScreenDMXPresenter.hpp>
+#include <gui/screenbluetooth_screen/ScreenBluetoothView.hpp>
+#include <gui/screenbluetooth_screen/ScreenBluetoothPresenter.hpp>
+#include <gui/screenlanguage_screen/ScreenLanguageView.hpp>
+#include <gui/screenlanguage_screen/ScreenLanguagePresenter.hpp>
+#include <gui/screenstudio_screen/ScreenStudioView.hpp>
+#include <gui/screenstudio_screen/ScreenStudioPresenter.hpp>
+#include <gui/screenupdate_screen/ScreenUpdateView.hpp>
+#include <gui/screenupdate_screen/ScreenUpdatePresenter.hpp>
 
 
 /**
@@ -36,8 +58,19 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< ScreenCCTView,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< ScreenMenuView,
+            touchgfx::meta::TypeList< Screen1View,
+            touchgfx::meta::TypeList< ScreenFanView,
+            touchgfx::meta::TypeList< ScreenCurveView,
+            touchgfx::meta::TypeList< ScreenEffectView,
+            touchgfx::meta::TypeList< ScreenEffectSetView,
+            touchgfx::meta::TypeList< ScreenControlView,
+            touchgfx::meta::TypeList< ScreenDMXView,
+            touchgfx::meta::TypeList< ScreenBluetoothView,
+            touchgfx::meta::TypeList< ScreenLanguageView,
+            touchgfx::meta::TypeList< ScreenStudioView,
+            touchgfx::meta::TypeList< ScreenUpdateView,
+            touchgfx::meta::Nil > > > > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -49,8 +82,19 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< ScreenCCTPresenter,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< ScreenMenuPresenter,
+            touchgfx::meta::TypeList< Screen1Presenter,
+            touchgfx::meta::TypeList< ScreenFanPresenter,
+            touchgfx::meta::TypeList< ScreenCurvePresenter,
+            touchgfx::meta::TypeList< ScreenEffectPresenter,
+            touchgfx::meta::TypeList< ScreenEffectSetPresenter,
+            touchgfx::meta::TypeList< ScreenControlPresenter,
+            touchgfx::meta::TypeList< ScreenDMXPresenter,
+            touchgfx::meta::TypeList< ScreenBluetoothPresenter,
+            touchgfx::meta::TypeList< ScreenLanguagePresenter,
+            touchgfx::meta::TypeList< ScreenStudioPresenter,
+            touchgfx::meta::TypeList< ScreenUpdatePresenter,
+            touchgfx::meta::Nil > > > > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -73,7 +117,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreenCCTScreenNoTransition();
+        app.gotoScreenMenuScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

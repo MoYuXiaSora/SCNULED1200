@@ -37,7 +37,7 @@ extern CAN_HandleTypeDef hcan1;
 
 /* USER CODE BEGIN Private defines */
 
-//该�?�辑遵循CMSIS_RTOS2标识符�?�辑
+//璇ワ拷?锟借緫閬靛惊CMSIS_RTOS2鏍囪瘑绗︼拷?锟借緫
 #define thisOK 0
 #define thisERROR -1
 //驱动板状态标识符

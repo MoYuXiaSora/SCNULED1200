@@ -16,8 +16,8 @@
         <TargetCommonOption>
           <Device>STM32F407ZGTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.16.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.2.0</PackID>
+          <PackURL>http://www.keil.com/pack</PackURL>
           <Cpu>IRAM(0x20000000-0x2001BFFF) IRAM2(0x2001C000-0x2001FFFF) IROM(0x8000000-0x80FFFFF)  CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -993,6 +993,11 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\control_box\control_box.c</FilePath>
             </File>
+            <File>
+              <FileName>frame.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\ESP32C3\frame.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1546,14 +1551,124 @@
               <FilePath>../touchgfx/gui/src/model/model.cpp</FilePath>
             </File>
             <File>
-              <FileName>ScreenCCTPresenter.cpp</FileName>
+              <FileName>Screen1Presenter.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screencct_screen/screencctpresenter.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/screen1_screen/screen1presenter.cpp</FilePath>
             </File>
             <File>
-              <FileName>ScreenCCTView.cpp</FileName>
+              <FileName>Screen1View.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screencct_screen/screencctview.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/screen1_screen/screen1view.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenBluetoothPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenbluetooth_screen/screenbluetoothpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenBluetoothView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenbluetooth_screen/screenbluetoothview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenControlPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screencontrol_screen/screencontrolpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenControlView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screencontrol_screen/screencontrolview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenCurvePresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screencurve_screen/screencurvepresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenCurveView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screencurve_screen/screencurveview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenDMXPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screendmx_screen/screendmxpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenDMXView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screendmx_screen/screendmxview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenEffectPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screeneffect_screen/screeneffectpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenEffectSetPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screeneffectset_screen/screeneffectsetpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenEffectSetView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screeneffectset_screen/screeneffectsetview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenEffectView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screeneffect_screen/screeneffectview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenFanPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenfan_screen/screenfanpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenFanView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenfan_screen/screenfanview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenLanguagePresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenlanguage_screen/screenlanguagepresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenLanguageView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenlanguage_screen/screenlanguageview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenMenuPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenmenu_screen/screenmenupresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenMenuView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenmenu_screen/screenmenuview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenStudioPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenstudio_screen/screenstudiopresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenStudioView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenstudio_screen/screenstudioview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenUpdatePresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenupdate_screen/screenupdatepresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenUpdateView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screenupdate_screen/screenupdateview.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -1581,14 +1696,179 @@
               <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_0.cpp</FilePath>
             </File>
             <File>
+              <FileName>Font_simfang_17_4bpp_10.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_10.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_11.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_11.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_12.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_12.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_13.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_13.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_14.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_14.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_15.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_15.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_16.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_16.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_17.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_17.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_18.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_18.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_19.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_19.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_31.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_31.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_17_4bpp_9.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_9.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Font_simfang_25_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_40_4bpp_0.cpp</FileName>
+              <FileName>Font_simfang_25_4bpp_10.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_40_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_10.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_11.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_11.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_12.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_12.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_13.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_13.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_14.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_14.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_15.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_15.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_16.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_16.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_18.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_18.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_19.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_19.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_25_4bpp_9.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_9.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_10.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_10.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_11.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_11.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_12.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_12.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_13.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_13.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_14.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_14.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_15.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_15.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_16.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_16.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_17.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_17.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_18.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_18.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_19.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_19.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_simfang_35_4bpp_9.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_9.cpp</FilePath>
             </File>
             <File>
               <FileName>FontCache.cpp</FileName>
@@ -1606,9 +1886,119 @@
               <FilePath>../touchgfx/generated/fonts/src/generatedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_R.cpp</FileName>
+              <FileName>image_alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_r.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_alternate_theme_images_widgets_circleprogress_backgrounds_large.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_circleprogress_backgrounds_large.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_alternate_theme_images_widgets_imageprogress_plain_normal_large.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_imageprogress_plain_normal_large.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_alternate_theme_images_widgets_imageprogress_plain_normal_large_active.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_imageprogress_plain_normal_large_active.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_badBulbs.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_badbulbs.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_Bluetooth_reset.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_bluetooth_reset.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_control.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_control.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_curve.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_curve.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_Dark_ProgressIndicators_bg_large_circle_indicator_bg_line_half.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_dark_progressindicators_bg_large_circle_indicator_bg_line_half.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_DMX_press.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_dmx_press.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_explode.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_explode.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_fan.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_fan.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_firework.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_firework.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_flash.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_flash.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_language.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_language.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_lightning.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_lightning.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_no.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_no.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_paparazzi.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_paparazzi.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_pulse.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_pulse.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_studio.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_studio.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_tv.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_tv.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_update.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_update.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_yes.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_yes.cpp</FilePath>
             </File>
             <File>
               <FileName>Kerning_simfang_17_4bpp.cpp</FileName>
@@ -1621,9 +2011,14 @@
               <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_25_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_simfang_40_4bpp.cpp</FileName>
+              <FileName>Kerning_simfang_35_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_40_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_35_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>LanguageEn.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/texts/src/languageen.cpp</FilePath>
             </File>
             <File>
               <FileName>LanguageGb.cpp</FileName>
@@ -1631,9 +2026,64 @@
               <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
             </File>
             <File>
-              <FileName>ScreenCCTViewBase.cpp</FileName>
+              <FileName>Screen1ViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/screencct_screen/screencctviewbase.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/screen1_screen/screen1viewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenBluetoothViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screenbluetooth_screen/screenbluetoothviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenControlViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screencontrol_screen/screencontrolviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenCurveViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screencurve_screen/screencurveviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenDMXViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screendmx_screen/screendmxviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenEffectSetViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screeneffectset_screen/screeneffectsetviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenEffectViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screeneffect_screen/screeneffectviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenFanViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screenfan_screen/screenfanviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenLanguageViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screenlanguage_screen/screenlanguageviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenMenuViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screenmenu_screen/screenmenuviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenStudioViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screenstudio_screen/screenstudioviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenUpdateViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screenupdate_screen/screenupdateviewbase.cpp</FilePath>
             </File>
             <File>
               <FileName>SVGDatabase.cpp</FileName>
@@ -1651,9 +2101,9 @@
               <FilePath>../touchgfx/generated/fonts/src/table_simfang_25_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_simfang_40_4bpp.cpp</FileName>
+              <FileName>Table_simfang_35_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_simfang_40_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_simfang_35_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>
@@ -1754,11 +2204,6 @@
             </GroupArmAds>
           </GroupOption>
           <Files>
-            <File>
-              <FileName>KnobController.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\TouchGFX\target\KnobController.cpp</FilePath>
-            </File>
             <File>
               <FileName>KeyController.cpp</FileName>
               <FileType>8</FileType>

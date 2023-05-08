@@ -17,19 +17,85 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoScreenCCTScreenNoTransition();
+        gotoScreenMenuScreenNoTransition();
     }
 
-    // ScreenCCT
-    void gotoScreenCCTScreenNoTransition();
+    // ScreenMenu
+    void gotoScreenMenuScreenNoTransition();
+
+    // Screen1
+    void gotoScreen1ScreenNoTransition();
+
+    // ScreenFan
+    void gotoScreenFanScreenNoTransition();
+
+    // ScreenCurve
+    void gotoScreenCurveScreenNoTransition();
+
+    // ScreenEffect
+    void gotoScreenEffectScreenNoTransition();
+
+    // ScreenEffectSet
+    void gotoScreenEffectSetScreenNoTransition();
+
+    // ScreenControl
+    void gotoScreenControlScreenNoTransition();
+
+    // ScreenDMX
+    void gotoScreenDMXScreenNoTransition();
+
+    // ScreenBluetooth
+    void gotoScreenBluetoothScreenNoTransition();
+
+    // ScreenLanguage
+    void gotoScreenLanguageScreenNoTransition();
+
+    // ScreenStudio
+    void gotoScreenStudioScreenNoTransition();
+
+    // ScreenUpdate
+    void gotoScreenUpdateScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // ScreenCCT
-    void gotoScreenCCTScreenNoTransitionImpl();
+    // ScreenMenu
+    void gotoScreenMenuScreenNoTransitionImpl();
+
+    // Screen1
+    void gotoScreen1ScreenNoTransitionImpl();
+
+    // ScreenFan
+    void gotoScreenFanScreenNoTransitionImpl();
+
+    // ScreenCurve
+    void gotoScreenCurveScreenNoTransitionImpl();
+
+    // ScreenEffect
+    void gotoScreenEffectScreenNoTransitionImpl();
+
+    // ScreenEffectSet
+    void gotoScreenEffectSetScreenNoTransitionImpl();
+
+    // ScreenControl
+    void gotoScreenControlScreenNoTransitionImpl();
+
+    // ScreenDMX
+    void gotoScreenDMXScreenNoTransitionImpl();
+
+    // ScreenBluetooth
+    void gotoScreenBluetoothScreenNoTransitionImpl();
+
+    // ScreenLanguage
+    void gotoScreenLanguageScreenNoTransitionImpl();
+
+    // ScreenStudio
+    void gotoScreenStudioScreenNoTransitionImpl();
+
+    // ScreenUpdate
+    void gotoScreenUpdateScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP
