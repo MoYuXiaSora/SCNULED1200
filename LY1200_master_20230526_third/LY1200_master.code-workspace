@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cct.h": "c",
+			"can.h": "c",
+			"fan.h": "c",
+			"bsp.h": "c",
+			"rng.h": "c",
+			"stddef.h": "c",
+			"light_effect.h": "c"
+		}
+	}
+}
