@@ -58,7 +58,7 @@ void touchgfx_enable_stdio();
  */
 void touchgfx_printf(const char* format, ...);
 #else
-#define touchgfx_printf(format, ...)
+//#define touchgfx_printf(format, ...)
 #endif
 
 namespace touchgfx

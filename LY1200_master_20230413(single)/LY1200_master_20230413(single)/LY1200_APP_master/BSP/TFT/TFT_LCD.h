@@ -5,7 +5,7 @@
 #include "stdint.h"
 #include "gpio.h"
 
-#define DFT_SCAN_DIR  D2U_L2R  //默认的扫描方向
+#define DFT_SCAN_DIR  U2D_R2L  //默认的扫描方向
 
 //扫描方向定义
 #define L2R_U2D  0x00 //从左到右,从上到下（正向）

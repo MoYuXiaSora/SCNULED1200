@@ -142,7 +142,7 @@ uint8_t GetReadyToOTA(uint8_t FrameData[])
 		OtaAddressFrame[1] = (uint8_t)(OtaFile1.ExpectedLenth>>24);    
     // memcpy (Otafile1.data,FileData,Otafile1.lenth);
     ReturnFrame(0x05, 0x05, OtaAddressFrame ,11);
-		printf("0x05");
+		//printf("0x05");
     return 0;
 }
 
@@ -170,7 +170,7 @@ uint8_t LoadOTAData(uint8_t FrameData[])
           OtaFile1.CRC32_Caled = 0xffffffff;
 					OtaFile1.lenth = 0x00000000;
 					OtaFile1.ExpectedLenth = 0x00000000;
-					printf("0x06 right");
+					//printf("0x06 right");
 					soft_Delay(500); //等待DMA发送完毕，测试代码可删除
 					memset(OtaFile1.data, 0, 500); //
           

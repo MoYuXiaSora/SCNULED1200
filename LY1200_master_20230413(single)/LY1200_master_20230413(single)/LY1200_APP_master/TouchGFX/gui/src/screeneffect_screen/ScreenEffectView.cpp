@@ -1,6 +1,7 @@
 #include <gui/screeneffect_screen/ScreenEffectView.hpp>
 #include "math.h"
 #include "control_box.h"
+#include <string.h> 
 #define max(x,y) ( x>y?x:y )
 #define min(x,y) ( x<y?x:y )
 
@@ -29,14 +30,16 @@ extern "C"
 				return EffcheckFinalCal(Levels);
 			
 			case 0x07://key menu
-				Levels[MenuLevel]=0;
+//				Levels[MenuLevel]=0;
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0
 			  return 0x0000c;		
 			case 0x08://key cct
-				Levels[MenuLevel]=0;
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0
 			  return 0x0000d;			
-			
+			case 0x09://key effect is pressed
+				return 0x0000e;
 			case 0x0a://key back
-				Levels[MenuLevel]=0;	
+				Levels[MenuLevel]=0;	//back
 			  return 0x0000c;
 			default:
 				return EffcheckFinalCal(Levels) ;
@@ -146,7 +149,9 @@ void ScreenEffectView::handleKeyEvent(uint8_t key)
 		case 0x0000c://key menu key back
 			   application().gotoScreenMenuScreenNoTransition();// go to menu
 		break;
-		
+		 case 0x0000e://key effect
+			 application().gotoScreenEffectScreenNoTransition();		
+		 break;
 		default:
 			break;
 	}

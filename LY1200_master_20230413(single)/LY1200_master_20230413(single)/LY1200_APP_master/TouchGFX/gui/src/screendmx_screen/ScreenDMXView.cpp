@@ -1,6 +1,7 @@
 #include <gui/screendmx_screen/ScreenDMXView.hpp>
 #include "math.h"
 #include "control_box.h"
+#include <string.h>
 #define max(x,y) ( x>y?x:y )
 #define min(x,y) ( x<y?x:y )
  //层级为第3层=2； 0，1，2，3，4 数组索引
@@ -16,6 +17,7 @@ extern "C"
 				return DMXcheckFinalCal(Levels);
 			case 0x01:
 				Levels[MenuLevel] += (-1)*min((GFXKeys&0x0F),Levels[MenuLevel]);
+			  Levels[MenuLevel] = max(Levels[MenuLevel],1);//边缘保护
 				return DMXcheckFinalCal(Levels);//MenuLevel=2
 			case 0x02:
 				Levels[MenuLevel] += (GFXKeys&0x0F);
@@ -28,21 +30,24 @@ extern "C"
 				return DMXcheckFinalCal(Levels);
 			
 			case 0x07:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
-			  Levels[1]=0;
+//				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+//			  Levels[1]=0;
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0				
 			  MenuLevel=0;
 				return 0x00000;//返回menu
 			case 0x08:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
-			  Levels[1]=0;
+//				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+//			  Levels[1]=0;
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0				
 			  MenuLevel=0;
-			  Levels[0]=0x00; 
+//			  Levels[0]=0x00; 
 				return 0x0000d;//直接去cct界面
       case 0x09:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
-			  Levels[1]=0;
+//				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+//			  Levels[1]=0;
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0				
 			  MenuLevel=0;
-			  Levels[0]=0x00; 
+//			  Levels[0]=0x00; 
 				return 0x0000e;//直接去effect界面	
      						
 			case 0x0a:
@@ -95,11 +100,11 @@ void ScreenDMXView::handleKeyEvent(uint8_t key)
 		
 		
 		//knob1 pressed 
-		case 0x01120:	//按中第一个组件 Bluetooth
-//			    application().gotoScreenBluetoothScreenNoTransition();
+		case 0x01120:	//按中第一个组件 
+			
 		break;
-		case 0x01220://按中第二个组件 DMX
-//			    application().gotoScreenDMXScreenNoTransition();
+		case 0x01220://按中第二个组件
+
 		break;			
 		
 		//快捷键

@@ -1,6 +1,7 @@
 #include <gui/screenmenu_screen/ScreenMenuView.hpp>
 #include "math.h"
 #include "control_box.h"
+#include <string.h> 
 #define max(x,y) ( x>y?x:y )
 #define min(x,y) ( x<y?x:y )
 #define gotoCCT  0x0000d
@@ -30,11 +31,15 @@ extern "C"
 				return checkFinalCal(Levels);
 			
 			case 0x08://key cct is pressed 				
- 			  Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+// 			  Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+				memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0
 				return gotoCCT;//直接去cct界面
+			
 			case 0x09://key effect is pressed				
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+//				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+				memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0
 				return 0x0000e;//直接去effect界面
+			
     	default:
 			return checkFinalCal(Levels) ;
 		}

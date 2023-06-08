@@ -252,7 +252,9 @@ uint8_t driver_Data_Format(uint8_t drive_Switch_Local,float cold_Out,float warm_
     //判断LED功率是否超出1200W，超出则不输�?
     if(sum_electric_current>2000){first_electric_current=second_electric_current=third_electric_current=fourth_electric_current=0;}
     set_LED_power= sum_electric_current *2400/(1000*4);
-
+		
+		
+		/*//旧版驱动协议
     driver_TxData_Local[0] =0xaa; //第一帧帧�?0xaa
     driver_TxData_Local[1] =(first_electric_current / 256);//第一路恒流输出高八位0x00-0x0a
     driver_TxData_Local[2] =(first_electric_current % 256);//第一路恒流输出低八位0x00-0x63
@@ -272,6 +274,30 @@ uint8_t driver_Data_Format(uint8_t drive_Switch_Local,float cold_Out,float warm_
     even_parity_flag=even_parity(driver_TxData_Local, 8, 13);
     driver_TxData_Local[14]=even_parity_flag;//第二帧前6位偶校验
     driver_TxData_Local[15]=0xff;//第二路帧�?0xff
+		*/
+
+
+		//新版驱动协议
+		driver_TxData_Local[0] =0xbb;//第二帧帧头0xbb
+    driver_TxData_Local[1] =(third_electric_current / 256);//第三路恒流输出高八位0x00-0x0a
+    driver_TxData_Local[2]=(third_electric_current % 256);//第三路恒流输出低八位0x00-0x63
+    driver_TxData_Local[3]=(fourth_electric_current / 256);//第四路恒流输出高八位0x00-0x0a
+    driver_TxData_Local[4]=(fourth_electric_current % 256);//第四路恒流输出低八位0x00-0x63
+    driver_TxData_Local[5]=fan_Ratio_Local;                     //第五路DC0-12V输出0x00-0x64
+    even_parity_flag=even_parity(driver_TxData_Local, 0, 5);
+    driver_TxData_Local[6]=even_parity_flag;//第二帧前6位偶校验
+    driver_TxData_Local[7]=0xff;//第二路帧尾0xff	
+		
+    driver_TxData_Local[8] =0xaa; //第一帧帧头0xaa
+    driver_TxData_Local[9] =(first_electric_current / 256);//第一路恒流输出高八位0x00-0x0a
+    driver_TxData_Local[10] =(first_electric_current % 256);//第一路恒流输出低八位0x00-0x63
+    driver_TxData_Local[11] =(second_electric_current / 256);//第二路恒流输出高八位0x00-0x0a
+    driver_TxData_Local[12] =(second_electric_current % 256);//第二路恒流输出低八位0x00-0x63
+    driver_TxData_Local[13] =drive_Switch_Local;//开0x77关0x88机
+    even_parity_flag=even_parity(driver_TxData_Local, 8, 13);
+    driver_TxData_Local[14] =even_parity_flag;//第一帧前6位偶校验
+    driver_TxData_Local[15] =0xff;//第一帧帧尾
+		
 }
 
 /* USER CODE END 1 */
