@@ -1,6 +1,7 @@
 #include <gui/screenstudio_screen/ScreenStudioView.hpp>
 #include "math.h"
 #include "control_box.h"
+#include <string.h>
 
  //层级为第二层=1； 0，1，2，3，4 数组索引
 extern "C"
@@ -12,25 +13,24 @@ extern "C"
 	uint64_t StucalVarition (uint8_t GFXKeys, uint8_t Levels[]){ //按键对应的值取高位进行case
 		switch ((GFXKeys&0xF0)>>4){
 			case 0x00:
-				return StucheckFinalCal(Levels);
-			
+				return StucheckFinalCal(Levels);			
 //			case 0x06:
 //				Levels[MenuLevel+1] = 1;
 //			  MenuLevel+=1;//层级加1 为2
 //				return StucheckFinalCal(Levels);
 			case 0x07:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.			
 			  MenuLevel=0;				
 				return 0x00003;//返回menu
+			
 			case 0x08:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0		Levels[MenuLevel]=0x00;//将该层数组值置为0 
 			  MenuLevel=0;
-			  Levels[0]=0x00; 
 				return 0x0000d;//直接去cct界面
+			
       case 0x09:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00003.
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0	 Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00003.
 			  MenuLevel=0;
-			  Levels[0]=0x00; //该层00000
 				return 0x0000e;//直接去effect界面	
      						
 			case 0x0a:

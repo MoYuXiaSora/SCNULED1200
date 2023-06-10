@@ -39,7 +39,7 @@ extern "C"
 				}//Frequency down
 				
 			case 0x04://knob2右移
-        if(FrequencySeting == 0){	//		
+        if(FrequencySeting == 0){		
 					return 0x00050;
 				}//temperature up
 				else{
@@ -47,16 +47,19 @@ extern "C"
 				}//Frequency up
 				
 			case 0x07://key menu is pressed
-				Levels[0]=0;
-			  Levels[1]=0;
-			  Levels[2]=0;
+//				Levels[0]=0;
+//			  Levels[1]=0;
+//			  Levels[2]=0;
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0				
 				MenuLevel=0;
 				return 0x0000c;//go to menu c只是数值 eg c d e 返回数组还是menu0x00000.
+			case 0x08://key cct is pressed
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0	
+				MenuLevel=0;//			
+				return 0x0000d;			
 			
 			case 0x09://key effect is pressed
-				Levels[0]=0;
-			  Levels[1]=0;
-			  Levels[2]=0;
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0	
 				MenuLevel=0;//等同back键 pressed 0x00000.			
 				return 0x0000e;
 			
@@ -93,8 +96,42 @@ void ScreenEffectSetView::GetEffectType(uint8_t EffectType)
 			Light_count=presenter->getPexplodeLight();	
 			Frequency_count=presenter->getPexplodeFrequency();			
 		break;
-				//...
+				
+		case 2:
+			Temperature_count=presenter->getPfireworkTemperature();//刷新新界面，用指针presenter 读取记录好的数值
+			Light_count=presenter->getPfireworkLight();	
+			Frequency_count=presenter->getPfireworkFrequency();			
+		break;
 		
+		case 3:
+			Temperature_count=presenter->getPflashTemperature();//刷新新界面，用指针presenter 读取记录好的数值
+			Light_count=presenter->getPflashLight();	
+			Frequency_count=presenter->getPflashFrequency();			
+		break;
+				
+		case 4:
+			Temperature_count=presenter->getPlightingTemperature();//刷新新界面，用指针presenter 读取记录好的数值
+			Light_count=presenter->getPlightingLight();	
+			Frequency_count=presenter->getPlightingFrequency();			
+		break;		
+
+		case 5:
+			Temperature_count=presenter->getPpaparazziTemperature();//刷新新界面，用指针presenter 读取记录好的数值
+			Light_count=presenter->getPpaparazziLight();	
+			Frequency_count=presenter->getPpaparazziFrequency();
+		break;
+		
+		case 6:
+			Temperature_count=presenter->getPpulseTemperature();//刷新新界面，用指针presenter 读取记录好的数值
+			Light_count=presenter->getPpulseLight();	
+			Frequency_count=presenter->getPpulseFrequency();			
+		break;
+				
+		case 7:
+			Temperature_count=presenter->getPtvTemperature();//刷新新界面，用指针presenter 读取记录好的数值
+			Light_count=presenter->getPtvLight();	
+			Frequency_count=presenter->getPtvFrequency();			
+		break;		
 		default:
 		break;
 		//...
@@ -116,6 +153,41 @@ void ScreenEffectSetView::SaveEffectType(uint8_t ViewEffectType)
 			presenter->savePexplodeFrequency(Frequency_count);			
 			break;
 			//....	
+		case 2:
+			presenter->savePfireworkLight(Light_count);
+			presenter->savePfireworkTemperature(Temperature_count);
+			presenter->savePfireworkFrequency(Frequency_count);
+		break;
+		
+		case 3:			//flash
+			presenter->savePflashLight(Light_count);
+			presenter->savePflashTemperature(Temperature_count);
+			presenter->savePflashFrequency(Frequency_count);			
+			break;		
+
+		case 4:
+			presenter->savePlightingLight(Light_count);
+			presenter->savePlightingTemperature(Temperature_count);
+			presenter->savePlightingFrequency(Frequency_count);
+		break;
+		
+		case 5:			
+			presenter->savePpaparazziLight(Light_count);
+			presenter->savePpaparazziTemperature(Temperature_count);
+			presenter->savePpaparazziFrequency(Frequency_count);			
+			break;
+			//....	
+		case 6:
+			presenter->savePpulseLight(Light_count);
+			presenter->savePpulseTemperature(Temperature_count);
+			presenter->savePpulseFrequency(Frequency_count);
+		break;
+		
+		case 7:			//flash
+			presenter->savePtvLight(Light_count);
+			presenter->savePtvTemperature(Temperature_count);
+			presenter->savePtvFrequency(Frequency_count);			
+			break;			
 		default:
 			break;
 
@@ -198,6 +270,10 @@ void ScreenEffectSetView::handleKeyEvent(uint8_t key)
 			 application().gotoScreenMenuScreenNoTransition();
 		 break;
 		 
+		 case 0x0000d:
+			  application().gotoScreen1ScreenNoTransition();// go to cct
+		 break;	
+		 
 		 case 0x00000:
 		 case 0x0000e://key effect
 			 application().gotoScreenEffectScreenNoTransition();
@@ -213,7 +289,7 @@ void ScreenEffectSetView::LightDown()
 	Light_count--;
 	Light_count=max(Light_count,0);
 	SaveEffectType(EffectType);	
-	touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
+//	touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
 	LightingProgress.setValue(Light_count);//给进度条设置亮度的值
 	LightingProgress.invalidate(); //更新显示进度条的值
 	//通配符显示
@@ -228,7 +304,7 @@ void ScreenEffectSetView::LightUp()
 	Light_count++;
 	Light_count=min(Light_count,100);
 	SaveEffectType(EffectType);	
-	touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
+//	touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
 	LightingProgress.setValue(Light_count);//给进度条设置亮度的值
 	LightingProgress.invalidate(); //更新显示进度条的值
 	//通配符显示
@@ -243,7 +319,7 @@ void ScreenEffectSetView::TemperatureDown()
 	Temperature_count-= 50;
 	Temperature_count=max(Temperature_count,2700);
 	SaveEffectType(EffectType);	
-	touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
+//	touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
 	TemperatureProgress.setValue(Temperature_count);//给进度条设置色温的值
 	TemperatureProgress.invalidate(); //更新显示半环进度条的值
 	//通配符显示
@@ -255,7 +331,7 @@ void ScreenEffectSetView::TemperatureUp()
 	Temperature_count+= 50;
 	Temperature_count=min(Temperature_count,6500);
 	SaveEffectType(EffectType);	
-	touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
+//	touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
 	TemperatureProgress.setValue(Temperature_count);//给进度条设置色温的值
 	TemperatureProgress.invalidate(); //更新显示半环进度条的值
 	//通配符显示
@@ -268,7 +344,7 @@ void ScreenEffectSetView::FrequencyDown()
 	Frequency_count=max(Frequency_count,0);
 	SaveEffectType(EffectType);	
 //	presenter->saveFrequency(Frequency_count);//特效较多时，增加很多函数，用其他枚举
-	touchgfx_printf("Frequency_count %ld \r\n", Frequency_count);//打印数据
+//	touchgfx_printf("Frequency_count %ld \r\n", Frequency_count);//打印数据
 	FrequencyProgress.setValue(Frequency_count);//给进度条设置值
 	FrequencyProgress.invalidate(); //更新显示进度条的值
 }
@@ -277,7 +353,7 @@ void ScreenEffectSetView::FrequencyUp()
 	Frequency_count++;
 	Frequency_count=min(Frequency_count,10);
 	SaveEffectType(EffectType);	
-	touchgfx_printf("Frequency_count %ld \r\n", Frequency_count);//打印数据
+//	touchgfx_printf("Frequency_count %ld \r\n", Frequency_count);//打印数据
 	FrequencyProgress.setValue(Frequency_count);//给进度条设置值
 	FrequencyProgress.invalidate(); //更新显示进度条的值	
 }

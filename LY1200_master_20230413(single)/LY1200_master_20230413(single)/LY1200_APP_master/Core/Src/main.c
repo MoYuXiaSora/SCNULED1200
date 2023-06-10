@@ -33,7 +33,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "system_data.h"
-
+#include <stdio.h>
 #include "bsp.h"
 
 /* USER CODE END Includes */
@@ -45,10 +45,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+//#pragma import(__use_no_semihosting_swi)
+//#pragma import(__use_no_semihosting) 
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+/* suport printf function, usemicrolib is unnecessary */
 
 /* USER CODE END PM */
 

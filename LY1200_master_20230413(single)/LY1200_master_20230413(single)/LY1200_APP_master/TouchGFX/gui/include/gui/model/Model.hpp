@@ -81,8 +81,163 @@ public:
 			return explode_Frequency;
 		}
 		
+				//effect界面参数 firework
+		void saveMfireworkTemperature(int saveTemperature)
+		{
+			firework_Temperature = saveTemperature;
+		}
+		void saveMfireworkLight(int saveLight)
+		{
+			firework_Light=saveLight;
+		}			
+		void saveMfireworkFrequency(int saveFrequency)
+		{
+			firework_Frequency=saveFrequency;
+		}					
+		int getMfireworkTemperature()
+		{
+			return firework_Temperature;
+		}
+		int  getMfireworkLight()
+		{
+			return firework_Light;
+		}			
+		int getMfireworkFrequency()
+		{
+			return firework_Frequency;
+		}		
+
+				//effect界面参数 flash
+		void saveMflashTemperature(int saveTemperature)
+		{
+			flash_Temperature = saveTemperature;
+		}
+		void saveMflashLight(int saveLight)
+		{
+			flash_Light=saveLight;
+		}			
+		void saveMflashFrequency(int saveFrequency)
+		{
+			flash_Frequency=saveFrequency;
+		}					
+		int getMflashTemperature()
+		{
+			return flash_Temperature;
+		}
+		int  getMflashLight()
+		{
+			return flash_Light;
+		}			
+		int getMflashFrequency()
+		{
+			return flash_Frequency;
+		}		
+
+				//effect界面参数 lighting
+		void saveMlightingTemperature(int saveTemperature)
+		{
+			lighting_Temperature = saveTemperature;
+		}
+		void saveMlightingLight(int saveLight)
+		{
+			lighting_Light=saveLight;
+		}			
+		void saveMlightingFrequency(int saveFrequency)
+		{
+			lighting_Frequency=saveFrequency;
+		}					
+		int getMlightingTemperature()
+		{
+			return lighting_Temperature;
+		}
+		int  getMlightingLight()
+		{
+			return lighting_Light;
+		}			
+		int getMlightingFrequency()
+		{
+			return lighting_Frequency;
+		}		
+
+				//effect界面参数 paparazzi
+		void saveMpaparazziTemperature(int saveTemperature)
+		{
+			paparazzi_Temperature = saveTemperature;
+		}
+		void saveMpaparazziLight(int saveLight)
+		{
+			paparazzi_Light=saveLight;
+		}			
+		void saveMpaparazziFrequency(int saveFrequency)
+		{
+			paparazzi_Frequency=saveFrequency;
+		}					
+		int getMpaparazziTemperature()
+		{
+			return paparazzi_Temperature;
+		}
+		int  getMpaparazziLight()
+		{
+			return paparazzi_Light;
+		}			
+		int getMpaparazziFrequency()
+		{
+			return paparazzi_Frequency;
+		}		
+
+				//effect界面参数 pulse
+		void saveMpulseTemperature(int saveTemperature)
+		{
+			pulse_Temperature = saveTemperature;
+		}
+		void saveMpulseLight(int saveLight)
+		{
+			pulse_Light=saveLight;
+		}			
+		void saveMpulseFrequency(int saveFrequency)
+		{
+			pulse_Frequency=saveFrequency;
+		}					
+		int getMpulseTemperature()
+		{
+			return pulse_Temperature;
+		}
+		int  getMpulseLight()
+		{
+			return pulse_Light;
+		}			
+		int getMpulseFrequency()
+		{
+			return pulse_Frequency;
+		}		
 		
-				
+
+				//effect界面参数 tv
+		void saveMtvTemperature(int saveTemperature)
+		{
+			tv_Temperature = saveTemperature;
+		}
+		void saveMtvLight(int saveLight)
+		{
+			tv_Light=saveLight;
+		}			
+		void saveMtvFrequency(int saveFrequency)
+		{
+			tv_Frequency=saveFrequency;
+		}					
+		int getMtvTemperature()
+		{
+			return tv_Temperature;
+		}
+		int  getMtvLight()
+		{
+			return tv_Light;
+		}			
+		int getMtvFrequency()
+		{
+			return tv_Frequency;
+		}		
+		
 		    void bind(ModelListener* listener)
     {
         modelListener = listener;
@@ -93,7 +248,7 @@ protected:
 	ModelListener* modelListener; //model有指向当前活动Presenter的指针 其类型是接口ModelListener
 	int CCT_Light_count;//cct界面
 	int CCT_Temperature_count;
-	int CCT_Frequency_count;
+
 
 	int badBulb_Light;//特效界面
 	int badBulb_Temperature;
@@ -101,7 +256,24 @@ protected:
 	int explode_Light;//特效界面
 	int explode_Temperature;
 	int explode_Frequency;
-
+	int firework_Light;//特效界面firework
+	int firework_Temperature;
+	int firework_Frequency;
+	int flash_Light;//特效界面flash
+	int flash_Temperature;
+	int flash_Frequency;
+	int lighting_Light;//特效界面lighting
+	int lighting_Temperature;
+	int lighting_Frequency;
+	int paparazzi_Light;//特效界面paparazzi
+	int paparazzi_Temperature;
+	int paparazzi_Frequency;
+	int pulse_Light;//特效界面pulse
+	int pulse_Temperature;
+	int pulse_Frequency;
+	int tv_Light;//特效界面tv
+	int tv_Temperature;
+	int tv_Frequency;
 
 };
 

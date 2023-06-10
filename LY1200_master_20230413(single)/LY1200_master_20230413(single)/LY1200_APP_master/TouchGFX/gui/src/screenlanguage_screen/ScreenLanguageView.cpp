@@ -2,6 +2,7 @@
 #include <texts/TextKeysAndLanguages.hpp>
 #include "math.h"
 #include "control_box.h"
+#include <string.h>
 #define max(x,y) ( x>y?x:y )
 #define min(x,y) ( x<y?x:y )
  //层级为第二层=1； 0，1，2，3，4 数组索引
@@ -17,6 +18,7 @@ extern "C"
 				return LancheckFinalCal(Levels);
 			case 0x01:
 				Levels[MenuLevel] += (-1)*min((GFXKeys&0x0F),Levels[MenuLevel]);
+			  Levels[MenuLevel] = max(Levels[MenuLevel],1);//转的范围			
 				return LancheckFinalCal(Levels);//MenuLevel=1
 			case 0x02:
 				Levels[MenuLevel] += (GFXKeys&0x0F);
@@ -29,18 +31,16 @@ extern "C"
 				return LancheckFinalCal(Levels);
 			
 			case 0x07:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.			
 			  MenuLevel=0;
 				return 0x00004;//返回menu
 			case 0x08:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0	Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
 			  MenuLevel=0;
-			  Levels[0]=0x00; 
 				return 0x0000d;//直接去cct界面
       case 0x09:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0	Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
 			  MenuLevel=0;
-			  Levels[0]=0x00; 
 				return 0x0000e;//直接去effect界面	
      						
 			case 0x0a:

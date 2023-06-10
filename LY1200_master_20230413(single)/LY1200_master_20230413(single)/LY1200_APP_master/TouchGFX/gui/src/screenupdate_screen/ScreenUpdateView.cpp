@@ -1,7 +1,7 @@
 #include <gui/screenupdate_screen/ScreenUpdateView.hpp>
 #include "math.h"
 #include "control_box.h"
-
+#include <string.h>
  //层级为第二层=1； 0，1，2，3，4 数组索引
 extern "C"
 {	
@@ -20,18 +20,20 @@ extern "C"
 //				return UpcheckFinalCal(Levels);
 			case 0x07:
 				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
-			  MenuLevel=0;
-			
+			  MenuLevel=0;			
 				return 0x00005;//返回menu
+			
 			case 0x08:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+//				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0				
 			  MenuLevel=0;
-			  Levels[0]=0x00; 
+//			  Levels[0]=0x00; 
 				return 0x0000d;//直接去cct界面
       case 0x09:
-				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+//				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
+			  memset(GFXLevels,0,sizeof(GFXLevels));//数组清为0				
 			  MenuLevel=0;
-			  Levels[0]=0x00; 
+//			  Levels[0]=0x00; 
 				return 0x0000e;//直接去effect界面	
      						
 			case 0x0a:

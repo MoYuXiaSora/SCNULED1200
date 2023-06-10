@@ -36,7 +36,7 @@ extern "C"
 			if(box_Data_gfx->knob1.direction == 0 && box_Data_gfx->knob1.mapping_Values!=1 && box_Data_gfx->knob1.mapping_Values!=0){ //如果向左转了变化幅度不能是1
 				CalVariationGFX|=(0x01<<4); //1按钮向左
 				CalVariationGFX|=(15-(box_Data_gfx->knob1.mapping_Values));
-			}else{
+			}else if(box_Data_gfx->knob1.direction == 1){
 				CalVariationGFX|=(0x02<<4); //按钮向右
 				CalVariationGFX|=min((box_Data_gfx->knob1.mapping_Values),15);
 			}
@@ -50,7 +50,7 @@ extern "C"
 			if(box_Data_gfx->knob2.direction == 0){
 				CalVariationGFX|=(0x03<<4);//2按钮向左
 				CalVariationGFX|=(15-(box_Data_gfx->knob2.mapping_Values));
-			}else{
+			}else if(box_Data_gfx->knob2.direction == 1){
 				CalVariationGFX|=(0x04<<4);//按钮向右
 				CalVariationGFX|=min((box_Data_gfx->knob2.mapping_Values),15);
 			}
@@ -61,7 +61,7 @@ extern "C"
 			return CalVariationGFX ;
 		}
 			else if(box_Data_gfx->key.state == 1){
-				switch (box_Data_gfx->key.value){ //其他按键的值
+				switch (box_Data_gfx->key.value){ //其他按键的值 将其位于高位
 					case KEY0_Pin_SET :
 						CalVariationGFX|=(0x05<<4);//KNOB2按下
 					  break;
