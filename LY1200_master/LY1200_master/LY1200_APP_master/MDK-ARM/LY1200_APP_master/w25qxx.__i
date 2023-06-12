@@ -1,0 +1,8 @@
+-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c
+-fno-rtti -funsigned-char -fshort-enums -fshort-wchar
+-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BSP/fan -I ../BSP/TFT -I ../BSP/control_box -I ../BSP/W25QXX -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include
+-I./RTE/_LY1200_APP_master
+-I"D:/Program Files/Keil_v5/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include"
+-I"D:/Program Files/Keil_v5/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx
+-o ly1200_app_master/w25qxx.o -MD "../BSP/W25QXX/W25QXX.c"
