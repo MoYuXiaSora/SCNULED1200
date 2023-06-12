@@ -72,11 +72,16 @@ uint8_t BlueFrameManage(uint8_t FrameData[], uint8_t FrameLen){
             }
             LoadOTAData(FrameData);
             break;
-				case 0x08:
+				case 0x07:
 					  if (CheckSum(FrameData, FrameLen) != FrameData[FrameLen - 1]) {
                 break;
             }
 						LoadFanData(FrameData);
+				case 0x08:
+					  if (CheckSum(FrameData, FrameLen) != FrameData[FrameLen - 1]) {
+                break;
+            }
+						LoadFeatureData(FrameData,FrameLen);
         case 0xee:
             if (CheckSum(FrameData, FrameLen) != FrameData[FrameLen - 1]) {
                 ReturnFrame(0xff, 0x01, WrongFrame,15);
@@ -237,6 +242,32 @@ uint8_t LoadFanData(uint8_t FrameData[])
     return FrameData[5];
 }
 
+uint8_t LoadCCTData(uint8_t FrameData[])
+{
+	return 0 ;
+}
+
+uint8_t LoadLightEffectData(uint8_t FrameData[])
+{
+	return 0 ;
+}
+
+uint8_t LoadFeatureData(uint8_t FrameData[] , int FrameLen)
+{
+	if(FrameData[6]==0x01){
+		//开启睡眠
+		return 0;
+	}
+	else {
+		switch (FrameData[7]) {
+			case 0x00 :
+				LoadCCTData(FrameData);
+			case 0x01 :
+				LoadLightEffectData(FrameData);
+		}
+	}
+	return 0 ;
+}
 //计算每一帧的校验和
 uint8_t CheckSum(uint8_t FrameData[], uint8_t Framelen)
 {

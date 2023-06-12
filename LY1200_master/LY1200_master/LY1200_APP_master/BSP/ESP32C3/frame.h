@@ -13,6 +13,7 @@ uint8_t Datacmd(uint8_t FrameCmd[]);
 uint8_t GetReadyToOTA();  
 uint8_t LoadOTAData(uint8_t FrameData[]);
 uint8_t LoadFanData(uint8_t FrameData[]);
+uint8_t LoadFeatureData(uint8_t FrameData[],int Framelenth);
 uint8_t ReturnFrame(uint8_t FrameCmd ,uint8_t DataLenth,uint8_t ResData[],int Framelenth);
 uint8_t CheckFinalRes(void);
 uint8_t BlueFrameManage(uint8_t FrameData[], uint8_t FrameLen);
