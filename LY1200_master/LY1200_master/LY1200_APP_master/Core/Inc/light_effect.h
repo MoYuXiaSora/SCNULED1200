@@ -13,10 +13,9 @@
 
 enum LIGHTEFFECTS_TYPE
 {
-    CANDLE,              //蜡烛  
 	FIRE,                //火焰  
-    BREATH,              //呼吸  
-    CLOUND,              //云朵  
+    BREATH,              //呼吸  ok
+    CLOUND,              //云朵  ok
     PAPARAZZI,           //狗仔
     FAULT,               //故障
     TV,                  //电视

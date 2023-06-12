@@ -466,7 +466,7 @@ void lightEffectTask_Entry(void *argument)
                   sys_Data_getQueue.LE_Parament.warm_Percentage */
 
    struct SYS_DATA sys_Data_getQueue={
-    .LE_Parament={ CANDLE, SETTING, 0, 4600, 5, 0, 0}//{类型，状态，亮度，色温，频率，冷通道结果，暖通道结果};
+    .LE_Parament={ FIRE, SETTING, 0, 4600, 5, 0, 0}//{类型，状态，亮度，色温，频率，冷通道结果，暖通道结果};
   };
 
   for(;;)

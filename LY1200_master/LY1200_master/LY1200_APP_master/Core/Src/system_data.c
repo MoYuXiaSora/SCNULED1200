@@ -10,7 +10,7 @@
 
 static struct SYS_DATA sys_Parament={
 		.control_Parament = BOX,				//控制模式选择
-		.model_Parament = CCT,//功能模式选择
+		.model_Parament = LIGHT_EFFECTS,//功能模式选择
     .cct_Parament={
 			.brightness=0.0,         //CCT 亮度 浮点型  0.0%-100.0%
 			.color_Temperature=4600, // CCT 色温 2700-6500K
