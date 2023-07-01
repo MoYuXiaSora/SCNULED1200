@@ -42,6 +42,10 @@ protected:
     touchgfx::Image image_1;
     touchgfx::Image image_2;
     touchgfx::Image image_3;
+    touchgfx::Box box2_0;
+    touchgfx::Box box2_1;
+    touchgfx::Box box2_2;
+    touchgfx::Box box2_3;
 
 private:
 

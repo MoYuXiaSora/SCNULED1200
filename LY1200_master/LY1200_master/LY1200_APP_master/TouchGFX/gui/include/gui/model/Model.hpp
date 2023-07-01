@@ -14,7 +14,7 @@ public:
 		{
 			CCT_Temperature_count = saveTemperature;
 		}
-		void saveCCTLight(int saveLight)
+		void saveCCTLight(float saveLight)
 		{
 			CCT_Light_count=saveLight;
 		}		
@@ -246,7 +246,7 @@ public:
 		
 protected:
 	ModelListener* modelListener; //model有指向当前活动Presenter的指针 其类型是接口ModelListener
-	int CCT_Light_count;//cct界面
+	float CCT_Light_count;//cct界面
 	int CCT_Temperature_count;
 
 

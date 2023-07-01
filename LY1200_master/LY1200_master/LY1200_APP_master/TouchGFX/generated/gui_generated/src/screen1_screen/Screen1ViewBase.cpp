@@ -74,7 +74,7 @@ Screen1ViewBase::Screen1ViewBase()
     TemperatureTextPg.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QIPC));
     add(TemperatureTextPg);
 
-    LightTextPg.setXY(69, 174);
+    LightTextPg.setXY(50, 174);
     LightTextPg.setColor(touchgfx::Color::getColorFromRGB(255, 247, 247));
     LightTextPg.setLinespacing(10);
     Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1NZU).getText());

@@ -1796,11 +1796,6 @@
               <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_16.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_17.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_17.cpp</FilePath>
-            </File>
-            <File>
               <FileName>Font_simfang_25_4bpp_18.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_18.cpp</FilePath>
@@ -1874,11 +1869,6 @@
               <FileName>Font_simfang_35_4bpp_9.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_9.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_simfang_40_4bpp_0.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_40_4bpp_0.cpp</FilePath>
             </File>
             <File>
               <FileName>FontCache.cpp</FileName>
@@ -2026,11 +2016,6 @@
               <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_35_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_simfang_40_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_40_4bpp.cpp</FilePath>
-            </File>
-            <File>
               <FileName>LanguageEn.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/texts/src/languageen.cpp</FilePath>
@@ -2119,11 +2104,6 @@
               <FileName>Table_simfang_35_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/table_simfang_35_4bpp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Table_simfang_40_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_simfang_40_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>

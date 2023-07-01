@@ -89,6 +89,26 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     image_3.setXY(299, 197);
     image_3.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
     add(image_3);
+
+    box2_0.setPosition(106, 90, 64, 64);
+    box2_0.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_0.setVisible(false);
+    add(box2_0);
+
+    box2_1.setPosition(299, 90, 64, 64);
+    box2_1.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_1.setVisible(false);
+    add(box2_1);
+
+    box2_2.setPosition(106, 197, 64, 64);
+    box2_2.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_2.setVisible(false);
+    add(box2_2);
+
+    box2_3.setPosition(299, 197, 64, 64);
+    box2_3.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_3.setVisible(false);
+    add(box2_3);
 }
 
 ScreenCurveViewBase::~ScreenCurveViewBase()
