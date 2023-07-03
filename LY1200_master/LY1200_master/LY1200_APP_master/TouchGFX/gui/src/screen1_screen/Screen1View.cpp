@@ -130,7 +130,7 @@ void Screen1View::LightDown()
 	  Light_count = max(Light_count,0.0);				
 	 break;
 		
-	 case 2://exp
+	 case 2://exp Exponential
 		Light_xn -= 0.001;//一共1000步
 		Light_xn = min(max(Light_xn,0.0),1.0);
 		Light_x = Light_xn*log(101);
@@ -159,9 +159,6 @@ void Screen1View::LightDown()
 	 
 	 Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
 	 LightTextPg.invalidate();//更新显示		
-	
-//     LightingTextPg.updateValue(Light_count, 1000);
-//     LightingTextPg.invalidate(); //文本进度条
 	
 }
 void Screen1View::LightUp()
@@ -220,8 +217,49 @@ void Screen1View::LightUp()
 
 void Screen1View::TemperatureDown()
 {
-	 Temperature_count-= 50;
-	 Temperature_count=max(Temperature_count,2700);
+		switch(CurveType)
+	{
+	 case 0:
+		Temperature_count-= 50; //0线型曲线 
+	  Temperature_count=max(Temperature_count,2700);
+	 break;
+
+	 case 1://s
+		Temperature_xs -= (1.0 / 76);
+	 	Temperature_xs = min(max(Temperature_xs,0.0),1.0);
+	  if(Temperature_xs <= 0.5)//横坐标
+		{
+			eTemperature_count = (3800*(0.5 - 0.5*pow((1-2*Temperature_xs),2.2))) + 2700;//y = y'*(6500-2700)+2700.
+		}
+		else 
+		{
+			eTemperature_count = (3800*(0.5 + 0.5*pow((2*(Temperature_xs-0.5)),2.2)))+2700;			
+		}
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入 保留整数
+		Temperature_count = max(Temperature_count,2700);			
+	 break;
+	 
+	 case 2:
+		Temperature_xn -= (1.0/76);//每次-1/76.
+		Temperature_xn = min(max(Temperature_xn,0.0),1.0);
+	  Temperature_x = Temperature_xn*(log(6500)-log(2700))+log(2700);//归一化改变温度的横坐标,C++中log就是loge
+		eTemperature_count =  exp(Temperature_x);//2指数型exp曲线
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入
+		Temperature_count = max(Temperature_count,2700);
+	 break;
+	 
+	 case 3:
+		Temperature_xln -= (1.0/76);//每次增加1/76.
+		Temperature_xln = min(max(Temperature_xln,0.0),1.0);
+	  Temperature_xl = Temperature_xln*(pow(2,6.5)-pow(2,2.7))+pow(2,2.7);
+	  eTemperature_count =  log2 (Temperature_xl)*1000;//3对数型log曲线2700-6500
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入 保留整数
+		Temperature_count = max(Temperature_count,2700);
+	 break;
+	 	 
+	 default:
+	 break;	 
+	}
 	 presenter->saveCCTTemperature(Temperature_count);
 //	 touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
 	 TemperatureProgress.setValue(Temperature_count);//给进度条设置色温的值
@@ -232,8 +270,49 @@ void Screen1View::TemperatureDown()
 }
 void Screen1View::TemperatureUp()
 {
-	 Temperature_count+= 50;
-	 Temperature_count=min(Temperature_count,6500);
+	switch(CurveType)
+	{
+	 case 0:
+		Temperature_count+= 50;//0线型曲线 76步
+		Temperature_count=min(Temperature_count,6500);
+	 break;
+
+	 case 1:	//S型
+		Temperature_xs += (1.0 / 76);
+	 	Temperature_xs = min(max(Temperature_xs,0.0),1.0);
+	  if(Temperature_xs <= 0.5)//横坐标
+		{
+			eTemperature_count = (3800*(0.5 - 0.5*pow((1-2*Temperature_xs),2.2)))+2700;//y = y'*(6500-2700)+2700.
+		}
+		else 
+		{
+			eTemperature_count = (3800*(0.5 + 0.5*pow((2*(Temperature_xs-0.5)),2.2)))+2700;			
+		}
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入 保留整数
+		Temperature_count = min(Temperature_count,6500);		
+	 break;
+
+	 case 2:
+		Temperature_xn += (1.0/76);//每次增加1/76.
+		Temperature_xn = min(max(Temperature_xn,0.0),1.0);
+	  Temperature_x = Temperature_xn*(log(6500)-log(2700))+log(2700);//归一化改变温度的横坐标
+		eTemperature_count =  exp(Temperature_x);//2指数型exp曲线
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入保留整数
+		Temperature_count = min(Temperature_count,6500);
+	 break;
+	 
+	 case 3:
+		Temperature_xln += (1.0/76);//每次增加1/76.
+		Temperature_xln = min(max(Temperature_xln,0.0),1.0);
+	  Temperature_xl = Temperature_xln*(pow(2,6.5)-pow(2,2.7))+pow(2,2.7);
+	  eTemperature_count =  log2 (Temperature_xl)*1000;//3对数型log曲线2700-6500
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入保留整数
+		Temperature_count = min(Temperature_count,6500);	 
+	 break;
+	 
+	 default:
+	 break;	 
+	}	
 	 presenter->saveCCTTemperature(Temperature_count);
 //	touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
 	TemperatureProgress.setValue(Temperature_count);//给进度条设置色温的值

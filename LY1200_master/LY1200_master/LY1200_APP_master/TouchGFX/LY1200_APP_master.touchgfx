@@ -484,8 +484,7 @@
             "FileNameBackground": "__generated\\alternate_theme_images_widgets_circleprogress_backgrounds_large.png",
             "ProgressRangeMax": 1000,
             "ProgressRangeSteps": 1000,
-            "ProgressRangeStepsMin": 1,
-            "ProgressInitialValue": 150
+            "ProgressRangeStepsMin": 1
           },
           {
             "Type": "CircleProgress",
@@ -536,9 +535,9 @@
           {
             "Type": "TextArea",
             "Name": "LightTextPg",
-            "X": 50,
+            "X": 56,
             "Y": 174,
-            "Width": 113,
+            "Width": 100,
             "Height": 39,
             "TextId": "__SingleUse_ZI7U",
             "TextRotation": "0",

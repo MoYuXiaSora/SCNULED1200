@@ -48,7 +48,7 @@ Screen1ViewBase::Screen1ViewBase()
     LightingProgress.setBackground(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_CIRCLEPROGRESS_BACKGROUNDS_LARGE_ID));
     LightingProgressPainter.setColor(touchgfx::Color::getColorFromRGB(149, 225, 230));
     LightingProgress.setPainter(LightingProgressPainter);
-    LightingProgress.setValue(150);
+    LightingProgress.setValue(0);
     add(LightingProgress);
 
     TemperatureProgress.setXY(267, 113);
@@ -74,7 +74,7 @@ Screen1ViewBase::Screen1ViewBase()
     TemperatureTextPg.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QIPC));
     add(TemperatureTextPg);
 
-    LightTextPg.setXY(50, 174);
+    LightTextPg.setXY(56, 174);
     LightTextPg.setColor(touchgfx::Color::getColorFromRGB(255, 247, 247));
     LightTextPg.setLinespacing(10);
     Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1NZU).getText());

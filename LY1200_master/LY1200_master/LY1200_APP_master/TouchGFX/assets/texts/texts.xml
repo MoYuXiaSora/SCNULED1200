@@ -40,12 +40,12 @@
         <Translation Language="EN">badBulbs</Translation>
       </Text>
       <Text Id="__SingleUse_H6ZA" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">   指数型   </Translation>
-        <Translation Language="EN">Exponential</Translation>
-      </Text>
-      <Text Id="__SingleUse_PS7J" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">   对数型   </Translation>
         <Translation Language="EN">Logarithmic</Translation>
+      </Text>
+      <Text Id="__SingleUse_PS7J" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">   指数型   </Translation>
+        <Translation Language="EN">Exponential</Translation>
       </Text>
       <Text Id="__SingleUse_I4E0" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">  S型  </Translation>
@@ -196,7 +196,7 @@
         <Translation Language="EN">Effect</Translation>
       </Text>
       <Text Id="__SingleUse_1NZU" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB"> 15.0 </Translation>
+        <Translation Language="GB"> 0.0 </Translation>
         <Translation Language="EN">15</Translation>
       </Text>
       <Text Id="__SingleUse_ZI7U" Alignment="Center" TypographyId="Default">
