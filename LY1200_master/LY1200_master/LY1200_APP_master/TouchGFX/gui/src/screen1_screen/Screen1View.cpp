@@ -52,15 +52,14 @@ Screen1View::Screen1View()
 void Screen1View::setupScreen()
 {
 	Screen1ViewBase::setupScreen();
-    
 	Temperature_count=presenter->getCCTTemperature();//刷新新界面，用指针presenter 读取记录好的数值
 	Light_count=presenter->getCCTLight();	
 
     //通配符显示
-  Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%d", Light_count);
+	Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
 	Unicode::snprintf(TemperatureTextPgBuffer, TEMPERATURETEXTPG_SIZE, "%d", Temperature_count);
 	 //进度器显示
-	LightingProgress.setValue(Light_count);
+	LightingProgress.setValue(Light_count*10);
 	TemperatureProgress.setValue(Temperature_count);
 }
 
@@ -109,14 +108,15 @@ void Screen1View::handleKeyEvent(uint8_t key)
 
 void Screen1View::LightDown()
 {   
-	 Light_count--;
-	 Light_count=max(Light_count,0);
+	 Light_count -= 0.1;
+	 Light_count=max(Light_count,0.0);
 	 presenter->saveCCTLight(Light_count);//通过presenter保存到mode 函数中直接进行采样
 //	 touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
-	 LightingProgress.setValue(Light_count);//给进度条设置亮度的值
+	 LightingProgress.setValue(Light_count*10);//给进度条设置亮度的值 
 	 LightingProgress.invalidate(); //更新显示进度条的值
 	 //通配符显示
-	 Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%d", Light_count);
+	 
+	 Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
 	 LightTextPg.invalidate();//更新显示		
 	
 //     LightingTextPg.updateValue(Light_count, 1000);
@@ -125,14 +125,14 @@ void Screen1View::LightDown()
 }
 void Screen1View::LightUp()
 {
-	 Light_count++;
+	 Light_count += 0.1;
 	 Light_count=min(Light_count,100);
 	 presenter->saveCCTLight(Light_count);
 //	 touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
-	 LightingProgress.setValue(Light_count);//给进度条设置亮度的值
+	 LightingProgress.setValue(Light_count*10);//给进度条设置亮度的值
 	 LightingProgress.invalidate(); //更新显示进度条的值
 	 //通配符显示
-	 Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%d", Light_count);
+	 Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
 	 LightTextPg.invalidate();//更新显示	
 //     LightingTextPg.updateValue(Light_count, 1000);
 //     LightingTextPg.invalidate(); //文本进度条	

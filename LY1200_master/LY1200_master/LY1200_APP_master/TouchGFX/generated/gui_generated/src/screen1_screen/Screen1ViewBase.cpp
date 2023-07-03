@@ -39,7 +39,7 @@ Screen1ViewBase::Screen1ViewBase()
 
     LightingProgress.setXY(17, 96);
     LightingProgress.setProgressIndicatorPosition(0, 0, 190, 190);
-    LightingProgress.setRange(0, 100, 100, 0);
+    LightingProgress.setRange(0, 1000, 1000, 1);
     LightingProgress.setCenter(95, 95);
     LightingProgress.setRadius(85);
     LightingProgress.setLineWidth(20);
@@ -48,7 +48,7 @@ Screen1ViewBase::Screen1ViewBase()
     LightingProgress.setBackground(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_CIRCLEPROGRESS_BACKGROUNDS_LARGE_ID));
     LightingProgressPainter.setColor(touchgfx::Color::getColorFromRGB(149, 225, 230));
     LightingProgress.setPainter(LightingProgressPainter);
-    LightingProgress.setValue(15);
+    LightingProgress.setValue(150);
     add(LightingProgress);
 
     TemperatureProgress.setXY(267, 113);

@@ -22,7 +22,7 @@ public:
 		{
 			return CCT_Temperature_count;
 		}
-		int  getCCTLight()
+		float  getCCTLight()
 		{
 			return CCT_Light_count;
 		}

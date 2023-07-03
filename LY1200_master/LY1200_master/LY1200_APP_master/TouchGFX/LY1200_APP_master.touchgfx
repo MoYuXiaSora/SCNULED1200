@@ -482,9 +482,10 @@
             "EndAngle": 360.0,
             "CapPrecision": "Butt",
             "FileNameBackground": "__generated\\alternate_theme_images_widgets_circleprogress_backgrounds_large.png",
-            "ProgressRangeMax": 100,
-            "ProgressRangeSteps": 100,
-            "ProgressInitialValue": 15
+            "ProgressRangeMax": 1000,
+            "ProgressRangeSteps": 1000,
+            "ProgressRangeStepsMin": 1,
+            "ProgressInitialValue": 150
           },
           {
             "Type": "CircleProgress",
@@ -537,7 +538,7 @@
             "Name": "LightTextPg",
             "X": 50,
             "Y": 174,
-            "Width": 125,
+            "Width": 113,
             "Height": 39,
             "TextId": "__SingleUse_ZI7U",
             "TextRotation": "0",
@@ -551,7 +552,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_1NZU",
               "UseBuffer": true,
-              "BufferSize": 8
+              "BufferSize": 16
             }
           }
         ],

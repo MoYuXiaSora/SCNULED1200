@@ -17,7 +17,7 @@ public:
 		virtual void TemperatureUp();
 		virtual void TemperatureDown();	
 protected:
-	 int Light_count;
+	 float Light_count;
    int Temperature_count;
 };
 
