@@ -4,6 +4,7 @@
 #include <string.h>
 #define max(x,y) ( x>y?x:y )
 #define min(x,y) ( x<y?x:y )
+uint8_t CurveType;//调光类别标志位
  //层级为第二层 0，1，2，3，4 数组索引
 extern "C"
 {	
@@ -125,25 +126,25 @@ void ScreenCurveView::handleKeyEvent(uint8_t key)
 		
 		//knob1 pressed 
 		case 0x00111:
-//			CurveType=0;
+			CurveType=0;
 			box2_0.setVisible(true);
 			box2_0.invalidate();		
 		break;
 	
 		case 0x00121:
-//			CurveType=1;
+			CurveType=1;
 			box2_1.setVisible(true);
 			box2_1.invalidate();		
 		break;
 
 		case 0x00131:
-//			CurveType=2;
+			CurveType=2;
 			box2_2.setVisible(true);
 			box2_2.invalidate();		
 		break;
 
 		case 0x00141:
-//			CurveType=3;
+			CurveType=3;
 			box2_3.setVisible(true);
 			box2_3.invalidate();		
 		break;	

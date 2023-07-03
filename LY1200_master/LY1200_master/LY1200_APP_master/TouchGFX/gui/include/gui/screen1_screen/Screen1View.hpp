@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 //extern uint8_t MenuLevel ;//全局变量
+extern uint8_t CurveType;//调光类别标志位
 class Screen1View : public Screen1ViewBase
 {
 public:
