@@ -19,7 +19,12 @@ public:
 		virtual void TemperatureDown();	
 protected:
 	 float Light_count;
+   float eLight_count;//由横坐标直接算出的亮度值（无理数）
    int Temperature_count;
+
+   float Light_x;//exp
+   float Light_xn;//归一化处理横坐标(0-ln101) Normalization
+   
 };
 
 #endif // SCREEN1VIEW_HPP

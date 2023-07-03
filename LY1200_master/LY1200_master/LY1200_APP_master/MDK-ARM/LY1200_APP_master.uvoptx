@@ -168,55 +168,35 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>sys_Data_getQueue,0x10</ItemText>
+          <ItemText>GFXLevels[5]</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>color_Temperature_Err</ItemText>
+          <ItemText>GFXLevels</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>brightness_Err</ItemText>
+          <ItemText>Light_count</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>breath_Parament</ItemText>
+          <ItemText>Light_xn</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>box_Data_gfx</ItemText>
+          <ItemText>Light_x</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>GFXLevels[5]</ItemText>
+          <ItemText>eLight_count</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>GFXLevels</ItemText>
-        </Ww>
-        <Ww>
-          <count>7</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Light_count</ItemText>
-        </Ww>
-        <Ww>
-          <count>8</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>LightTextPgBuffer</ItemText>
-        </Ww>
-        <Ww>
-          <count>9</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>LightTextPgBuffer</ItemText>
-        </Ww>
-        <Ww>
-          <count>10</count>
           <WinNumber>1</WinNumber>
           <ItemText>Light_count</ItemText>
         </Ww>

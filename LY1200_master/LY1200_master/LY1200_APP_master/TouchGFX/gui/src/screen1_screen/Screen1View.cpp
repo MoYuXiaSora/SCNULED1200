@@ -110,11 +110,20 @@ void Screen1View::LightDown()
 {   
 	switch(CurveType)
 	{
-		case 0:
+	 case 0:
 		 Light_count -= 0.1;
 		 Light_count=max(Light_count,0.0);
-		break;
-			
+	 break;
+
+	 case 2://exp
+		Light_xn -= 0.001;//一共1000步
+		Light_xn = min(max(Light_xn,0.0),1.0);
+		Light_x = Light_xn*log(101);
+		eLight_count =  exp(Light_x)-1;
+		Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位	 
+		Light_count = max(Light_count,0.0);	
+	 break;
+		
 		default:
 		break;	
 	}	
@@ -137,7 +146,16 @@ void Screen1View::LightUp()
 	{
 	 case 0:
 		Light_count+= 0.1; //0线型曲线 
-	  Light_count=min(Light_count,100.0);
+		Light_count=min(Light_count,100.0);
+	 break;
+ 
+	 case 2://exp
+		Light_xn += 0.001;//一共1000步
+		Light_xn = min(max(Light_xn,0.0),1.0);
+		Light_x = Light_xn*log(101);
+		eLight_count =  exp(Light_x)-1;
+		Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位	 
+	  Light_count = min(Light_count,100.0);
 	 break;
 	 
 	 default:
