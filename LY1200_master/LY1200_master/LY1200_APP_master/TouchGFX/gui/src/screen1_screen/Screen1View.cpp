@@ -115,6 +115,21 @@ void Screen1View::LightDown()
 		 Light_count=max(Light_count,0.0);
 	 break;
 
+	 case 1://s
+		Light_xs -=0.001;
+	 	Light_xs = min(max(Light_xs,0),1);
+	  if(Light_xs <= 0.5)
+		{
+			eLight_count = 100*(0.5 - 0.5*pow((1-2*Light_xs),2.2));
+		}
+		else 
+		{
+			eLight_count = 100*(0.5 + 0.5*pow((2*(Light_xs-0.5)),2.2));			
+		}
+	  Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位
+	  Light_count = max(Light_count,0.0);				
+	 break;
+		
 	 case 2://exp
 		Light_xn -= 0.001;//一共1000步
 		Light_xn = min(max(Light_xn,0.0),1.0);
@@ -148,7 +163,22 @@ void Screen1View::LightUp()
 		Light_count+= 0.1; //0线型曲线 
 		Light_count=min(Light_count,100.0);
 	 break;
- 
+
+	 case 1://s
+		Light_xs +=0.001;
+	 	Light_xs = min(max(Light_xs,0),1);
+	  if(Light_xs <= 0.5)
+		{
+			eLight_count = 100*(0.5 - 0.5*pow((1-2*Light_xs),2.2));
+		}
+		else 
+		{
+			eLight_count = 100*(0.5 + 0.5*pow((2*(Light_xs-0.5)),2.2));			
+		}
+	  Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位
+	  Light_count = min(Light_count,100.0);				
+	 break;
+		
 	 case 2://exp
 		Light_xn += 0.001;//一共1000步
 		Light_xn = min(max(Light_xn,0.0),1.0);
