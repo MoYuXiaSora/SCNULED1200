@@ -88,36 +88,65 @@ void ScreenCurveView::handleKeyEvent(uint8_t key)
      switch (ScreenMenuNumberGFX)  //这里屏幕转换要添加方框清0
    {
     case 0x00011://BOX
-		   	hideBox();
-			  box_0.setVisible(true);
-        box_0.invalidate();
+			hideBox();
+			box_0.setVisible(true);
+			box_0.invalidate();
+		  box2_0.setVisible(false);
+			box2_0.invalidate();		
 		break;
     case 0x00021:
-			  hideBox();
-			  //Hide box Show box
-				box_1.setVisible(true);
-        box_1.invalidate();
+			hideBox();
+			//Hide box Show box
+			box_1.setVisible(true);
+			box_1.invalidate();
+		  box2_1.setVisible(false);
+			box2_1.invalidate();
+		
 		break;
     case 0x00031:
-		      hideBox();
-		      box_2.setVisible(true);
-          box_2.invalidate();
+			hideBox();
+			box_2.setVisible(true);
+			box_2.invalidate();
+		  box2_2.setVisible(false);
+			box2_2.invalidate();		
 		break;
     case 0x00041:
-			    hideBox();
-		      box_3.setVisible(true);
-          box_3.invalidate();
+			hideBox();
+			box_3.setVisible(true);
+			box_3.invalidate();
+		  box2_3.setVisible(false);
+			box2_3.invalidate();		
 		break;
 		
 		case 0x00001:
-		     application().gotoScreenMenuScreenNoTransition();
+			application().gotoScreenMenuScreenNoTransition();
 		break;
 		
 		
 		//knob1 pressed 
-		case 0x00141:	//选中第四个组件
-			    application().gotoScreen1ScreenNoTransition();
+		case 0x00111:
+//			CurveType=0;
+			box2_0.setVisible(true);
+			box2_0.invalidate();		
 		break;
+	
+		case 0x00121:
+//			CurveType=1;
+			box2_1.setVisible(true);
+			box2_1.invalidate();		
+		break;
+
+		case 0x00131:
+//			CurveType=2;
+			box2_2.setVisible(true);
+			box2_2.invalidate();		
+		break;
+
+		case 0x00141:
+//			CurveType=3;
+			box2_3.setVisible(true);
+			box2_3.invalidate();		
+		break;	
 		
 		//快捷键
 		case 0x0000d:
@@ -126,8 +155,7 @@ void ScreenCurveView::handleKeyEvent(uint8_t key)
 		case 0x0000e:
 			   application().gotoScreenEffectScreenNoTransition();// go to effect
 		break;
-					
-		
+				
 		default:
 			break;
 	}
