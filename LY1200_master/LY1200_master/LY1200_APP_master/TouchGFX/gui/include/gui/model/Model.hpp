@@ -17,7 +17,11 @@ public:
 		void saveCCTLight(float saveLight)
 		{
 			CCT_Light_count=saveLight;
-		}		
+		}	
+		void saveLightxn(float saveLightxn)
+		{
+			Light_xn=saveLightxn;
+		}	
 		int getCCTTemperature()
 		{
 			return CCT_Temperature_count;
@@ -26,7 +30,10 @@ public:
 		{
 			return CCT_Light_count;
 		}
-
+		float  getLightxn()
+		{
+			return Light_xn;
+		}
 		//以上代码：数值得以保存于模型中，可检索数据，访问数值。
 		
 		//effect界面参数 badBulbs
@@ -248,7 +255,7 @@ protected:
 	ModelListener* modelListener; //model有指向当前活动Presenter的指针 其类型是接口ModelListener
 	float CCT_Light_count;//cct界面
 	int CCT_Temperature_count;
-
+  float Light_xn;
 
 	int badBulb_Light;//特效界面
 	int badBulb_Temperature;

@@ -54,6 +54,7 @@ void Screen1View::setupScreen()
 	Screen1ViewBase::setupScreen();
 	Temperature_count=presenter->getCCTTemperature();//刷新新界面，用指针presenter 读取记录好的数值
 	Light_count=presenter->getCCTLight();	
+	Light_xn=presenter->getLightxn();	
 
     //通配符显示
 	Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
@@ -69,6 +70,7 @@ void Screen1View::tearDownScreen()
 	
 	presenter->saveCCTLight(Light_count);
 	presenter->saveCCTTemperature(Temperature_count);
+	presenter->saveLightxn(Light_xn);
 }
 
 void Screen1View::handleKeyEvent(uint8_t key)
@@ -140,9 +142,9 @@ void Screen1View::LightDown()
 	 break;
 		
 	 case 3://log
-	  Light_xln -= 0.001;//从0开始++
-	  Light_xln = min(max(Light_xln,0.0),1.0);
-	  Light_xl = Light_xln*(pow(2,10)-1)+1;
+	  Light_xn -= 0.001;//从0开始++
+	  Light_xn = min(max(Light_xn,0.0),1.0);
+	  Light_xl = Light_xn*(pow(2,10)-1)+1;
 	  eLight_count = (log2(Light_xl))*10;
 	  Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位
 	  Light_count = max(Light_count,0.0);
@@ -153,6 +155,7 @@ void Screen1View::LightDown()
 	}	
 		
 	 presenter->saveCCTLight(Light_count);//通过presenter保存到mode 函数中直接进行采样
+	 presenter->saveLightxn(Light_xn);//保存横坐标
 	 LightingProgress.setValue(Light_count*10);//给进度条设置亮度的值 
 	 LightingProgress.invalidate(); //更新显示进度条的值
 	 //通配符显示
@@ -208,6 +211,7 @@ void Screen1View::LightUp()
 	}
 	
 	 presenter->saveCCTLight(Light_count);
+	 presenter->saveLightxn(Light_xn);//保存横坐标
 	 LightingProgress.setValue(Light_count*10);//给进度条设置亮度的值0-1000步。
 	 LightingProgress.invalidate(); //更新显示进度条的值
 	 //通配符显示

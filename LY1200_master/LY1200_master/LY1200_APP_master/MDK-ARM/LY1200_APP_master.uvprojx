@@ -1946,6 +1946,26 @@
               <FilePath>../touchgfx/generated/images/src/image_fan.cpp</FilePath>
             </File>
             <File>
+              <FileName>image_fanhigh.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_fanhigh.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_fanmiddle.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_fanmiddle.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_fanmute.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_fanmute.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_fansmart.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_fansmart.cpp</FilePath>
+            </File>
+            <File>
               <FileName>image_firework.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/image_firework.cpp</FilePath>

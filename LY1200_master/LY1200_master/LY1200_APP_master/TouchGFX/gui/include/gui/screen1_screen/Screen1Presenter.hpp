@@ -38,6 +38,11 @@ public:
 			 model->saveCCTLight(CCT_Light_count);
 		}
 		
+		void saveLightxn(float Light_xn)
+		{
+			 model->saveLightxn(Light_xn);			
+		}
+		
 		int getCCTTemperature()
 		{
 		  return model->getCCTTemperature();
@@ -46,7 +51,10 @@ public:
 		{
 			return model->getCCTLight();
 		}
-		
+		float getLightxn()
+		{
+			return model->getLightxn();
+		}		
 		
 		
 

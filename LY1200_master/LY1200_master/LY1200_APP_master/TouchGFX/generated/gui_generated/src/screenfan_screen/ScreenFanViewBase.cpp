@@ -89,6 +89,26 @@ ScreenFanViewBase::ScreenFanViewBase()
     textArea2_3.setLinespacing(0);
     textArea2_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZZ1H));
     add(textArea2_3);
+
+    image1_0.setXY(176, 105);
+    image1_0.setBitmap(touchgfx::Bitmap(BITMAP_FANSMART_ID));
+    image1_0.setVisible(false);
+    add(image1_0);
+
+    image1_1.setXY(176, 105);
+    image1_1.setBitmap(touchgfx::Bitmap(BITMAP_FANHIGH_ID));
+    image1_1.setVisible(false);
+    add(image1_1);
+
+    image1_2.setXY(176, 105);
+    image1_2.setBitmap(touchgfx::Bitmap(BITMAP_FANMIDDLE_ID));
+    image1_2.setVisible(false);
+    add(image1_2);
+
+    image1_3.setXY(176, 105);
+    image1_3.setBitmap(touchgfx::Bitmap(BITMAP_FANMUTE_ID));
+    image1_3.setVisible(false);
+    add(image1_3);
 }
 
 ScreenFanViewBase::~ScreenFanViewBase()

@@ -18,17 +18,21 @@ const uint16_t BITMAP_DARK_PROGRESSINDICATORS_BG_LARGE_CIRCLE_INDICATOR_BG_LINE_
 const uint16_t BITMAP_DMX_PRESS_ID = 9;
 const uint16_t BITMAP_EXPLODE_ID = 10;
 const uint16_t BITMAP_FAN_ID = 11;
-const uint16_t BITMAP_FIREWORK_ID = 12;
-const uint16_t BITMAP_FLASH_ID = 13;
-const uint16_t BITMAP_LANGUAGE_ID = 14;
-const uint16_t BITMAP_LIGHTNING_ID = 15;
-const uint16_t BITMAP_NO_ID = 16;
-const uint16_t BITMAP_PAPARAZZI_ID = 17;
-const uint16_t BITMAP_PULSE_ID = 18;
-const uint16_t BITMAP_STUDIO_ID = 19;
-const uint16_t BITMAP_TV_ID = 20;
-const uint16_t BITMAP_UPDATE_ID = 21;
-const uint16_t BITMAP_YES_ID = 22;
+const uint16_t BITMAP_FANHIGH_ID = 12;
+const uint16_t BITMAP_FANMIDDLE_ID = 13;
+const uint16_t BITMAP_FANMUTE_ID = 14;
+const uint16_t BITMAP_FANSMART_ID = 15;
+const uint16_t BITMAP_FIREWORK_ID = 16;
+const uint16_t BITMAP_FLASH_ID = 17;
+const uint16_t BITMAP_LANGUAGE_ID = 18;
+const uint16_t BITMAP_LIGHTNING_ID = 19;
+const uint16_t BITMAP_NO_ID = 20;
+const uint16_t BITMAP_PAPARAZZI_ID = 21;
+const uint16_t BITMAP_PULSE_ID = 22;
+const uint16_t BITMAP_STUDIO_ID = 23;
+const uint16_t BITMAP_TV_ID = 24;
+const uint16_t BITMAP_UPDATE_ID = 25;
+const uint16_t BITMAP_YES_ID = 26;
 
 namespace BitmapDatabase
 {

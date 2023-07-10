@@ -20,7 +20,7 @@ public:
 protected:
 	 float Light_count;
    float eLight_count;//由横坐标直接算出的亮度值（无理数）
-   int Temperature_count ;
+   int Temperature_count;
    float eTemperature_count;//由横坐标直接算出的色温值（无理数）
 
    float Light_xs;//s，利用(0-1)
