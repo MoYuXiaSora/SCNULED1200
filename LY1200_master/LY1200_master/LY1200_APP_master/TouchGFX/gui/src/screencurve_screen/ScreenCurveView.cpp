@@ -26,8 +26,9 @@ extern "C"
 				return CurcheckFinalCal(Levels);
 			
 			case 0x06:
-				Levels[MenuLevel+1] = 1;
 			  MenuLevel+=1;//层级加1 为2
+				MenuLevel = min(MenuLevel,2);//层级边缘保护！！！
+				Levels[MenuLevel] = 1;
 				return CurcheckFinalCal(Levels);
 			case 0x07:
 				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.

@@ -24,8 +24,8 @@ extern "C"
 				return EffcheckFinalCal(Levels);
 			
 			case 0x06:								
-				Levels[MenuLevel+1] = 1;
-			  MenuLevel+=1;//层级加1 则为2
+			  MenuLevel+=1;//层级加1 为2
+				Levels[MenuLevel] = 1;
 			  EffectType=Levels[0];//记录选中特效编号0-7.
 				return EffcheckFinalCal(Levels);
 			

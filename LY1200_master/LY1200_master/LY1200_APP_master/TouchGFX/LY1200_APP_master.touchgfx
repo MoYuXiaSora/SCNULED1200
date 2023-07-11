@@ -775,46 +775,6 @@
               "Blue": 255
             },
             "AutoSize": true
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_0",
-            "X": 176,
-            "Y": 105,
-            "Width": 128,
-            "Height": 128,
-            "Visible": false,
-            "RelativeFilename": "fansmart.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 176,
-            "Y": 105,
-            "Width": 128,
-            "Height": 128,
-            "Visible": false,
-            "RelativeFilename": "fanhigh.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_2",
-            "X": 176,
-            "Y": 105,
-            "Width": 128,
-            "Height": 128,
-            "Visible": false,
-            "RelativeFilename": "fanmiddle.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_3",
-            "X": 176,
-            "Y": 105,
-            "Width": 128,
-            "Height": 128,
-            "Visible": false,
-            "RelativeFilename": "fanmute.png"
           }
         ],
         "Interactions": []

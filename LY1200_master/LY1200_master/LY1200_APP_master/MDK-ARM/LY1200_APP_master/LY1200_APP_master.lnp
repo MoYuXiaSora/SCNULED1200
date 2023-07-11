@@ -148,6 +148,7 @@
 "ly1200_app_master\image_paparazzi.o"
 "ly1200_app_master\image_pulse.o"
 "ly1200_app_master\image_studio.o"
+"ly1200_app_master\image_try.o"
 "ly1200_app_master\image_tv.o"
 "ly1200_app_master\image_update.o"
 "ly1200_app_master\image_yes.o"
