@@ -22,13 +22,11 @@ const uint16_t BITMAP_FIREWORK_ID = 12;
 const uint16_t BITMAP_FLASH_ID = 13;
 const uint16_t BITMAP_LANGUAGE_ID = 14;
 const uint16_t BITMAP_LIGHTNING_ID = 15;
-const uint16_t BITMAP_NO_ID = 16;
-const uint16_t BITMAP_PAPARAZZI_ID = 17;
-const uint16_t BITMAP_PULSE_ID = 18;
-const uint16_t BITMAP_STUDIO_ID = 19;
-const uint16_t BITMAP_TV_ID = 20;
-const uint16_t BITMAP_UPDATE_ID = 21;
-const uint16_t BITMAP_YES_ID = 22;
+const uint16_t BITMAP_PAPARAZZI_ID = 16;
+const uint16_t BITMAP_PULSE_ID = 17;
+const uint16_t BITMAP_STUDIO_ID = 18;
+const uint16_t BITMAP_TV_ID = 19;
+const uint16_t BITMAP_UPDATE_ID = 20;
 
 namespace BitmapDatabase
 {

@@ -29,7 +29,7 @@ ScreenStudioViewBase::ScreenStudioViewBase()
     box_0.setVisible(false);
     add(box_0);
 
-    image1.setXY(208, 128);
+    image1.setXY(188, 121);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_STUDIO_ID));
     add(image1);
 }

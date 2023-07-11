@@ -2,7 +2,7 @@
 #include "math.h"
 #include "control_box.h"
 #include <string.h>
-#define max(x,y) ( x>y?x:y )
+#define max(x,y) ( x>y?x:y ) 
 #define min(x,y) ( x<y?x:y )
 //uint8_t FanType;//风扇类别标志位
  //层级为第二层 0，1，2，3，4 数组索引

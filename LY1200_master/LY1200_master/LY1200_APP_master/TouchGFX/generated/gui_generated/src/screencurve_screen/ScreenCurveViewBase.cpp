@@ -16,7 +16,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     box1.setColor(touchgfx::Color::getColorFromRGB(41, 36, 36));
     add(box1);
 
-    textArea1.setXY(138, 20);
+    textArea1.setXY(119, 10);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T7S8));
@@ -74,19 +74,19 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I4E0));
     add(textArea2_1);
 
-    image_0.setXY(106, 90);
+    image_0.setXY(92, 60);
     image_0.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
     add(image_0);
 
-    image_1.setXY(299, 90);
+    image_1.setXY(276, 60);
     image_1.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
     add(image_1);
 
-    image_2.setXY(106, 197);
+    image_2.setXY(86, 183);
     image_2.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
     add(image_2);
 
-    image_3.setXY(299, 197);
+    image_3.setXY(283, 183);
     image_3.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
     add(image_3);
 

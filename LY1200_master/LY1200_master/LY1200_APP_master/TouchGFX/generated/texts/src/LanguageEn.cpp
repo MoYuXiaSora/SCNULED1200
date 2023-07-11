@@ -10,7 +10,7 @@ KEEP extern const uint32_t indicesEn[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 // Remap all strings
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesEn[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
-    885, // T___SINGLEUSE_91DT: "TV"
+    889, // T___SINGLEUSE_91DT: "TV"
     797, // T___SINGLEUSE_O027: "pulse"
     430, // T___SINGLEUSE_THLA: "paparazzi"
     420, // T___SINGLEUSE_66IO: "lightning"
@@ -45,7 +45,7 @@ KEEP extern const uint32_t indicesEn[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     192, // T___SINGLEUSE_BFZR: "Control System"
     814, // T___SINGLEUSE_WUUG: "2700"
     725, // T___SINGLEUSE_0ILK: " <> K "
-    882, // T___SINGLEUSE_QXLY: "15"
+    886, // T___SINGLEUSE_QXLY: "15"
     786, // T___SINGLEUSE_XH30: " <> %"
     400, // T___SINGLEUSE_OWEB: "Frequency"
     310, // T___SINGLEUSE_RC5J: "Temperature"
@@ -57,7 +57,7 @@ KEEP extern const uint32_t indicesEn[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     244, // T___SINGLEUSE_7KP4: "curve"
     618, // T___SINGLEUSE_Q01U: "control"
     738, // T___SINGLEUSE_5TCC: "Effect"
-    882, // T___SINGLEUSE_1NZU: "15"
+    886, // T___SINGLEUSE_1NZU: "15"
     786, // T___SINGLEUSE_ZI7U: " <> %"
     814, // T___SINGLEUSE_7APG: "2700"
     725, // T___SINGLEUSE_QIPC: " <> K "
