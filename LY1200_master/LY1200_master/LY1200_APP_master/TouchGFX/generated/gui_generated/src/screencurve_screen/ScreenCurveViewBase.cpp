@@ -19,7 +19,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     box1.setColor(touchgfx::Color::getColorFromRGB(41, 36, 36));
     add(box1);
 
-    textArea1.setXY(177, 8);
+    textArea1.setXY(177, 14);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T7S8));
@@ -78,7 +78,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgbg_0);
 
     svgbg_1.setSVG(SVG_BLACKB_ID);
-    svgbg_1.setPosition(264, 35, 101, 101);
+    svgbg_1.setPosition(280, 35, 101, 101);
     svgbg_1.setScale(0.5f, 0.5f);
     svgbg_1.setImagePosition(0, 0);
     svgbg_1.setRotationCenter(0, 0);
@@ -94,7 +94,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgbg_2);
 
     svgbg_3.setSVG(SVG_BLACKB_ID);
-    svgbg_3.setPosition(264, 174, 101, 101);
+    svgbg_3.setPosition(280, 176, 101, 101);
     svgbg_3.setScale(0.5f, 0.5f);
     svgbg_3.setImagePosition(0, 0);
     svgbg_3.setRotationCenter(0, 0);
@@ -110,7 +110,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(box_0);
 
     box_1.setSVG(SVG_BLUEB_ID);
-    box_1.setPosition(273, 44, 92, 92);
+    box_1.setPosition(289, 44, 92, 92);
     box_1.setScale(0.5f, 0.5f);
     box_1.setImagePosition(0, 0);
     box_1.setRotationCenter(0, 0);
@@ -126,7 +126,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(box_2);
 
     box_3.setSVG(SVG_BLUEB_ID);
-    box_3.setPosition(272, 183, 92, 92);
+    box_3.setPosition(293, 183, 92, 92);
     box_3.setScale(0.5f, 0.5f);
     box_3.setImagePosition(0, 0);
     box_3.setRotationCenter(0, 0);
@@ -142,7 +142,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgimage_0);
 
     svgimage_1.setSVG(SVG_S_ID);
-    svgimage_1.setPosition(289, 62, 60, 60);
+    svgimage_1.setPosition(304, 62, 60, 60);
     svgimage_1.setScale(0.5f, 0.55f);
     svgimage_1.setImagePosition(0, 0);
     svgimage_1.setRotationCenter(0, 0);
@@ -158,7 +158,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgimage_2);
 
     svgimage_3.setSVG(SVG_LOG_ID);
-    svgimage_3.setPosition(289, 202, 60, 60);
+    svgimage_3.setPosition(304, 202, 60, 60);
     svgimage_3.setScale(0.48f, 0.48f);
     svgimage_3.setImagePosition(0, 0);
     svgimage_3.setRotationCenter(0, 0);

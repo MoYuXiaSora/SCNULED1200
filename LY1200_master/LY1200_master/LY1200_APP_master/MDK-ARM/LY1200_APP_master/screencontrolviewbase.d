@@ -62,8 +62,11 @@ ly1200_app_master/screencontrolviewbase.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\TextArea.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\TypedText.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Texts.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\SVGImage.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\Matrix3x3.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\VGData.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\canvas_widget_renderer\CanvasWidgetRenderer.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\canvas_widget_renderer\Cell.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Color.hpp \
   ..\touchgfx\generated\texts\include\texts\TextKeysAndLanguages.hpp \
-  ..\touchgfx\generated\images\include\images\BitmapDatabase.hpp
+  ..\touchgfx\generated\images\include\images\SVGDatabase.hpp
