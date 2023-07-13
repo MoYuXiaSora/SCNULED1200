@@ -306,45 +306,45 @@ void HAL_TIM_Encoder_MspDeInit(TIM_HandleTypeDef* tim_encoderHandle)
 /* USER CODE BEGIN 1 */
 
 /**
-  * @brief  获取EC11旋转编码器数�?
-  *         4分频 AB双采�? 旋转�?圈即为硬件本身脉冲数,右旋增，左旋�?
+  * @brief  获取EC11旋转编码器数�??
+  *         4分频 AB双采�?? 旋转�??圈即为硬件本身脉冲数,右旋增，左旋�??
   * @param  
   *         
   * @retval encoder_EOF(uint8_t *encoder_EOF_direction, int16_t *encoder_EOF_Variation);
   */
 
 #define ENCODER_COUNT_MEDIAN 32768    //计数中�??
-#define NUMBER_OF_LOCATIONS 30	//EC11单圈定位�?
-#define NUMBER_OF_PULSES_PER_CYCLE 15 //EC11单圈脉冲�?
-#define DIRECTION_ADJUSTMENT -1	//默认方向与硬件方向相�?
+#define NUMBER_OF_LOCATIONS 30	//EC11单圈定位�??
+#define NUMBER_OF_PULSES_PER_CYCLE 15 //EC11单圈脉冲�??
+#define DIRECTION_ADJUSTMENT -1	//默认方向与硬件方向相�??
 
 //void encoder_EOF(uint8_t *encoder_EOF_direction, int16_t *encoder_EOF_Variation)
 //{
 
-//  uint8_t ec11_Direction=0; //旋转方向�?1，左0
+//  uint8_t ec11_Direction=0; //旋转方向�??1，左0
 //  uint16_t ec11_Pulses=0;     //即时脉冲数�??
-//  int16_t ec11_Variation=0; //脉冲变化�?
+//  int16_t ec11_Variation=0; //脉冲变化�??
 
 //  ec11_Direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim4);  
-//  ec11_Pulses = __HAL_TIM_GET_COUNTER(&htim4);	//获取定时器的�?
-//  ec11_Variation = ec11_Pulses - ENCODER_COUNT_MEDIAN; //计算脉冲变化�?
+//  ec11_Pulses = __HAL_TIM_GET_COUNTER(&htim4);	//获取定时器的�??
+//  ec11_Variation = ec11_Pulses - ENCODER_COUNT_MEDIAN; //计算脉冲变化�??
 
-//  *encoder_EOF_direction = ec11_Direction;  //传�?�方�?
-//  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //浼狅拷?锟藉彉鍖栭噺
+//  *encoder_EOF_direction = ec11_Direction;  //传�?�方�??
+//  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //浼狅�??锟藉彉鍖栭噺
 
 //	
-//  __HAL_TIM_SET_COUNTER(&htim4, ENCODER_COUNT_MEDIAN); //计数器�?�重新置�?
+//  __HAL_TIM_SET_COUNTER(&htim4, ENCODER_COUNT_MEDIAN); //计数器�?�重新置�??
 //}
 static uint32_t encoder_Frist_Flag = 1;
 
 void encoder_EOF(TIM_HandleTypeDef *htim_local,uint8_t *encoder_EOF_direction, int16_t *encoder_EOF_Variation)
 {
-  uint8_t ec11_Direction=0; //旋转方向�?1，左0
+  uint8_t ec11_Direction=0; //旋转方向�??1，左0
   uint16_t ec11_Pulses=0x0000;     //即时脉冲数�??
-  int16_t ec11_Variation=0; //脉冲变化�?
+  int16_t ec11_Variation=0; //脉冲变化�??
 
   ec11_Direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(htim_local);  
-  ec11_Pulses = __HAL_TIM_GET_COUNTER(htim_local);	//获取定时器的�?
+  ec11_Pulses = __HAL_TIM_GET_COUNTER(htim_local);	//获取定时器的�??
 	//娑堥櫎缂栫爜鍣ㄥ垵濮嬮敊璇暟鍊?
 	while((ec11_Pulses==0)&&(encoder_Frist_Flag==1))
 	{
@@ -355,14 +355,14 @@ void encoder_EOF(TIM_HandleTypeDef *htim_local,uint8_t *encoder_EOF_direction, i
 	encoder_Frist_Flag=0;
   ec11_Variation = ec11_Pulses - ENCODER_COUNT_MEDIAN; //璁＄畻鑴夊啿鍙樺寲锟??
 
-  *encoder_EOF_direction = ec11_Direction;  //传�?�方�?
-  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //浼狅拷?锟藉彉鍖栭噺
+  *encoder_EOF_direction = ec11_Direction;  //传�?�方�??
+  *encoder_EOF_Variation = (DIRECTION_ADJUSTMENT*ec11_Variation); //浼狅�??锟藉彉鍖栭噺
 	
 	//if((ec11_Direction>0)&&(*encoder_EOF_Variation<0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
 	//if((ec11_Direction<0)&&(*encoder_EOF_Variation>0)) {*encoder_EOF_Variation=(*encoder_EOF_Variation)*(-1);}
 	if((ec11_Direction>0)&&(*encoder_EOF_Variation<0)) *encoder_EOF_Variation=0;
 	if((ec11_Direction<0)&&(*encoder_EOF_Variation>0)) *encoder_EOF_Variation=0;
-  __HAL_TIM_SET_COUNTER(htim_local, ENCODER_COUNT_MEDIAN); //璁℃暟鍣拷?锟介噸鏂扮疆锟??
+  __HAL_TIM_SET_COUNTER(htim_local, ENCODER_COUNT_MEDIAN); //璁℃暟鍣拷?锟介噸鏂扮疆�???
 }
 
 

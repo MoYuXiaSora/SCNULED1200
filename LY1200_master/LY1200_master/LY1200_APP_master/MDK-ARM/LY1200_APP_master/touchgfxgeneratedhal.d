@@ -70,14 +70,16 @@ ly1200_app_master/touchgfxgeneratedhal.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\TextArea.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\TypedText.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Texts.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\SVGImage.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\Matrix3x3.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\VGData.hpp \
   ..\touchgfx\gui\include\gui\screen1_screen\Screen1View.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp \
   ..\touchgfx\gui\include\gui\screen1_screen\Screen1Presenter.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\containers\progress_indicators\CircleProgress.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\containers\progress_indicators\AbstractProgressIndicator.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\EasingEquations.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\AbstractPainter.hpp \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
@@ -99,6 +101,7 @@ ly1200_app_master/touchgfxgeneratedhal.o: \
   ..\touchgfx\gui\include\gui\screenfan_screen\ScreenFanView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screenfan_screen\ScreenFanViewBase.hpp \
   ..\touchgfx\gui\include\gui\screenfan_screen\ScreenFanPresenter.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
   ..\touchgfx\gui\include\gui\screencurve_screen\ScreenCurveView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screencurve_screen\ScreenCurveViewBase.hpp \
   ..\touchgfx\gui\include\gui\screencurve_screen\ScreenCurvePresenter.hpp \
@@ -133,6 +136,13 @@ ly1200_app_master/touchgfxgeneratedhal.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\Paint.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Color.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\PaintRGB565Impl.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\CWRVectorRenderer.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\VectorRenderer.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\AbstractPainterLinearGradient.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\PainterRGB565LinearGradient.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\PainterRGB888.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\AbstractPainterRGB888.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\PainterRGB888LinearGradient.hpp \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \

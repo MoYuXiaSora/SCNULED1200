@@ -10,7 +10,6 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/Image.hpp>
 
 class ScreenStudioViewBase : public touchgfx::View<ScreenStudioPresenter>
 {
@@ -31,7 +30,6 @@ protected:
     touchgfx::Box box1;
     touchgfx::TextArea textArea1;
     touchgfx::BoxWithBorder box_0;
-    touchgfx::Image image1;
 
 private:
 

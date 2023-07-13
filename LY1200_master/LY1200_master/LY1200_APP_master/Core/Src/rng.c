@@ -82,7 +82,7 @@ void HAL_RNG_MspDeInit(RNG_HandleTypeDef* rngHandle)
 
 /* USER CODE BEGIN 1 */
 /*
- * 真随机数生成函数�? random_number(10); 将生�?0-9随机�?
+ * 真随机数生成函数�?? random_number(10); 将生�??0-9随机�??
 */
 uint32_t random_number(uint32_t superior_limit)
 {

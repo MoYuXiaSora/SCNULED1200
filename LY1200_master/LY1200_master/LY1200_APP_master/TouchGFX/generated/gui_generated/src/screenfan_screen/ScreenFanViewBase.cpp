@@ -4,7 +4,6 @@
 #include <gui_generated/screenfan_screen/ScreenFanViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 
 ScreenFanViewBase::ScreenFanViewBase()
 {
@@ -49,22 +48,6 @@ ScreenFanViewBase::ScreenFanViewBase()
     box_3.setBorderSize(5);
     box_3.setVisible(false);
     add(box_3);
-
-    image_0.setXY(106, 73);
-    image_0.setBitmap(touchgfx::Bitmap(BITMAP_FAN_ID));
-    add(image_0);
-
-    image_1.setXY(310, 73);
-    image_1.setBitmap(touchgfx::Bitmap(BITMAP_FAN_ID));
-    add(image_1);
-
-    image_2.setXY(106, 197);
-    image_2.setBitmap(touchgfx::Bitmap(BITMAP_FAN_ID));
-    add(image_2);
-
-    image_3.setXY(310, 197);
-    image_3.setBitmap(touchgfx::Bitmap(BITMAP_FAN_ID));
-    add(image_3);
 
     textArea2.setXY(88, 152);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));

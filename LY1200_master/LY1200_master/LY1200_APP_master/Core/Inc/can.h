@@ -37,7 +37,7 @@ extern CAN_HandleTypeDef hcan1;
 
 /* USER CODE BEGIN Private defines */
 
-//璇ワ拷?锟借緫閬靛惊CMSIS_RTOS2鏍囪瘑绗︼拷?锟借緫
+//璇ワ�??锟�?�緫閬靛惊CMSIS_RTOS2鏍囪瘑绗︼拷?锟�?�緫
 #define thisOK 0
 #define thisERROR -1
 //驱动板状态标识符
@@ -66,14 +66,14 @@ struct CAN_DATA
 struct DRIVER_DATA
 {
   /* data */
-  uint8_t drive_State_Update; //驱动更新状???
+  uint8_t drive_State_Update; //驱动更新�????
   uint8_t drive_Switch;       //驱动板开关机：开0x77，关0x88
   uint8_t drive_Temperature;  //驱动板温度：0x00-0xc8
   uint8_t drive_Power_Ratio;  //驱动板功率负载率??0x00-0x64
-  uint8_t drive_Status_Code;  //电源驱动板状态码 0x77??机状?? 0x88关机状??? 0xXX异常状???
+  uint8_t drive_Status_Code;  //电源驱动板状态码 0x77??机状?? 0x88关机�???? 0xXX异常�????
   uint8_t LED_Temperature;    //灯板温度??
 
-  //uint8_t drive_TxData[16];   //发???给驱动板的数组
+  //uint8_t drive_TxData[16];   //�????给驱动板的数�?
   //uint8_t drive_RxData[16];   //从驱动板接受的数??
 };
 

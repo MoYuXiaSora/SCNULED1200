@@ -63,7 +63,5 @@ ly1200_app_master/screencurveviewbase.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\TypedText.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Texts.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Color.hpp \
-  ..\touchgfx\generated\texts\include\texts\TextKeysAndLanguages.hpp \
-  ..\touchgfx\generated\images\include\images\BitmapDatabase.hpp
+  ..\touchgfx\generated\texts\include\texts\TextKeysAndLanguages.hpp

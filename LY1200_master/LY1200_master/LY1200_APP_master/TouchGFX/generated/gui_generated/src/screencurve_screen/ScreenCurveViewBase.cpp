@@ -4,7 +4,6 @@
 #include <gui_generated/screencurve_screen/ScreenCurveViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 
 ScreenCurveViewBase::ScreenCurveViewBase()
 {
@@ -73,22 +72,6 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     textArea2_1.setLinespacing(0);
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I4E0));
     add(textArea2_1);
-
-    image_0.setXY(92, 60);
-    image_0.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
-    add(image_0);
-
-    image_1.setXY(276, 60);
-    image_1.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
-    add(image_1);
-
-    image_2.setXY(86, 183);
-    image_2.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
-    add(image_2);
-
-    image_3.setXY(283, 183);
-    image_3.setBitmap(touchgfx::Bitmap(BITMAP_CURVE_ID));
-    add(image_3);
 
     box2_0.setPosition(106, 90, 64, 64);
     box2_0.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));

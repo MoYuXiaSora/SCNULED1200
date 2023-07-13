@@ -71,14 +71,16 @@ ly1200_app_master/touchgfxconfiguration.o: \
   ..\touchgfx\gui\include\gui\model\ModelListener.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Box.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\TextArea.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\SVGImage.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\Matrix3x3.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\VGData.hpp \
   ..\touchgfx\gui\include\gui\screen1_screen\Screen1View.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp \
   ..\touchgfx\gui\include\gui\screen1_screen\Screen1Presenter.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\containers\progress_indicators\CircleProgress.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\containers\progress_indicators\AbstractProgressIndicator.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\EasingEquations.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\canvas\AbstractPainter.hpp \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
@@ -100,6 +102,7 @@ ly1200_app_master/touchgfxconfiguration.o: \
   ..\touchgfx\gui\include\gui\screenfan_screen\ScreenFanView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screenfan_screen\ScreenFanViewBase.hpp \
   ..\touchgfx\gui\include\gui\screenfan_screen\ScreenFanPresenter.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
   ..\touchgfx\gui\include\gui\screencurve_screen\ScreenCurveView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screencurve_screen\ScreenCurveViewBase.hpp \
   ..\touchgfx\gui\include\gui\screencurve_screen\ScreenCurvePresenter.hpp \

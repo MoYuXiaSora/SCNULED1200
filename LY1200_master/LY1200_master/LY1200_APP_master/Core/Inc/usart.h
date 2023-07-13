@@ -23,8 +23,6 @@
 
 #ifdef __cplusplus
 extern "C" {
-	
-	
 #endif
 
 /* Includes ------------------------------------------------------------------*/
@@ -44,10 +42,10 @@ extern UART_HandleTypeDef huart3;
 struct UARTEx_FRAME
 {
     /* data */
-	volatile uint8_t new_Frame_Flag; //是否收到了新一帧 新:USART3_NEW_FRAME 旧:USART3_OLD_FRAME
-	volatile uint8_t tx_Frame_Flag;	 //是否成功发送了新一帧 发送成功返回：HAL_OK   发送失败返回：HAL_BUSY / HAL_ERROR
-	volatile uint16_t frame_Length;	 //新一帧数据长度
-	uint8_t *pData;	//缓冲区数组地址指针
+	volatile uint8_t new_Frame_Flag; //是否收到了新�?�? �?:USART3_NEW_FRAME �?:USART3_OLD_FRAME
+	volatile uint8_t tx_Frame_Flag;	 //是否成功发�?�了新一�? 发�?�成功返回：HAL_OK   发�?�失败返回：HAL_BUSY / HAL_ERROR
+	volatile uint16_t frame_Length;	 //新一帧数据长�?
+	uint8_t *pData;	//缓冲区数组地�?指针
 };
 
 /* USER CODE END Private defines */
@@ -65,7 +63,6 @@ struct UARTEx_FRAME clear_UARTx_Frame();
 #ifdef __cplusplus
 }
 #endif
-
 
 #endif /* __USART_H__ */
 

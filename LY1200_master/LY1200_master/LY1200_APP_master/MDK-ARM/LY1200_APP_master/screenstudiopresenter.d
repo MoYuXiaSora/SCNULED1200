@@ -63,5 +63,4 @@ ly1200_app_master/screenstudiopresenter.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\TextArea.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\TypedText.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Texts.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp

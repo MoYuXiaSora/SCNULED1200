@@ -10,7 +10,6 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/Image.hpp>
 
 class ScreenCurveViewBase : public touchgfx::View<ScreenCurvePresenter>
 {
@@ -38,10 +37,6 @@ protected:
     touchgfx::TextArea textArea2_2;
     touchgfx::TextArea textArea2_3;
     touchgfx::TextArea textArea2_1;
-    touchgfx::Image image_0;
-    touchgfx::Image image_1;
-    touchgfx::Image image_2;
-    touchgfx::Image image_3;
     touchgfx::Box box2_0;
     touchgfx::Box box2_1;
     touchgfx::Box box2_2;

@@ -64,7 +64,6 @@ ly1200_app_master/screenfanview.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\TypedText.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Texts.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\Image.hpp \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\math.h \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \

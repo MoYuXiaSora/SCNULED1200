@@ -22,9 +22,9 @@
 
 /* USER CODE BEGIN 0 */
 
-const int16_t CANTXDATALONG = 8;  //CAN发???数组长??
+const int16_t CANTXDATALONG = 8;  //CAN�????数组�???
 const int16_t CANRXDATALONG = 8;  //CAN接受数组长度
-volatile uint8_t CanTxData[CANTXDATALONG]={0};  //CAN发???数??
+volatile uint8_t CanTxData[CANTXDATALONG]={0};  //CAN�????�???
 volatile uint8_t CanRxData[CANRXDATALONG]={0};  //CAN接受数组
 
 static void MX_CAN1_Filter_Init();
@@ -218,14 +218,14 @@ uint8_t can_Tx_User(char *tx_Buf, int length)
 
 uint8_t driver_Data_Format(uint8_t drive_Switch_Local,float cold_Out,float warm_Out,uint8_t fan_Ratio_Local,uint8_t *driver_TxData_Local)
 {
-    //float cold_Out=0;                   //定义冷色温输出???0.0-100%
-    //float warm_Out=0;                   //定义暖色温输出???0.0-100%
+    //float cold_Out=0;                   //定义冷色温输�????0.0-100%
+    //float warm_Out=0;                   //定义暖色温输�????0.0-100%
 
     uint8_t even_parity_flag = 0;       //偶校验标志位
-    uint16_t first_electric_current=0;  //第一路电流???0000-1000（等效为0.0%-100.0%??
-    uint16_t second_electric_current=0; //第二路电流???0000-1000（等效为0.0%-100.0%??
-    uint16_t third_electric_current=0;  //第三路电流???0000-1000（等效为0.0%-100.0%??
-    uint16_t fourth_electric_current=0; //第四路电流???0000-1000（等效为0.0%-100.0%??
+    uint16_t first_electric_current=0;  //第一路电�????0000-1000（等效为0.0%-100.0%??
+    uint16_t second_electric_current=0; //第二路电�????0000-1000（等效为0.0%-100.0%??
+    uint16_t third_electric_current=0;  //第三路电�????0000-1000（等效为0.0%-100.0%??
+    uint16_t fourth_electric_current=0; //第四路电�????0000-1000（等效为0.0%-100.0%??
 
     uint16_t sum_electric_current=0;    //总的电流??0000-4000
     uint16_t set_LED_power=0;           //设定的LED功率??
@@ -237,7 +237,7 @@ uint8_t driver_Data_Format(uint8_t drive_Switch_Local,float cold_Out,float warm_
     fourth_electric_current=(warm_Out*1000)+0.5;
 
     //安全????
-    //对四路电流输出???进行限??
+    //对四路电流输�????进行�???
     if(first_electric_current>1000)    {first_electric_current=1000;}
     else if(first_electric_current<0)  {first_electric_current=0;}
     if(second_electric_current>1000)   {second_electric_current=1000;}
@@ -278,7 +278,7 @@ uint8_t driver_Data_Format(uint8_t drive_Switch_Local,float cold_Out,float warm_
 
 
 		//新版驱动协议
-		driver_TxData_Local[0] =0xbb;//第二帧帧头0xbb
+		driver_TxData_Local[0] =0xbb;//第二帧帧�?0xbb
     driver_TxData_Local[1] =(third_electric_current / 256);//第三路恒流输出高八位0x00-0x0a
     driver_TxData_Local[2]=(third_electric_current % 256);//第三路恒流输出低八位0x00-0x63
     driver_TxData_Local[3]=(fourth_electric_current / 256);//第四路恒流输出高八位0x00-0x0a
@@ -286,17 +286,17 @@ uint8_t driver_Data_Format(uint8_t drive_Switch_Local,float cold_Out,float warm_
     driver_TxData_Local[5]=fan_Ratio_Local;                     //第五路DC0-12V输出0x00-0x64
     even_parity_flag=even_parity(driver_TxData_Local, 0, 5);
     driver_TxData_Local[6]=even_parity_flag;//第二帧前6位偶校验
-    driver_TxData_Local[7]=0xff;//第二路帧尾0xff	
+    driver_TxData_Local[7]=0xff;//第二路帧�?0xff	
 		
-    driver_TxData_Local[8] =0xaa; //第一帧帧头0xaa
+    driver_TxData_Local[8] =0xaa; //第一帧帧�?0xaa
     driver_TxData_Local[9] =(first_electric_current / 256);//第一路恒流输出高八位0x00-0x0a
     driver_TxData_Local[10] =(first_electric_current % 256);//第一路恒流输出低八位0x00-0x63
     driver_TxData_Local[11] =(second_electric_current / 256);//第二路恒流输出高八位0x00-0x0a
     driver_TxData_Local[12] =(second_electric_current % 256);//第二路恒流输出低八位0x00-0x63
-    driver_TxData_Local[13] =drive_Switch_Local;//开0x77关0x88机
+    driver_TxData_Local[13] =drive_Switch_Local;//�?0x77�?0x88�?
     even_parity_flag=even_parity(driver_TxData_Local, 8, 13);
     driver_TxData_Local[14] =even_parity_flag;//第一帧前6位偶校验
-    driver_TxData_Local[15] =0xff;//第一帧帧尾
+    driver_TxData_Local[15] =0xff;//第一帧帧�?
 		
 }
 

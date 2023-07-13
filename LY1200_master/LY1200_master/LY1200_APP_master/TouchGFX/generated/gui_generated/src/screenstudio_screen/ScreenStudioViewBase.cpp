@@ -4,7 +4,6 @@
 #include <gui_generated/screenstudio_screen/ScreenStudioViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 
 ScreenStudioViewBase::ScreenStudioViewBase()
 {
@@ -28,10 +27,6 @@ ScreenStudioViewBase::ScreenStudioViewBase()
     box_0.setBorderSize(5);
     box_0.setVisible(false);
     add(box_0);
-
-    image1.setXY(188, 121);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_STUDIO_ID));
-    add(image1);
 }
 
 ScreenStudioViewBase::~ScreenStudioViewBase()

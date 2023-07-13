@@ -1095,7 +1095,7 @@
 
   <Group>
     <GroupName>gui</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1462,8 +1462,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_0.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_0.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_0.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_0.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1474,8 +1474,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_10.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_10.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_10.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_10.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1486,8 +1486,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_11.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_11.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_11.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_11.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1498,8 +1498,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_12.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_12.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_12.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_12.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1510,8 +1510,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_13.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_13.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_13.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_13.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1522,8 +1522,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_14.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_14.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_14.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_14.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1534,8 +1534,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_15.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_15.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_15.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_15.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1546,8 +1546,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_16.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_16.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_16.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_16.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1558,8 +1558,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_17.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_17.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_17.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_17.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1570,8 +1570,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_18.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_18.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_18.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_18.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1582,8 +1582,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_19.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_19.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_19.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_19.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1594,8 +1594,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_31.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_31.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_31.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_31.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1606,8 +1606,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_9.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_17_4bpp_9.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_17_4bpp_9.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_17_4bpp_9.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1618,8 +1618,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_0.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_0.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_0.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_0.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1630,8 +1630,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_10.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_10.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_10.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_10.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1642,8 +1642,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_11.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_11.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_11.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_11.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1654,8 +1654,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_12.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_12.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_12.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_12.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1666,8 +1666,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_13.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_13.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_13.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_13.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1678,8 +1678,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_14.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_14.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_14.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_14.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1690,8 +1690,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_15.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_15.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_15.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_15.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1702,8 +1702,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_16.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_16.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_16.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_16.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1714,8 +1714,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_18.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_18.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_18.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_18.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1726,8 +1726,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_19.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_19.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_19.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_19.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1738,8 +1738,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_9.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_25_4bpp_9.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_25_4bpp_9.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_25_4bpp_9.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1750,8 +1750,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_0.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_0.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_0.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_0.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1762,8 +1762,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_10.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_10.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_10.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_10.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1774,8 +1774,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_11.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_11.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_11.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_11.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1786,8 +1786,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_12.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_12.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_12.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_12.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1798,8 +1798,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_13.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_13.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_13.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_13.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1810,8 +1810,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_14.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_14.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_14.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_14.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1822,8 +1822,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_15.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_15.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_15.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_15.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1834,8 +1834,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_16.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_16.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_16.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_16.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1846,8 +1846,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_17.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_17.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_17.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_17.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1858,8 +1858,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_18.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_18.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_18.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_18.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1870,8 +1870,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_19.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_19.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_19.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_19.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1882,8 +1882,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_9.cpp</PathWithFileName>
-      <FilenameWithoutPath>Font_simfang_35_4bpp_9.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/font_deng_35_4bpp_9.cpp</PathWithFileName>
+      <FilenameWithoutPath>Font_Deng_35_4bpp_9.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -2002,30 +2002,6 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/images/src/image_control.cpp</PathWithFileName>
-      <FilenameWithoutPath>image_control.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>8</GroupNumber>
-      <FileNumber>138</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/images/src/image_curve.cpp</PathWithFileName>
-      <FilenameWithoutPath>image_curve.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>8</GroupNumber>
-      <FileNumber>139</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
       <PathWithFileName>../touchgfx/generated/images/src/image_dark_progressindicators_bg_large_circle_indicator_bg_line_half.cpp</PathWithFileName>
       <FilenameWithoutPath>image_Dark_ProgressIndicators_bg_large_circle_indicator_bg_line_half.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -2033,7 +2009,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>140</FileNumber>
+      <FileNumber>138</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2045,7 +2021,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>141</FileNumber>
+      <FileNumber>139</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2057,19 +2033,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>142</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/images/src/image_fan.cpp</PathWithFileName>
-      <FilenameWithoutPath>image_fan.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>8</GroupNumber>
-      <FileNumber>143</FileNumber>
+      <FileNumber>140</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2081,7 +2045,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>144</FileNumber>
+      <FileNumber>141</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2093,19 +2057,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>145</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/images/src/image_language.cpp</PathWithFileName>
-      <FilenameWithoutPath>image_language.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>8</GroupNumber>
-      <FileNumber>146</FileNumber>
+      <FileNumber>142</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2117,7 +2069,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>147</FileNumber>
+      <FileNumber>143</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2129,7 +2081,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>148</FileNumber>
+      <FileNumber>144</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2141,19 +2093,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>149</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/images/src/image_studio.cpp</PathWithFileName>
-      <FilenameWithoutPath>image_studio.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>8</GroupNumber>
-      <FileNumber>150</FileNumber>
+      <FileNumber>145</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2165,55 +2105,43 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>151</FileNumber>
+      <FileNumber>146</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/images/src/image_update.cpp</PathWithFileName>
-      <FilenameWithoutPath>image_update.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/kerning_deng_17_4bpp.cpp</PathWithFileName>
+      <FilenameWithoutPath>Kerning_Deng_17_4bpp.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>152</FileNumber>
+      <FileNumber>147</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/kerning_simfang_17_4bpp.cpp</PathWithFileName>
-      <FilenameWithoutPath>Kerning_simfang_17_4bpp.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/kerning_deng_25_4bpp.cpp</PathWithFileName>
+      <FilenameWithoutPath>Kerning_Deng_25_4bpp.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>153</FileNumber>
+      <FileNumber>148</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/kerning_simfang_25_4bpp.cpp</PathWithFileName>
-      <FilenameWithoutPath>Kerning_simfang_25_4bpp.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/kerning_deng_35_4bpp.cpp</PathWithFileName>
+      <FilenameWithoutPath>Kerning_Deng_35_4bpp.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>154</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/kerning_simfang_35_4bpp.cpp</PathWithFileName>
-      <FilenameWithoutPath>Kerning_simfang_35_4bpp.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>8</GroupNumber>
-      <FileNumber>155</FileNumber>
+      <FileNumber>149</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2225,7 +2153,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>156</FileNumber>
+      <FileNumber>150</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2237,7 +2165,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>157</FileNumber>
+      <FileNumber>151</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2249,7 +2177,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>158</FileNumber>
+      <FileNumber>152</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2261,7 +2189,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>159</FileNumber>
+      <FileNumber>153</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2273,7 +2201,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>160</FileNumber>
+      <FileNumber>154</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2285,7 +2213,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>161</FileNumber>
+      <FileNumber>155</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2297,7 +2225,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>162</FileNumber>
+      <FileNumber>156</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2309,7 +2237,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>163</FileNumber>
+      <FileNumber>157</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2321,7 +2249,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>164</FileNumber>
+      <FileNumber>158</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2333,7 +2261,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>165</FileNumber>
+      <FileNumber>159</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2345,7 +2273,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>166</FileNumber>
+      <FileNumber>160</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2357,7 +2285,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>167</FileNumber>
+      <FileNumber>161</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2369,7 +2297,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>168</FileNumber>
+      <FileNumber>162</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2381,7 +2309,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>169</FileNumber>
+      <FileNumber>163</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2393,43 +2321,43 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>170</FileNumber>
+      <FileNumber>164</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/table_simfang_17_4bpp.cpp</PathWithFileName>
-      <FilenameWithoutPath>Table_simfang_17_4bpp.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/table_deng_17_4bpp.cpp</PathWithFileName>
+      <FilenameWithoutPath>Table_Deng_17_4bpp.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>171</FileNumber>
+      <FileNumber>165</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/table_simfang_25_4bpp.cpp</PathWithFileName>
-      <FilenameWithoutPath>Table_simfang_25_4bpp.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/table_deng_25_4bpp.cpp</PathWithFileName>
+      <FilenameWithoutPath>Table_Deng_25_4bpp.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>172</FileNumber>
+      <FileNumber>166</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../touchgfx/generated/fonts/src/table_simfang_35_4bpp.cpp</PathWithFileName>
-      <FilenameWithoutPath>Table_simfang_35_4bpp.cpp</FilenameWithoutPath>
+      <PathWithFileName>../touchgfx/generated/fonts/src/table_deng_35_4bpp.cpp</PathWithFileName>
+      <FilenameWithoutPath>Table_Deng_35_4bpp.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>173</FileNumber>
+      <FileNumber>167</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2441,7 +2369,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>174</FileNumber>
+      <FileNumber>168</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2453,7 +2381,7 @@
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>175</FileNumber>
+      <FileNumber>169</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2473,7 +2401,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>9</GroupNumber>
-      <FileNumber>176</FileNumber>
+      <FileNumber>170</FileNumber>
       <FileType>4</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2493,7 +2421,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>10</GroupNumber>
-      <FileNumber>177</FileNumber>
+      <FileNumber>171</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2505,7 +2433,7 @@
     </File>
     <File>
       <GroupNumber>10</GroupNumber>
-      <FileNumber>178</FileNumber>
+      <FileNumber>172</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2517,7 +2445,7 @@
     </File>
     <File>
       <GroupNumber>10</GroupNumber>
-      <FileNumber>179</FileNumber>
+      <FileNumber>173</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2529,7 +2457,7 @@
     </File>
     <File>
       <GroupNumber>10</GroupNumber>
-      <FileNumber>180</FileNumber>
+      <FileNumber>174</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2549,7 +2477,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>11</GroupNumber>
-      <FileNumber>181</FileNumber>
+      <FileNumber>175</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2561,7 +2489,7 @@
     </File>
     <File>
       <GroupNumber>11</GroupNumber>
-      <FileNumber>182</FileNumber>
+      <FileNumber>176</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2573,7 +2501,7 @@
     </File>
     <File>
       <GroupNumber>11</GroupNumber>
-      <FileNumber>183</FileNumber>
+      <FileNumber>177</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2585,7 +2513,7 @@
     </File>
     <File>
       <GroupNumber>11</GroupNumber>
-      <FileNumber>184</FileNumber>
+      <FileNumber>178</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -2605,7 +2533,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>12</GroupNumber>
-      <FileNumber>185</FileNumber>
+      <FileNumber>179</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
