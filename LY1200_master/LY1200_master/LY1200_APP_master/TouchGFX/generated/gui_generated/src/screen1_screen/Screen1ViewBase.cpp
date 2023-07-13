@@ -25,13 +25,13 @@ Screen1ViewBase::Screen1ViewBase()
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VFHT));
     add(textArea1);
 
-    textArea2.setXY(56, 43);
+    textArea2.setXY(73, 43);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_80PN));
     add(textArea2);
 
-    textArea3.setXY(309, 43);
+    textArea3.setXY(319, 43);
     textArea3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea3.setLinespacing(0);
     textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CP7Q));
@@ -74,7 +74,7 @@ Screen1ViewBase::Screen1ViewBase()
     TemperatureTextPg.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QIPC));
     add(TemperatureTextPg);
 
-    LightTextPg.setXY(56, 174);
+    LightTextPg.setXY(73, 174);
     LightTextPg.setColor(touchgfx::Color::getColorFromRGB(255, 247, 247));
     LightTextPg.setLinespacing(10);
     Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1NZU).getText());

@@ -63,4 +63,6 @@ ly1200_app_master/screenfanpresenter.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\TextArea.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\TypedText.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Texts.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\SVGImage.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\Matrix3x3.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\VGData.hpp

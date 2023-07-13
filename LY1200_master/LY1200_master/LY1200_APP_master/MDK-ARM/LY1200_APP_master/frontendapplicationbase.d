@@ -99,13 +99,13 @@ ly1200_app_master/frontendapplicationbase.o: \
   ..\touchgfx\gui\include\gui\screenfan_screen\ScreenFanView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screenfan_screen\ScreenFanViewBase.hpp \
   ..\touchgfx\gui\include\gui\screenfan_screen\ScreenFanPresenter.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
   ..\touchgfx\gui\include\gui\screencurve_screen\ScreenCurveView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screencurve_screen\ScreenCurveViewBase.hpp \
   ..\touchgfx\gui\include\gui\screencurve_screen\ScreenCurvePresenter.hpp \
   ..\touchgfx\gui\include\gui\screeneffect_screen\ScreenEffectView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screeneffect_screen\ScreenEffectViewBase.hpp \
   ..\touchgfx\gui\include\gui\screeneffect_screen\ScreenEffectPresenter.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
   ..\touchgfx\gui\include\gui\screeneffectset_screen\ScreenEffectSetView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screeneffectset_screen\ScreenEffectSetViewBase.hpp \
   ..\touchgfx\gui\include\gui\screeneffectset_screen\ScreenEffectSetPresenter.hpp \

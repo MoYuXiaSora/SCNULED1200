@@ -200,7 +200,7 @@
         <Translation Language="EN">15</Translation>
       </Text>
       <Text Id="__SingleUse_ZI7U" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB"> &lt;value&gt;% </Translation>
+        <Translation Language="GB">  &lt;value&gt;%    </Translation>
         <Translation Language="EN"> &lt;&gt; %</Translation>
       </Text>
       <Text Id="__SingleUse_7APG" Alignment="Center" TypographyId="Default">
@@ -234,8 +234,8 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="Deng.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters=" . " WildcardCharacterRanges="0-9" />
-    <Typography Id="Large" Font="Deng.ttf" Size="35" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
-    <Typography Id="Small" Font="Deng.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Default" Font="Deng.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters=" . " WildcardCharacterRanges="0-9" />
+    <Typography Id="Large" Font="Deng.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Small" Font="Deng.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

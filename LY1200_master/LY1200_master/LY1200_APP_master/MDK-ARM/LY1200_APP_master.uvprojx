@@ -1691,69 +1691,124 @@
               <FilePath>../touchgfx/generated/fonts/src/cachedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_0.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_10.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_10.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_10.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_10.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_11.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_11.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_11.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_11.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_12.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_12.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_12.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_12.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_13.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_13.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_13.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_13.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_14.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_14.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_14.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_14.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_15.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_15.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_15.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_15.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_16.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_16.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_16.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_16.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_17.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_17.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_17.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_17.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_18.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_18.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_18.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_18.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_19.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_19.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_19.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_19.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_31.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_31.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_31.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_31.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_Deng_17_4bpp_9.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_9.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_17_4bpp_9.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_9.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_10.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_10.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_11.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_11.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_12.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_12.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_13.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_13.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_14.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_14.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_15.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_15.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_16.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_16.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_18.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_18.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_19.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_19.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Deng_20_4bpp_9.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_9.cpp</FilePath>
             </File>
             <File>
               <FileName>Font_Deng_25_4bpp_0.cpp</FileName>
@@ -1796,6 +1851,11 @@
               <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_16.cpp</FilePath>
             </File>
             <File>
+              <FileName>Font_Deng_25_4bpp_17.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_17.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Font_Deng_25_4bpp_18.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_18.cpp</FilePath>
@@ -1809,66 +1869,6 @@
               <FileName>Font_Deng_25_4bpp_9.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_9.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_0.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_0.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_10.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_10.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_11.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_11.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_12.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_12.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_13.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_13.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_14.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_14.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_15.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_15.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_16.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_16.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_17.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_17.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_18.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_18.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_19.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_19.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_Deng_35_4bpp_9.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_deng_35_4bpp_9.cpp</FilePath>
             </File>
             <File>
               <FileName>FontCache.cpp</FileName>
@@ -1961,19 +1961,19 @@
               <FilePath>../touchgfx/generated/images/src/image_tv.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_Deng_17_4bpp.cpp</FileName>
+              <FileName>Kerning_Deng_18_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_deng_17_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_deng_18_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_Deng_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_deng_20_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Kerning_Deng_25_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/kerning_deng_25_4bpp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Kerning_Deng_35_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_deng_35_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>LanguageEn.cpp</FileName>
@@ -2051,19 +2051,19 @@
               <FilePath>../touchgfx/generated/images/src/svgdatabase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_Deng_17_4bpp.cpp</FileName>
+              <FileName>Table_Deng_18_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_deng_17_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_deng_18_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_Deng_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_deng_20_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Table_Deng_25_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/table_deng_25_4bpp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Table_Deng_35_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_deng_35_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>

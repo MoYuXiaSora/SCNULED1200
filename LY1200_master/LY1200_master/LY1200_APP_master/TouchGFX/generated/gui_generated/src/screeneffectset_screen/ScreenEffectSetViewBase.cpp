@@ -84,7 +84,7 @@ ScreenEffectSetViewBase::ScreenEffectSetViewBase()
     add(TemperatureTextPg);
 
     box2.setPosition(35, 282, 410, 20);
-    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box2.setColor(touchgfx::Color::getColorFromRGB(46, 98, 181));
     box2.setVisible(false);
     add(box2);
 
