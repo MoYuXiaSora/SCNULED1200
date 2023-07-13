@@ -360,6 +360,7 @@ static uint8_t paparazzi(struct LIGHTEFFECTS *paparazzi_Parament)
 	#define PARA_LONG 10
 	float light_Para[PARA_LONG] = {0.50, 0.525, 0.55, 0.575, 0.60, 0.625, 0.65, 0.675, 0.70, 0.725};
 	uint16_t color_Temperature_Para[PARA_LONG] = {6250, 6000, 5750, 5500, 5250, 5000, 4750, 4500, 4250, 4000};
+		
 	if(paparazzi_Parament->le_Update_Flag == FLAG_TRUE) paparazzi_Parament->le_State = SETTING;	//有新的参数进来需要重新设置
 	switch (paparazzi_Parament->le_State)
 	{
@@ -375,7 +376,8 @@ static uint8_t paparazzi(struct LIGHTEFFECTS *paparazzi_Parament)
 			if(paparazzi_Parament->freq == 'R') freq_Set = 1+random_number(10);
 			else freq_Set = paparazzi_Parament->freq;
 
-			set_State++;//参数切换
+			//set_State++;//参数切换
+			set_State=random_number(PARA_LONG);
 			if(set_State>=PARA_LONG){set_State=0;}
 			if(set_State<0){set_State=0;}
 
@@ -522,8 +524,8 @@ static uint8_t tv(struct LIGHTEFFECTS *tv_Parament)
 	static int16_t color_Temperature_Set = 0;
 	static uint8_t freq_Set = 0;
 	//保存 cloud 参数组
-	float light_Para[4] = {0.525, 0.55, 0.575, 0.60};
-	uint16_t color_Temperature_Para[4] = {6000, 5500, 5000, 4500};
+	float light_Para[4] = {0.525, 0.55, 0.575, 0.60}; 
+	uint16_t color_Temperature_Para[4] = {6500, 4500, 5500, 4000};
 	if(tv_Parament->le_Update_Flag == FLAG_TRUE) tv_Parament->le_State = SETTING;	//有新的参数进来需要重新设置
 	switch (tv_Parament->le_State)
 	{
@@ -832,7 +834,7 @@ static uint8_t lightning(struct LIGHTEFFECTS *lightning_Parament)
 				case 1:
 				{
 					//参数赋值			
-					brightness_Set = 0.01;//最小值不能设定为0
+					brightness_Set = 0.005;//最小值不能设定为0
 					color_Temperature_Set = lightning_Parament->color_Temperature;
 					if(lightning_Parament->freq == 'R') freq_Set = 1+random_number(10);
 					else freq_Set = lightning_Parament->freq;
@@ -844,14 +846,6 @@ static uint8_t lightning(struct LIGHTEFFECTS *lightning_Parament)
 			}
 			//状态切换
 			lightning_Parament->le_State = CARRY_OUT;
-			if(set_State==0)
-			{
-				if(random_number(2)==0)
-				{
-					lightning_Parament->le_State = DELAY;
-					set_State=0;
-				}
-			}
 		}break;
 		
 		case CARRY_OUT:
@@ -867,7 +861,18 @@ static uint8_t lightning(struct LIGHTEFFECTS *lightning_Parament)
 			light_Effect_Analysis(&brightness_Out, &color_Temperature_Out, &(lightning_Parament->cold_Percentage), &(lightning_Parament->warm_Percentage));
 			//根据频率设置延迟
 			osDelay(200/freq_Set); //最大周期长度为(200+1)*ms
-			if((fabsf(brightness_Err)<=0.001)&&(abs(color_Temperature_Err)<=50)) lightning_Parament->le_State = SETTING;	//已经完成本轮变换，需要重新设置
+			if((fabsf(brightness_Err)<=0.001)&&(abs(color_Temperature_Err)<=50)){		
+				lightning_Parament->le_State = SETTING;	//已经完成本轮变换，需要重新设置
+				if(brightness_Set<=0.005)
+				{
+					if(random_number(3)!=0)
+					{
+						lightning_Parament->le_State = DELAY;
+					}
+				}
+			}
+			
+
 			
 		}break;
 

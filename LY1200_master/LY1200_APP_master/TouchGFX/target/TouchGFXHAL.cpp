@@ -29,7 +29,7 @@
 #include "W25Qx.h"
 
 using namespace touchgfx;
-static KeyController kc;//静�?�变�?
+static KeyController kc;//静�?�变�?
 //static KnobController knc;
 
 uint32_t text_i;
@@ -148,20 +148,20 @@ void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
 	
 	
 			
-//			uint16_t local_w,local_h=0;//记录touchgfx瞬时渲染�?维数组指针位�?
-//			uint16_t cout_w,cout_h=0;//�?部渲染数组循环计�?
-//			uint16_t color16=0;//8位转16位临时存储变�?
-//			uint32_t i = 0;//8位转16位key�?
-//			//LCD_Address_Set(lcdinfo.x,lcdinfo.y,lcdinfo.w,lcdinfo.h+lcdinfo.y);//1.每区�? 设置光标矩形位置
+//			uint16_t local_w,local_h=0;//记录touchgfx瞬时渲染�?维数组指针位�?
+//			uint16_t cout_w,cout_h=0;//�?部渲染数组循环计�?
+//			uint16_t color16=0;//8位转16位临时存储变�?
+//			uint32_t i = 0;//8位转16位key�?
+//			//LCD_Address_Set(lcdinfo.x,lcdinfo.y,lcdinfo.w,lcdinfo.h+lcdinfo.y);//1.每区�? 设置光标矩形位置
 //			for(cout_h=0;cout_h<lcdinfo.h;cout_h++)
 //			{
-//				//LCD_Address_Set(lcdinfo.x,lcdinfo.y+local_h,lcdinfo.w,lcdinfo.y+local_h);//2.每行刷新 设置光标矩形位置 兼顾性能和撕�?
-//				//进行行刷�?
+//				//LCD_Address_Set(lcdinfo.x,lcdinfo.y+local_h,lcdinfo.w,lcdinfo.y+local_h);//2.每行刷新 设置光标矩形位置 兼顾性能和撕�?
+//				//进行行刷�?
 //				for(cout_w=0;cout_w<lcdinfo.w;cout_w++)
 //				{
 //					color16 = lcdinfo.pixels[i];
 //					color16 |= ((uint16_t)(lcdinfo.pixels[i+1]) << 8);
-//					LCD_Address_Set(lcdinfo.x+cout_w,lcdinfo.y+local_h,lcdinfo.x+cout_w,lcdinfo.y+local_h);//3.设置光标点位�? 可完美解决画面撕裂问�? 但会降低刷新速度
+//					LCD_Address_Set(lcdinfo.x+cout_w,lcdinfo.y+local_h,lcdinfo.x+cout_w,lcdinfo.y+local_h);//3.设置光标点位�? 可完美解决画面撕裂问�? 但会降低刷新速度
 //					LCD_IO_WriteData(color16);
 //					local_w++;
 //					i += 2;

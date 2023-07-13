@@ -311,7 +311,7 @@ void TIM4_IRQHandler(void)
 void USART3_IRQHandler(void)
 {
   /* USER CODE BEGIN USART3_IRQn 0 */
-	// 新添加的函数，用来处理串口空闲中�?
+	// 新添加的函数，用来处理串口空闲中�?
   //USER1_UART_IRQHandler1(&huart3); 
   /* USER CODE END USART3_IRQn 0 */
   HAL_UART_IRQHandler(&huart3);
@@ -361,19 +361,19 @@ void USAR_UART_IDLECallback(UART_HandleTypeDef *huart)
 	// 测试函数：将接收到的数据打印出去
 
     
-	// 清零接收缓冲�?                                         
+	// 清零接收缓冲�?                                         
     
-    // 重启�?始DMA传输 每次255字节数据
+    // 重启�?始DMA传输 每次255字节数据
 		//extern uint8_t rx_array[8];
     //HAL_UART_Receive_DMA(&huart3, rx_array,sizeof(rx_array));  
 }
 
 void USER1_UART_IRQHandler1(UART_HandleTypeDef *huart)
-{	// 判断是否是串�?3
+{	// 判断是否是串�?3
     if(USART3 == huart3.Instance)                                   
-    {	// 判断是否是空闲中�?
+    {	// 判断是否是空闲中�?
         if(RESET != __HAL_UART_GET_FLAG(&huart3, UART_FLAG_IDLE))   
-        {	 // 清除空闲中断标志（否则会�?直不断进入中断）
+        {	 // 清除空闲中断标志（否则会�?直不断进入中断）
             __HAL_UART_CLEAR_IDLEFLAG(&huart3);
             // 调用中断处理函数
             USAR_UART_IDLECallback(huart);                          

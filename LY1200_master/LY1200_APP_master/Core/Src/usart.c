@@ -23,8 +23,8 @@
 /* USER CODE BEGIN 0 */
 #include "string.h"
 
-#define USART3_DMA_RX_BUFFER_LENGTH 256 //ÓÉÓÃ»§ÅäÖÃDMA»º´æÇø ¿É¸ü¸Ä
-#define USART3_DMA_RX_IT_BUFFER_LENGTH 256 //ÓÉÓÃ»§ÅäÖÃDMA_IT»º´æÇø ¿É¸ü¸Ä
+#define USART3_DMA_RX_BUFFER_LENGTH 256 //ç”±ç”¨æˆ·é…ç½®DMAç¼“å­˜åŒº å¯æ›´æ”¹
+#define USART3_DMA_RX_IT_BUFFER_LENGTH 256 //ç”±ç”¨æˆ·é…ç½®DMA_ITç¼“å­˜åŒº å¯æ›´æ”¹
 __attribute__ ((section(".IRAM1"))) static volatile uint8_t USART3_DMA_Rx_Buffer[USART3_DMA_RX_BUFFER_LENGTH];
 __attribute__ ((section(".IRAM1"))) static volatile uint8_t USART3_DMA_Rx_It_Buffer[USART3_DMA_RX_IT_BUFFER_LENGTH];
 
@@ -37,9 +37,39 @@ static struct UARTEx_FRAME UART3_Frame={
 
 /* USER CODE END 0 */
 
+UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart3_rx;
 
+/* USART1 init function */
+
+void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
 /* USART3 init function */
 
 void MX_USART3_UART_Init(void)
@@ -65,7 +95,7 @@ void MX_USART3_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART3_Init 2 */
-	__HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);//Ê¹ÄÜidleÖÐ¶Ï
+	__HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);//Ê¹ï¿½ï¿½idleï¿½Ð¶ï¿½
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart3,USART3_DMA_Rx_It_Buffer,sizeof(USART3_DMA_Rx_It_Buffer)/sizeof(USART3_DMA_Rx_It_Buffer[0]));
 	__HAL_DMA_DISABLE_IT(&hdma_usart3_rx, DMA_IT_HT);
 	__HAL_DMA_DISABLE_IT(&hdma_usart3_rx, DMA_IT_DME);
@@ -77,7 +107,31 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if(uartHandle->Instance==USART3)
+  if(uartHandle->Instance==USART1)
+  {
+  /* USER CODE BEGIN USART1_MspInit 0 */
+
+  /* USER CODE END USART1_MspInit 0 */
+    /* USART1 clock enable */
+    __HAL_RCC_USART1_CLK_ENABLE();
+
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**USART1 GPIO Configuration
+    PA9     ------> USART1_TX
+    PA10     ------> USART1_RX
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_10;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* USER CODE BEGIN USART1_MspInit 1 */
+
+  /* USER CODE END USART1_MspInit 1 */
+  }
+  else if(uartHandle->Instance==USART3)
   {
   /* USER CODE BEGIN USART3_MspInit 0 */
 
@@ -128,7 +182,25 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
 void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 {
 
-  if(uartHandle->Instance==USART3)
+  if(uartHandle->Instance==USART1)
+  {
+  /* USER CODE BEGIN USART1_MspDeInit 0 */
+
+  /* USER CODE END USART1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_USART1_CLK_DISABLE();
+
+    /**USART1 GPIO Configuration
+    PA9     ------> USART1_TX
+    PA10     ------> USART1_RX
+    */
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_9|GPIO_PIN_10);
+
+  /* USER CODE BEGIN USART1_MspDeInit 1 */
+
+  /* USER CODE END USART1_MspDeInit 1 */
+  }
+  else if(uartHandle->Instance==USART3)
   {
   /* USER CODE BEGIN USART3_MspDeInit 0 */
 
@@ -183,7 +255,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 
 
 /**
-  * @brief  Ê¹ÓÃ USART3 ´Ó pData ÖÐ·¢ËÍ Size ¸ö×Ö½Ú´óÐ¡µÄÊý¾Ýµ½ ESP32C3
+  * @brief  Ê¹ï¿½ï¿½ USART3 ï¿½ï¿½ pData ï¿½Ð·ï¿½ï¿½ï¿½ Size ï¿½ï¿½ï¿½Ö½Ú´ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ ESP32C3
   * @note  
   * @param  pData Pointer to data buffer (u8 or u16 data elements).
   * @param  Size  Amount of data elements (u8 or u16) to be received.
@@ -193,20 +265,20 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 struct UARTEx_FRAME Transmit_To_ESP32C3(uint8_t *pData, uint16_t Size)
 {
 	/*
-	* ·¢ËÍ³É¹¦·µ»Ø£ºHAL_OK
-	* ·¢ËÍÊ§°Ü·µ»Ø£ºHAL_BUSY / HAL_ERROR
+	* ï¿½ï¿½ï¿½Í³É¹ï¿½ï¿½ï¿½ï¿½Ø£ï¿½HAL_OK
+	* ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü·ï¿½ï¿½Ø£ï¿½HAL_BUSY / HAL_ERROR
 	*/
 	UART3_Frame.tx_Frame_Flag = HAL_UART_Transmit_IT(&huart3, pData, Size);
   return UART3_Frame;
 }
 
 /**
-  * @brief  Ê¹ÓÃ USART3_DMA ½ÓÊÕÒ»Ö¡Êý¾Ýµ½ ESP32C3
+  * @brief  Ê¹ï¿½ï¿½ USART3_DMA ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ï¿½ï¿½ï¿½Ýµï¿½ ESP32C3
   * @note		static struct UARTEx_FRAME UART3_Frame={
-							.new_Frame_Flag=USART3_OLD_FRAME, //ÊÇ·ñÊÕµ½ÁËÐÂÒ»Ö¡ ÐÂ:USART3_NEW_FRAME ¾É:USART3_OLD_FRAME
-							.tx_Frame_Flag=HAL_OK,						//ÊÇ·ñ³É¹¦·¢ËÍÁËÐÂÒ»Ö¡ ·¢ËÍ³É¹¦·µ»Ø£ºHAL_OK   ·¢ËÍÊ§°Ü·µ»Ø£ºHAL_BUSY / HAL_ERROR
-							.frame_Length=0,									//ÐÂÒ»Ö¡Êý¾Ý³¤¶È
-							.pData=USART3_DMA_Rx_Buffer				//»º³åÇøÊý×éµØÖ·Ö¸Õë
+							.new_Frame_Flag=USART3_OLD_FRAME, //ï¿½Ç·ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ ï¿½ï¿½:USART3_NEW_FRAME ï¿½ï¿½:USART3_OLD_FRAME
+							.tx_Frame_Flag=HAL_OK,						//ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ ï¿½ï¿½ï¿½Í³É¹ï¿½ï¿½ï¿½ï¿½Ø£ï¿½HAL_OK   ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü·ï¿½ï¿½Ø£ï¿½HAL_BUSY / HAL_ERROR
+							.frame_Length=0,									//ï¿½ï¿½Ò»Ö¡ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½
+							.pData=USART3_DMA_Rx_Buffer				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·Ö¸ï¿½ï¿½
 						}; 
   * @param  
   * @retval struct UARTEx_FRAME 
@@ -218,12 +290,12 @@ struct UARTEx_FRAME Receive_From_ESP32C3()
 }
 
 /**
-  * @brief  Ê¹ÓÃ USART3_DMA ½ÓÊÕÒ»Ö¡Êý¾Ýµ½ ESP32C3
+  * @brief  Ê¹ï¿½ï¿½ USART3_DMA ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ï¿½ï¿½ï¿½Ýµï¿½ ESP32C3
   * @note		static struct UARTEx_FRAME UART3_Frame={
-							.new_Frame_Flag=USART3_OLD_FRAME, //ÊÇ·ñÊÕµ½ÁËÐÂÒ»Ö¡ ÐÂ:USART3_NEW_FRAME ¾É:USART3_OLD_FRAME
-							.tx_Frame_Flag=HAL_OK,						//æ˜¯å¦æˆåŠŸå‘é?äº†æ–°ä¸€å¸? å‘é?æˆåŠŸè¿”å›žï¼šHAL_OK   å‘é?å¤±è´¥è¿”å›žï¼šHAL_BUSY / HAL_ERROR
-							.frame_Length=0,									//æ–°ä¸€å¸§æ•°æ®é•¿åº?
-							.pData=USART3_DMA_Rx_Buffer				//ç¼“å†²åŒºæ•°ç»„åœ°å?æŒ‡é’ˆ
+							.new_Frame_Flag=USART3_OLD_FRAME, //ï¿½Ç·ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ ï¿½ï¿½:USART3_NEW_FRAME ï¿½ï¿½:USART3_OLD_FRAME
+							.tx_Frame_Flag=HAL_OK,						//æ˜¯å¦æˆåŠŸå‘ï¿½?ï¿½äº†æ–°ä¸€ï¿½? å‘ï¿½?ï¿½æˆåŠŸè¿”å›žï¼šHAL_OK   å‘ï¿½?ï¿½å¤±è´¥è¿”å›žï¼šHAL_BUSY / HAL_ERROR
+							.frame_Length=0,									//æ–°ä¸€å¸§æ•°æ®é•¿ï¿½?
+							.pData=USART3_DMA_Rx_Buffer				//ç¼“å†²åŒºæ•°ç»„åœ°ï¿½?æŒ‡é’ˆ
 						}; 
   * @param  
   * @retval struct UARTEx_FRAME 
@@ -231,10 +303,10 @@ struct UARTEx_FRAME Receive_From_ESP32C3()
 **/
 struct UARTEx_FRAME clear_UARTx_Frame()
 {
-	UART3_Frame.new_Frame_Flag=USART3_OLD_FRAME,  //ÊÇ·ñÊÕµ½ÁËÐÂÒ»Ö¡ ÐÂ:USART3_NEW_FRAME ¾É:USART3_OLD_FRAME
-	UART3_Frame.tx_Frame_Flag=HAL_OK,					  	//ÊÇ·ñ³É¹¦·¢ËÍÁËÐÂÒ»Ö¡ ·¢ËÍ³É¹¦·µ»Ø£ºHAL_OK   ·¢ËÍÊ§°Ü·µ»Ø£ºHAL_BUSY / HAL_ERROR
-	UART3_Frame.frame_Length=0,									  //ÐÂÒ»Ö¡Êý¾Ý³¤¶È
-	UART3_Frame.pData=USART3_DMA_Rx_Buffer;		   	//»º³åÇøÊý×éµØÖ·Ö¸Õë
+	UART3_Frame.new_Frame_Flag=USART3_OLD_FRAME,  //ï¿½Ç·ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ ï¿½ï¿½:USART3_NEW_FRAME ï¿½ï¿½:USART3_OLD_FRAME
+	UART3_Frame.tx_Frame_Flag=HAL_OK,					  	//ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡ ï¿½ï¿½ï¿½Í³É¹ï¿½ï¿½ï¿½ï¿½Ø£ï¿½HAL_OK   ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü·ï¿½ï¿½Ø£ï¿½HAL_BUSY / HAL_ERROR
+	UART3_Frame.frame_Length=0,									  //ï¿½ï¿½Ò»Ö¡ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½
+	UART3_Frame.pData=USART3_DMA_Rx_Buffer;		   	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·Ö¸ï¿½ï¿½
 	
 	return UART3_Frame;
 }

@@ -408,7 +408,7 @@ void canTask_Entry(void *argument)
   for(;;)
   {
     //获取消息
-    if (osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
+    if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     { //获取消息成功
       if(sys_Data_getQueue.driver_Parament.drive_State_Update == driverUPDATE)
       {
@@ -435,6 +435,12 @@ void canTask_Entry(void *argument)
         sys_Data_getQueue.driver_Parament.drive_State_Update = driverSLEEP;
       }
 
+//			uint8_t uart_test[4]={0,0,0,0};
+//			uart_test[0]=0xEE;
+//			uart_test[1]=(uint8_t)(sys_Data_getQueue.LE_Parament.cold_Percentage * 100);
+//			uart_test[2]=0xFF;
+//			uart_test[3]=(uint8_t)(sys_Data_getQueue.LE_Parament.warm_Percentage * 100);
+//			HAL_UART_Transmit(&huart1, uart_test, 4, 1000);
     }
     //放入消息
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
@@ -468,13 +474,21 @@ void lightEffectTask_Entry(void *argument)
    struct SYS_DATA sys_Data_getQueue={
     .LE_Parament={ FIRE, SETTING, 0, 4600, 5, 0, 0}//{类型，状态，亮度，色温，频率，冷通道结果，暖通道结果};
   };
-
+	 struct SYS_DATA sys_Data_getQueue_Delete={
+    .LE_Parament={ FIRE, SETTING, 0, 4600, 5, 0, 0}//{类型，状态，亮度，色温，频率，冷通道结果，暖通道结果};
+  };
+	 
   for(;;)
   {
 		EventStartA(1);
     //获取消息
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     { //获取消息成功
+			//放入消息 
+			if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
+			{ //放入消息成功
+				
+			}
       if(sys_Data_getQueue.model_Parament == LIGHT_EFFECTS)
       {
         //运行 lighteffects_Type_Choose 将输入的特效参数计算为应输出的冷、暖两个通道比例
@@ -486,7 +500,10 @@ void lightEffectTask_Entry(void *argument)
       }
 
     }
-
+    //放入消息 
+    if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue_Delete,NULL,portMAX_DELAY)==osOK)
+    { //获取消息成功
+		}			
     //放入消息 
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
     { //放入消息成功
@@ -805,9 +822,11 @@ void testTask_Entry(void *argument)
 //    {
 //        g_test_buffer[i-1] = (i);         /* 预存测试数据 */
 //    }
-
+		
+		
+		
 		test_info[7] = uxTaskGetStackHighWaterMark(NULL);
-    osDelay(100);
+    osDelay(1);
 		EventStopA(0);
   }
   /* USER CODE END testTask_Entry */

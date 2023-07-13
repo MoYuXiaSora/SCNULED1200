@@ -20,14 +20,14 @@ enum CURVE {
 
 struct CCT
 {
-    /* data */
+    /* input data */
     float brightness; //CCT 亮度 浮点型  0.0%-100.0%
     uint16_t color_Temperature; // CCT 色温 2700-6500K
     enum CURVE curve;  //四种类型 直线型 对数型 指数型 S型
+		uint8_t cct_Update_Flag; //是否有新参数更新
+		/* output data */
     float cold_Percentage;  //冷色温输出结果 0.0%-100.0%
     float warm_Percentage;  //暖色温输出结果 0.0%-100.0%
-    uint8_t cct_Update_Flag; //是否有新参数更新
-    
 };
 
 uint8_t cct_User(struct CCT *cct_Local_app,float *cct_Cold_Out_App, float *cct_Warm_Out_App);

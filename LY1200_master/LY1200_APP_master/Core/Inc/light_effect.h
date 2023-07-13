@@ -30,17 +30,17 @@ enum LIGHTEFFECTS_TYPE
 
 struct LIGHTEFFECTS
 {   
+		/* input data */
     uint8_t type;//灯效类型
     uint8_t le_State; //特效状态
-    
+    uint8_t le_Update_Flag; //是否有新参数更新
     float brightness;//灯效亮度 0.0%-100.0%
     uint16_t color_Temperature;//灯效色温 2700-6500
     uint8_t freq;//灯效频率 1 - 10 R（自动）
-
+	
+		/* output data */
     float cold_Percentage;  //冷色温输出结果 0.0%-100.0%
     float warm_Percentage;  //暖色温输出结果 0.0%-100.0%
-
-    uint8_t le_Update_Flag; //是否有新参数更新
 
 };
 

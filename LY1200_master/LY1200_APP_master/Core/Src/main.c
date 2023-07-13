@@ -120,6 +120,7 @@ int main(void)
   MX_TIM3_Init();
   MX_SPI2_Init();
   MX_USART3_UART_Init();
+  MX_USART1_UART_Init();
   MX_TouchGFX_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
@@ -129,7 +130,7 @@ int main(void)
 	BSP_W25Qx_Init();
 	esp32c3_Init();
 	
-		/* ≥ı ºªØ EventRecorder ≤¢ø™∆Ù */
+		/* ÂàùÂßãÂåñ EventRecorder Âπ∂ÂºÄÂêØ */
 	EventRecorderInitialize(EventRecordAll, 1U);
 	EventRecorderStart();
 	
