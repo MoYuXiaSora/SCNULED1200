@@ -12,11 +12,11 @@ uint8_t CheckSum(uint8_t FrameData[],uint8_t Framelen);
 uint8_t Datacmd(uint8_t FrameCmd[]);
 uint8_t GetReadyToOTA();  
 uint8_t LoadOTAData(uint8_t FrameData[]);
-uint8_t LoadFanData(uint8_t FrameData[]);
-uint8_t LoadFeatureData(uint8_t FrameData[],int Framelenth);
+uint8_t LoadFanData(uint8_t FrameData[],struct SYS_DATA *sys_Data_getQueue);
+uint8_t LoadFeatureData(uint8_t FrameData[],int Framelenth ,struct SYS_DATA *sys_Data_getQueue);
+uint8_t BlueFrameManage(uint8_t atstr[], uint8_t LenthOfAT ,struct SYS_DATA *sys_Data_getQueue);
 uint8_t ReturnFrame(uint8_t FrameCmd ,uint8_t DataLenth,uint8_t ResData[],int Framelenth);
 uint8_t CheckFinalRes(void);
-uint8_t BlueFrameManage(uint8_t FrameData[], uint8_t FrameLen);
 void init_CRC32_table(uint32_t CRC32_table[]);
 
 ///uint8_t CorrectFrame[8] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // 

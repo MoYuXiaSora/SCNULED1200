@@ -846,7 +846,7 @@ void wirelessTask_Entry(void *argument)
 			if(USART3_NEW_FRAME==UART3_Frame_Local.new_Frame_Flag)
 			{//新一帧接收成功
 				//发送接收到的数据
-				BleService(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
+				BleService(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length ,&sys_Data_getQueue);
 				//Transmit_To_ESP32C3(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
 				//清除接收标志
 				//UART3_Frame_Local=clear_UARTx_Frame();
@@ -873,7 +873,7 @@ void wirelessTask_Entry(void *argument)
     //放入消息 
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
     {//放入消息成功
-      
+      BleClearSysData(&sys_Data_getQueue);
     }
 		else
 		{//放入消息失败

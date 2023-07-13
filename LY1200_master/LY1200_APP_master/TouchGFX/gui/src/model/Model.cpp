@@ -18,7 +18,7 @@ Model::Model() : modelListener(0),CCT_Light_count(15),CCT_Temperature_count(2700
 extern osMessageQueueId_t sysDataQueue_AppHandle;//消息队列
 
 void Model::tick()//每一帧都会自动调用 保存状态数据
-{
+{ 
 	struct SYS_DATA sys_Data_getQueue;//（void*)&指向需要放入消息队列的消息结构体
 		//获取消息
 	if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)

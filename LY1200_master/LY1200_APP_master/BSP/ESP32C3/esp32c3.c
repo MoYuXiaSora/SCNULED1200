@@ -91,17 +91,18 @@ uint8_t BlueToothMsgManage(uint8_t atstr[], uint8_t LenthOfAT)
 //	printf("status+ %x \r\n", BLE_SERVICE_STATUS);
 //	printf("framelenth + %x \r\n", LenthOfAT);
 //	printf(atstr);
-    if (strstr(atstr, "BLEDISCONN") != BLE_IDLE) {
+	  char *restr=strstr(atstr, "BLEDISCONN");
+    if (strstr(atstr, "BLEDISCONN") != NULL) {
         BLE_SERVICE_STATUS = BLE_IDLE;
         esp32c3_SendCheck("+++",3 , "");
 				esp32c3_SendCheck(BLEADVSTART,16,"OK");
 				esp32c3_SendCheck(BLEADVDATA,46,"OK");
         BLE_SERVICE_STATUS = BLE_READY;
         return 0;
-    } else if (strstr(atstr, "BLECFGMTU:") != 0 || strstr(atstr, "CONNPARAM") != 0 || strstr(atstr, "BLECONN") != 0) {
+    } else if (strstr(atstr, "BLECFGMTU:") != NULL || strstr(atstr, "CONNPARAM") != NULL || strstr(atstr, "BLECONN") != NULL) {
         BLE_SERVICE_STATUS = BLE_CONNECTED;
         return 0;
-    } else if (strstr(atstr, "WRITE") != 0) {
+    } else if (strstr(atstr, "WRITE") != NULL) {
         BLE_SERVICE_STATUS = BLE_IDLE;
         esp32c3_SendCheck(BLESPPCFG, 24,"OK");
         esp32c3_SendCheck(BLESPP,11, "OK");
@@ -128,14 +129,14 @@ uint8_t BlueToothSPPManage(uint8_t atstr[], uint8_t LenthOfAT)
 //	printf("status+ %x \r\n", BLE_SERVICE_STATUS);
 //	printf("framelenth + %x \r\n", LenthOfAT);
 //	printf(atstr);
-    if (strstr(atstr, "BLEDISCONN") != 0) {
+    if (strstr(atstr, "BLEDISCONN") != NULL) {
         BLE_SERVICE_STATUS = BLE_IDLE;
         esp32c3_SendCheck("+++",3 , "");
 				soft_Delay(500);
 				esp32c3_SendCheck(BLEADVSTART,16,"OK");
 				esp32c3_SendCheck(BLEADVDATA,46,"OK");
         BLE_SERVICE_STATUS = BLE_READY;
-    } else if (strstr(atstr, "WRITE") != 0) {
+    } else if (strstr(atstr, "WRITE") != NULL) {
         BLE_SERVICE_STATUS = BLE_IDLE;
         esp32c3_SendCheck(BLESPPCFG, 24,"OK");
         esp32c3_SendCheck(BLESPP,11, "OK");
@@ -157,7 +158,7 @@ uint8_t BlueToothCmdManage(uint8_t FrameData[], uint8_t FrameLen)
 	//printf("status+ %x \r\n", BLE_SERVICE_STATUS);
 	//printf("framelenth + %x \r\n", FrameLen);
 	//printf(FrameData);
-    if (strstr(FrameData, "BLEDISCONN") != 0) {
+    if (strstr(FrameData, "BLEDISCONN") != NULL) {
         BLE_SERVICE_STATUS = BLE_IDLE;
         esp32c3_SendCheck("+++",3 , "");
 			  soft_Delay(500);
@@ -165,7 +166,7 @@ uint8_t BlueToothCmdManage(uint8_t FrameData[], uint8_t FrameLen)
 				esp32c3_SendCheck(BLEADVDATA,46,"OK");
         BLE_SERVICE_STATUS = BLE_READY;
         return 0;
-    } else if ((strstr(FrameData, "WRITE") != 0)) {
+    } else if ((strstr(FrameData, "WRITE") != NULL)) {
         BLE_SERVICE_STATUS = BLE_IDLE;
         esp32c3_SendCheck(BLESPPCFG, 24,"OK");
         esp32c3_SendCheck(BLESPP,11, "OK");
@@ -182,7 +183,7 @@ uint8_t BlueToothCmdManage(uint8_t FrameData[], uint8_t FrameLen)
   * @retval uint8_t thisOK / thisERROR
   * @example esp32c3_Init();
 **/
-uint8_t BleService(uint8_t *pData,uint8_t FrameLength){
+uint8_t BleService(uint8_t *pData,uint8_t FrameLength,struct SYS_DATA *sys_Data_getQueue){
 		struct UARTEx_FRAME ESP32_Frame_Local={
 		.new_Frame_Flag=USART3_OLD_FRAME,
 		.tx_Frame_Flag=HAL_OK,
@@ -192,6 +193,10 @@ uint8_t BleService(uint8_t *pData,uint8_t FrameLength){
 //	printf("status+ %x \r\n", BLE_SERVICE_STATUS);
 //	printf("framelenth + %x \r\n", FrameLength);
 	if(FrameLength<=1){return 0;}
+	while (*pData == 0x00 && FrameLength > 0) {
+    pData++;
+    FrameLength--;
+}
 	memcpy(ESP32_DMA_Rx_Buffer,pData,FrameLength);
 	switch (BLE_SERVICE_STATUS) {
 		case BLE_IDLE:
@@ -209,10 +214,17 @@ uint8_t BleService(uint8_t *pData,uint8_t FrameLength){
 			ESP32_Frame_Local=clear_UARTx_Frame();
 			break;
 		case BLE_SPP:			
-			BlueFrameManage(ESP32_DMA_Rx_Buffer, FrameLength);
+			BlueFrameManage(ESP32_DMA_Rx_Buffer, FrameLength ,sys_Data_getQueue);
 			memset(ESP32_DMA_Rx_Buffer,0,256);
 			ESP32_Frame_Local=clear_UARTx_Frame();
 			break;			
             }
 	return 0;
+}
+
+
+uint8_t BleClearSysData(struct SYS_DATA *sys_Data_getQueue){
+	sys_Data_getQueue->cct_Parament.cct_Update_Flag = 0;
+	sys_Data_getQueue->LE_Parament.le_Update_Flag = 0;
+	return 0 ;
 }
