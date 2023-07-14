@@ -4,7 +4,8 @@
 #include <string.h>
 #define max(x,y) ( x>y?x:y ) 
 #define min(x,y) ( x<y?x:y )
-//uint8_t FanType;//风扇类别标志位
+uint8_t FanType;//风扇类别标志位
+
  //层级为第二层 0，1，2，3，4 数组索引
 extern "C"
 {	
@@ -60,12 +61,15 @@ ScreenFanView::ScreenFanView()
 
 void ScreenFanView::setupScreen()
 {
-    ScreenFanViewBase::setupScreen();
+	ScreenFanViewBase::setupScreen();//刷新显示而已 type还是上次的值（否则默认为0）
+		FanType=presenter->getFanType();//进入时读取type
 }
 
 void ScreenFanView::tearDownScreen()
 {
     ScreenFanViewBase::tearDownScreen();
+		presenter->saveFanType(FanType);//离开时记录
+	
 }
 
 void ScreenFanView::hideBox()
@@ -121,27 +125,31 @@ void ScreenFanView::handleKeyEvent(uint8_t key)
 		break;
 		
 		
-//		//knob1 pressed  
-//		case 0x00112:
-//			FanType = 0 ;//可以默认为此选项 智能
+		//knob1 pressed  
+		case 0x00112:
+			FanType = 0 ;//可以默认为此选项 智能
+			presenter->saveFanType(FanType);
 //		  image1_0.setVisible(true);
 //			image1_0.invalidate();
-//		break;
-//		case 0x00122:
-//			FanType = 1 ;//高速
+		break;
+		case 0x00122:
+			FanType = 1 ;//高速
+			presenter->saveFanType(FanType);
 //		  image1_1.setVisible(true);
 //			image1_1.invalidate();
-//		break;
-//		case 0x00132:
-//			FanType = 2 ;//中速
+		break;
+		case 0x00132:
+			FanType = 2 ;//中速
+			presenter->saveFanType(FanType);
 //		  image1_2.setVisible(true);
 //			image1_2.invalidate();
-//		break;			
-//		case 0x00142:	//选中第四个组件 静音
-//			FanType = 3 ;
+		break;			
+		case 0x00142:	//选中第四个组件 静音
+			FanType = 3 ;
+			presenter->saveFanType(FanType);
 //		  image1_3.setVisible(true);
 //			image1_3.invalidate();
-//		break;
+		break;
 		
 		//快捷键
 		case 0x0000d:

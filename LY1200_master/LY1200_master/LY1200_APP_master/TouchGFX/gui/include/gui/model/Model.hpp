@@ -36,6 +36,16 @@ public:
 		}
 		//以上代码：数值得以保存于模型中，可检索数据，访问数值。
 		
+		//Fan类型保存
+		void saveFanType( int saveFanType)
+		{
+			FanType = saveFanType;
+		}
+		int getFanType()
+		{
+			return FanType ;
+		}
+		
 		//effect界面参数 badBulbs
 		void saveMbadBulbsTemperature(int saveTemperature)
 		{
@@ -256,6 +266,8 @@ protected:
 	float CCT_Light_count;//cct界面
 	int CCT_Temperature_count;
   float Light_xn;
+
+  int FanType;//Fan类型
 
 	int badBulb_Light;//特效界面
 	int badBulb_Temperature;
