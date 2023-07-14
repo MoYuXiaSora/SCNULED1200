@@ -1906,59 +1906,14 @@
               <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_imageprogress_plain_normal_large_active.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_badBulbs.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_badbulbs.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_Bluetooth_reset.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_bluetooth_reset.cpp</FilePath>
-            </File>
-            <File>
               <FileName>image_Dark_ProgressIndicators_bg_large_circle_indicator_bg_line_half.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/image_dark_progressindicators_bg_large_circle_indicator_bg_line_half.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_DMX_press.cpp</FileName>
+              <FileName>image_twopang.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_dmx_press.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_explode.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_explode.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_firework.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_firework.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_flash.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_flash.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_lightning.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_lightning.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_paparazzi.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_paparazzi.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_pulse.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_pulse.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_tv.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_tv.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_twopang.cpp</FilePath>
             </File>
             <File>
               <FileName>Kerning_Deng_18_4bpp.cpp</FileName>

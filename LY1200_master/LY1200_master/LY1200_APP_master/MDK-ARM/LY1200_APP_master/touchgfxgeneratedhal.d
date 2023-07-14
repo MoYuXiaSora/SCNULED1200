@@ -107,7 +107,6 @@ ly1200_app_master/touchgfxgeneratedhal.o: \
   ..\touchgfx\gui\include\gui\screeneffect_screen\ScreenEffectView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screeneffect_screen\ScreenEffectViewBase.hpp \
   ..\touchgfx\gui\include\gui\screeneffect_screen\ScreenEffectPresenter.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
   ..\touchgfx\gui\include\gui\screeneffectset_screen\ScreenEffectSetView.hpp \
   ..\touchgfx\generated\gui_generated\include\gui_generated\screeneffectset_screen\ScreenEffectSetViewBase.hpp \
   ..\touchgfx\gui\include\gui\screeneffectset_screen\ScreenEffectSetPresenter.hpp \

@@ -63,7 +63,9 @@ ly1200_app_master/screenstudioview.o: \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\TextArea.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\TypedText.hpp \
   ..\middlewares\st\touchgfx\framework\include\touchgfx\Texts.hpp \
-  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\BoxWithBorder.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\widgets\SVGImage.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\Matrix3x3.hpp \
+  ..\middlewares\st\touchgfx\framework\include\touchgfx\hal\VGData.hpp \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\math.h \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \

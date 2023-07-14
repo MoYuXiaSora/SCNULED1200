@@ -65,7 +65,7 @@ Screen1ViewBase::Screen1ViewBase()
     TemperatureProgress.setValue(2700);
     add(TemperatureProgress);
 
-    TemperatureTextPg.setXY(328, 184);
+    TemperatureTextPg.setXY(328, 174);
     TemperatureTextPg.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     TemperatureTextPg.setLinespacing(0);
     Unicode::snprintf(TemperatureTextPgBuffer, TEMPERATURETEXTPG_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_7APG).getText());

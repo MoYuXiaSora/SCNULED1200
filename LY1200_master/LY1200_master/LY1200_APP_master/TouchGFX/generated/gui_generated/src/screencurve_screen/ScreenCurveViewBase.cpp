@@ -25,52 +25,32 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T7S8));
     add(textArea1);
 
-    textArea2.setXY(88, 140);
+    textArea2.setXY(111, 148);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_J594));
     add(textArea2);
 
-    textArea2_2.setXY(77, 277);
+    textArea2_2.setXY(98, 283);
     textArea2_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2_2.setLinespacing(0);
     textArea2_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PS7J));
     add(textArea2_2);
 
-    textArea2_3.setXY(273, 277);
+    textArea2_3.setXY(287, 283);
     textArea2_3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2_3.setLinespacing(0);
     textArea2_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_H6ZA));
     add(textArea2_3);
 
-    textArea2_1.setXY(293, 140);
+    textArea2_1.setXY(308, 148);
     textArea2_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2_1.setLinespacing(0);
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I4E0));
     add(textArea2_1);
 
-    box2_0.setPosition(106, 90, 64, 64);
-    box2_0.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
-    box2_0.setVisible(false);
-    add(box2_0);
-
-    box2_1.setPosition(299, 90, 64, 64);
-    box2_1.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
-    box2_1.setVisible(false);
-    add(box2_1);
-
-    box2_2.setPosition(106, 197, 64, 64);
-    box2_2.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
-    box2_2.setVisible(false);
-    add(box2_2);
-
-    box2_3.setPosition(299, 197, 64, 64);
-    box2_3.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
-    box2_3.setVisible(false);
-    add(box2_3);
-
     svgbg_0.setSVG(SVG_BLACKB_ID);
-    svgbg_0.setPosition(69, 35, 101, 101);
+    svgbg_0.setPosition(90, 41, 101, 101);
     svgbg_0.setScale(0.5f, 0.5f);
     svgbg_0.setImagePosition(0, 0);
     svgbg_0.setRotationCenter(0, 0);
@@ -78,7 +58,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgbg_0);
 
     svgbg_1.setSVG(SVG_BLACKB_ID);
-    svgbg_1.setPosition(280, 35, 101, 101);
+    svgbg_1.setPosition(278, 41, 101, 101);
     svgbg_1.setScale(0.5f, 0.5f);
     svgbg_1.setImagePosition(0, 0);
     svgbg_1.setRotationCenter(0, 0);
@@ -86,7 +66,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgbg_1);
 
     svgbg_2.setSVG(SVG_BLACKB_ID);
-    svgbg_2.setPosition(69, 174, 101, 101);
+    svgbg_2.setPosition(90, 176, 101, 101);
     svgbg_2.setScale(0.5f, 0.5f);
     svgbg_2.setImagePosition(0, 0);
     svgbg_2.setRotationCenter(0, 0);
@@ -94,7 +74,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgbg_2);
 
     svgbg_3.setSVG(SVG_BLACKB_ID);
-    svgbg_3.setPosition(280, 176, 101, 101);
+    svgbg_3.setPosition(278, 176, 101, 101);
     svgbg_3.setScale(0.5f, 0.5f);
     svgbg_3.setImagePosition(0, 0);
     svgbg_3.setRotationCenter(0, 0);
@@ -102,7 +82,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgbg_3);
 
     box_0.setSVG(SVG_BLUEB_ID);
-    box_0.setPosition(77, 44, 92, 92);
+    box_0.setPosition(100, 50, 92, 92);
     box_0.setScale(0.5f, 0.5f);
     box_0.setImagePosition(0, 0);
     box_0.setRotationCenter(0, 0);
@@ -110,7 +90,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(box_0);
 
     box_1.setSVG(SVG_BLUEB_ID);
-    box_1.setPosition(289, 44, 92, 92);
+    box_1.setPosition(287, 50, 92, 92);
     box_1.setScale(0.5f, 0.5f);
     box_1.setImagePosition(0, 0);
     box_1.setRotationCenter(0, 0);
@@ -118,7 +98,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(box_1);
 
     box_2.setSVG(SVG_BLUEB_ID);
-    box_2.setPosition(78, 183, 92, 92);
+    box_2.setPosition(100, 183, 92, 92);
     box_2.setScale(0.5f, 0.5f);
     box_2.setImagePosition(0, 0);
     box_2.setRotationCenter(0, 0);
@@ -126,15 +106,35 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(box_2);
 
     box_3.setSVG(SVG_BLUEB_ID);
-    box_3.setPosition(293, 183, 92, 92);
+    box_3.setPosition(287, 183, 92, 92);
     box_3.setScale(0.5f, 0.5f);
     box_3.setImagePosition(0, 0);
     box_3.setRotationCenter(0, 0);
     box_3.setRotation(0);
     add(box_3);
 
+    box2_0.setPosition(116, 62, 64, 64);
+    box2_0.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_0.setVisible(false);
+    add(box2_0);
+
+    box2_1.setPosition(305, 65, 64, 64);
+    box2_1.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_1.setVisible(false);
+    add(box2_1);
+
+    box2_2.setPosition(112, 199, 64, 64);
+    box2_2.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_2.setVisible(false);
+    add(box2_2);
+
+    box2_3.setPosition(301, 198, 64, 64);
+    box2_3.setColor(touchgfx::Color::getColorFromRGB(36, 87, 143));
+    box2_3.setVisible(false);
+    add(box2_3);
+
     svgimage_0.setSVG(SVG_XY_ID);
-    svgimage_0.setPosition(94, 62, 60, 60);
+    svgimage_0.setPosition(117, 68, 60, 60);
     svgimage_0.setScale(0.55f, 0.55f);
     svgimage_0.setImagePosition(0, 0);
     svgimage_0.setRotationCenter(0, 0);
@@ -142,7 +142,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgimage_0);
 
     svgimage_1.setSVG(SVG_S_ID);
-    svgimage_1.setPosition(304, 62, 60, 60);
+    svgimage_1.setPosition(305, 61, 60, 60);
     svgimage_1.setScale(0.5f, 0.55f);
     svgimage_1.setImagePosition(0, 0);
     svgimage_1.setRotationCenter(0, 0);
@@ -150,7 +150,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgimage_1);
 
     svgimage_2.setSVG(SVG_EXP_ID);
-    svgimage_2.setPosition(94, 202, 60, 60);
+    svgimage_2.setPosition(117, 202, 60, 60);
     svgimage_2.setScale(0.48f, 0.48f);
     svgimage_2.setImagePosition(0, 0);
     svgimage_2.setRotationCenter(0, 0);
@@ -158,7 +158,7 @@ ScreenCurveViewBase::ScreenCurveViewBase()
     add(svgimage_2);
 
     svgimage_3.setSVG(SVG_LOG_ID);
-    svgimage_3.setPosition(304, 202, 60, 60);
+    svgimage_3.setPosition(305, 202, 60, 60);
     svgimage_3.setScale(0.48f, 0.48f);
     svgimage_3.setImagePosition(0, 0);
     svgimage_3.setRotationCenter(0, 0);

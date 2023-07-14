@@ -33,10 +33,6 @@ protected:
     touchgfx::TextArea textArea2_2;
     touchgfx::TextArea textArea2_3;
     touchgfx::TextArea textArea2_1;
-    touchgfx::Box box2_0;
-    touchgfx::Box box2_1;
-    touchgfx::Box box2_2;
-    touchgfx::Box box2_3;
     touchgfx::SVGImage svgbg_0;
     touchgfx::SVGImage svgbg_1;
     touchgfx::SVGImage svgbg_2;
@@ -45,6 +41,10 @@ protected:
     touchgfx::SVGImage box_1;
     touchgfx::SVGImage box_2;
     touchgfx::SVGImage box_3;
+    touchgfx::Box box2_0;
+    touchgfx::Box box2_1;
+    touchgfx::Box box2_2;
+    touchgfx::Box box2_3;
     touchgfx::SVGImage svgimage_0;
     touchgfx::SVGImage svgimage_1;
     touchgfx::SVGImage svgimage_2;

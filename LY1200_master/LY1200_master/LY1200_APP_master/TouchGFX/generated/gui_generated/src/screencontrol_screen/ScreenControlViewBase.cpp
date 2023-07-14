@@ -25,13 +25,13 @@ ScreenControlViewBase::ScreenControlViewBase()
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BFZR));
     add(textArea1);
 
-    textArea2.setXY(99, 210);
+    textArea2.setXY(94, 198);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B603));
     add(textArea2);
 
-    textArea2_1.setXY(285, 210);
+    textArea2_1.setXY(272, 198);
     textArea2_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2_1.setLinespacing(0);
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_D6UE));
@@ -46,7 +46,7 @@ ScreenControlViewBase::ScreenControlViewBase()
     add(svgbg_0);
 
     svgbg_1.setSVG(SVG_BLACKB_ID);
-    svgbg_1.setPosition(278, 92, 101, 101);
+    svgbg_1.setPosition(267, 92, 101, 101);
     svgbg_1.setScale(0.5f, 0.5f);
     svgbg_1.setImagePosition(0, 0);
     svgbg_1.setRotationCenter(0, 0);
@@ -62,7 +62,7 @@ ScreenControlViewBase::ScreenControlViewBase()
     add(box_0);
 
     box_1.setSVG(SVG_BLUEB_ID);
-    box_1.setPosition(291, 101, 92, 92);
+    box_1.setPosition(276, 101, 92, 92);
     box_1.setScale(0.5f, 0.5f);
     box_1.setImagePosition(0, 0);
     box_1.setRotationCenter(0, 0);
@@ -70,7 +70,7 @@ ScreenControlViewBase::ScreenControlViewBase()
     add(box_1);
 
     svgimage.setSVG(SVG_BLUETOOTH_ID);
-    svgimage.setPosition(117, 117, 60, 60);
+    svgimage.setPosition(115, 117, 60, 60);
     svgimage.setScale(0.51f, 0.48f);
     svgimage.setImagePosition(0, 0);
     svgimage.setRotationCenter(0, 0);
@@ -78,7 +78,7 @@ ScreenControlViewBase::ScreenControlViewBase()
     add(svgimage);
 
     svgimage_1.setSVG(SVG_DMX_ID);
-    svgimage_1.setPosition(304, 117, 60, 60);
+    svgimage_1.setPosition(292, 117, 60, 60);
     svgimage_1.setScale(0.46f, 0.46f);
     svgimage_1.setImagePosition(0, 0);
     svgimage_1.setRotationCenter(0, 0);

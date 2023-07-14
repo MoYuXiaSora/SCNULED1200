@@ -4,6 +4,125 @@
 
 using namespace touchgfx;
 
+static const uint8_t svg_badbulbs_shape_2_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_CLOSE
+};
+
+static const float svg_badbulbs_shape_2_points[] = {
+    107.5766f, 121.5711f, 23.8135f, 37.8111f, 22.8679f, 36.9300f, 21.3943f, 36.9560f, 20.4803f, 37.8699f, 19.5663f, 38.7839f, 19.5403f, 40.2575f, 20.4215f, 41.2031f,
+    104.1814f, 124.9663f, 105.1227f, 125.8764f, 106.6197f, 125.8642f, 107.5459f, 124.9388f, 108.4722f, 124.0134f, 108.4858f, 122.5165f, 107.5766f, 121.5743f, 121.5711f,
+};
+
+static const VGFixedColor svg_badbulbs_shape_2_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_badbulbs_shape_2 = {
+    9, 31,                                                    // numCommands, numPoints
+    svg_badbulbs_shape_2_commands,                            // commands
+    svg_badbulbs_shape_2_points,                              // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_badbulbs_shape_2_fill,                               // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 19.7773f, 37.1670f, 108.2497f, 125.6409f },             // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_badbulbs_shape_1_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_CLOSE
+};
+
+static const float svg_badbulbs_shape_1_points[] = {
+    23.8135f, 124.9665f, 107.5767f, 41.2065f, 108.4577f, 40.2608f, 108.4317f, 38.7873f, 107.5178f, 37.8734f, 106.6039f, 36.9594f, 105.1303f, 36.9334f, 104.1847f, 37.8145f,
+    20.4215f, 121.5681f, 19.5403f, 122.5137f, 19.5663f, 123.9873f, 20.4803f, 124.9013f, 21.3943f, 125.8153f, 22.8679f, 125.8412f, 23.8135f, 124.9601f, 124.9665f,
+};
+
+static const VGFixedColor svg_badbulbs_shape_1_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_badbulbs_shape_1 = {
+    9, 31,                                                    // numCommands, numPoints
+    svg_badbulbs_shape_1_commands,                            // commands
+    svg_badbulbs_shape_1_points,                              // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_badbulbs_shape_1_fill,                               // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 19.7773f, 37.1704f, 108.2208f, 125.6042f },             // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_badbulbs_shape_2                                     // next
+};
+
+static const uint8_t svg_badbulbs_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_VLINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_badbulbs_shape_0_points[] = {
+    77.1300f, 16.8576f, 82.8425f, 16.8576f, 87.4739f, 21.4875f, 87.4756f, 27.2000f, 36.9888f, 87.4756f, 39.4208f, 88.5764f, 41.6512f, 90.3876f, 42.9312f,
+    102.5626f, 51.4888f, 109.8047f, 65.4416f, 109.7956f, 80.3232f, 109.7956f, 107.5710f, 86.1700f, 128.8610f, 58.7908f, 125.8270f, 37.6260f, 123.4880f, 20.5893f, 106.2690f, 18.4485f, 85.0720f, 16.7294f, 68.6610f, 23.9927f, 52.5982f, 37.4500f, 43.0496f,
+    39.3764f, 41.6736f, 40.5220f, 39.4208f, 40.5220f, 37.0016f, 27.2000f, 40.5220f, 21.4838f, 45.1578f, 16.8509f, 50.8740f, 16.8544f, 77.1300f,
+    16.8576f,
+    77.1300f, 26.4576f, 50.8740f, 50.4610f, 26.4558f, 50.1252f, 26.7902f, 50.1252f, 27.2032f, 37.0016f,
+    50.1383f, 42.5002f, 47.4917f, 47.6657f, 43.0212f, 50.8672f, 32.3718f, 58.4152f, 26.6270f, 71.1246f, 27.9973f, 84.1056f, 29.6836f, 100.8000f, 43.1844f, 114.4420f, 59.8468f, 116.2880f, 81.5268f, 118.6880f, 100.1956f, 101.8690f, 100.1956f, 80.3264f,
+    100.1956f, 68.4288f, 94.4068f, 57.5232f, 84.8484f, 50.7744f, 80.4324f, 47.6512f, 77.8724f, 42.4736f, 77.8724f, 36.9920f, 27.2000f, 77.8707f, 26.7907f, 77.5393f, 26.4594f, 77.1300f, 26.4576f,
+    53.8116f, 9.6000f, 74.1892f, 76.8402f, 9.6000f, 78.9892f, 7.4510f, 78.9892f, 4.8000f, 78.9892f, 2.1490f, 76.8402f, 0.0000f, 74.1892f, 0.0000f,
+    53.8116f, 51.1607f, 0.0000f, 49.0116f, 2.1490f, 49.0116f, 4.8000f, 49.0116f, 7.4510f, 51.1607f, 9.6000f, 53.8116f, 9.6000f,
+};
+
+static const VGFixedColor svg_badbulbs_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_badbulbs_shape_0 = {
+    35, 135,                                                  // numCommands, numPoints
+    svg_badbulbs_shape_0_commands,                            // commands
+    svg_badbulbs_shape_0_points,                              // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_badbulbs_shape_0_fill,                               // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 18.1992f, 0.0000f, 109.7956f, 126.1154f },              // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_badbulbs_shape_1                                     // next
+};
+
 static const uint8_t svg_blackb_shape_0_commands[] = {
     VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE,
     VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE,
@@ -514,6 +633,250 @@ static const VGShape svg_exp_shape_0 = {
     &svg_exp_shape_1                                          // next
 };
 
+static const uint8_t svg_explode_shape_1_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_explode_shape_1_points[] = {
+    53.3340f, 37.3333f, 35.7340f, 37.3333f, 21.3340f, 51.7333f, 21.3340f, 69.3333f, 21.3340f, 72.2665f, 23.7340f, 74.6665f, 26.6673f, 74.6665f, 29.6006f, 74.6665f, 32.0007f, 72.2665f, 32.0007f, 69.3333f,
+    32.0007f, 57.6000f, 41.6007f, 48.0000f, 53.3340f, 48.0000f, 56.2673f, 48.0000f, 58.6673f, 45.5999f, 58.6673f, 42.6666f, 58.6673f, 39.7333f, 56.2673f, 37.3332f, 53.3340f, 37.3333f,
+};
+
+static const VGFixedColor svg_explode_shape_1_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_explode_shape_1 = {
+    8, 38,                                                    // numCommands, numPoints
+    svg_explode_shape_1_commands,                             // commands
+    svg_explode_shape_1_points,                               // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_explode_shape_1_fill,                                // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 21.3340f, 37.3333f, 58.6673f, 74.6665f },               // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_explode_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_explode_shape_0_points[] = {
+    125.5996f, 15.4666f, 127.9996f, 17.0666f, 128.5326f, 20.5333f, 126.9326f, 22.9333f, 125.3326f, 25.3333f, 121.8666f, 25.8666f, 119.4666f, 24.2666f, 118.6666f, 23.7333f, 112.7996f, 20.2666f, 104.5326f, 26.1333f,
+    113.5996f, 35.1999f, 115.7326f, 37.3333f, 115.7326f, 40.5333f, 113.5996f, 42.6666f, 101.8663f, 54.3999f, 107.1996f, 71.9999f, 102.3996f, 91.4666f, 89.0663f, 104.7999f,
+    79.1996f, 114.9336f, 66.3996f, 119.9995f, 53.3329f, 119.9995f, 40.2663f, 119.9995f, 27.4663f, 114.9336f, 17.5996f, 105.0666f, -2.4004f, 85.3333f, -2.4004f, 53.3333f, 17.5996f, 33.5999f, 30.9329f, 20.2666f, 50.3996f, 15.4666f, 67.9996f, 20.7999f,
+    79.7329f, 9.0666f, 81.8663f, 6.9332f, 85.0663f, 6.9332f, 87.1996f, 9.0666f, 97.0663f, 18.6666f, 109.3326f, 9.0666f, 120.7996f, 12.2666f, 125.5996f, 15.4666f,
+    95.7329f, 45.8666f, 102.3996f, 39.1999f, 83.4663f, 20.2666f, 76.7996f, 26.9333f,
+    95.7329f, 45.8666f,
+    81.5996f, 97.5999f, 92.5329f, 86.6665f, 95.9996f, 70.6665f, 91.1996f, 56.2666f, 66.6663f, 31.7333f, 51.9996f, 26.6666f, 35.9996f, 30.1333f, 25.0663f, 41.0666f,
+    9.5996f, 56.5333f, 9.5996f, 82.1333f, 25.0663f, 97.5999f, 40.5329f, 113.0666f, 65.8663f, 113.3335f, 81.5996f, 97.5999f,
+};
+
+static const VGFixedColor svg_explode_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_explode_shape_0 = {
+    30, 114,                                                  // numCommands, numPoints
+    svg_explode_shape_0_commands,                             // commands
+    svg_explode_shape_0_points,                               // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_explode_shape_0_fill,                                // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 2.5996f, 7.4666f, 127.8473f, 119.9995f },               // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_explode_shape_1                                      // next
+};
+
+static const uint8_t svg_firework_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_VLINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_VLINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_firework_shape_0_points[] = {
+    55.0080f, 0.0000f, 62.9547f, 23.8400f, 55.0080f,
+    0.0000f,
+    55.0080f, 71.5200f, 62.9547f, 95.3653f, 55.0080f,
+    71.5253f, 71.5200f,
+    11.2960f, 51.6587f, 43.7120f, 35.1360f, 51.6587f,
+    11.2960f,
+    82.8267f, 51.6587f, 43.7120f, 106.6670f, 51.6587f,
+    82.8267f,
+    22.4747f, 16.7627f, 28.0640f, 11.1787f, 44.9493f, 28.0640f, 39.3653f, 33.6533f,
+    22.4747f, 16.7627f,
+    73.0133f, 67.3067f, 78.6027f, 61.7173f, 95.4880f, 78.6027f, 89.9040f, 84.1920f,
+    73.0133f, 67.3067f,
+    5.5893f, 106.6670f, 0.0000f, 101.0770f, 39.3600f, 61.7173f, 44.9493f, 67.3067f,
+    5.5893f, 106.6670f,
+    78.6027f, 33.6533f, 73.0187f, 28.0640f, 89.9040f, 11.1787f, 95.4933f, 16.7627f,
+    78.6027f, 33.6533f,
+};
+
+static const VGFixedColor svg_firework_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_firework_shape_0 = {
+    49, 65,                                                   // numCommands, numPoints
+    svg_firework_shape_0_commands,                            // commands
+    svg_firework_shape_0_points,                              // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_firework_shape_0_fill,                               // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 0.0000f, 0.0000f, 106.6670f, 106.6670f },               // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_flash_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_CLOSE
+};
+
+static const float svg_flash_shape_0_points[] = {
+    70.6000f, 0.0000f, 80.0000f, 94.2000f, 40.0000f, 85.1000f,
+    82.5000f, 32.0000f, 67.8000f, 65.1000f, 40.0000f, 56.3000f,
+    70.6000f, 0.0000f,
+    69.9000f, 24.0000f, 79.9000f, 75.3000f, 9.2000f, 69.9000f, 24.0000f,
+    0.0000f, 0.0000f, 56.0000f, 16.0000f, 104.0000f,
+    53.0000f, 40.0000f, 32.2000f, 53.0000f, 0.0000f, 0.0000f,
+};
+
+static const VGFixedColor svg_flash_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_flash_shape_0 = {
+    24, 32,                                                   // numCommands, numPoints
+    svg_flash_shape_0_commands,                               // commands
+    svg_flash_shape_0_points,                                 // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_flash_shape_0_fill,                                  // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 0.0000f, 0.0000f, 94.2000f, 104.0000f },                // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_lightning_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_lightning_shape_0_points[] = {
+    36.0000f, 83.8801f, 91.8801f, 27.9200f, 91.2081f, 21.2720f, 88.0881f, 16.0640f, 82.5041f, 10.8560f, 76.9201f, 8.1680f, 70.0801f, 8.0000f, 62.0001f,
+    8.0800f, 54.5041f, 10.4160f, 48.0401f, 15.0000f, 42.6241f, 19.5840f, 37.2081f, 25.5440f, 33.7921f, 32.8720f, 32.3761f, 34.7120f, 25.5361f, 38.2320f, 19.9121f, 43.4400f, 15.4961f, 48.6480f, 11.0801f, 54.8400f, 8.6161f, 62.0000f, 8.1201f,
+    68.7848f, 7.6261f, 75.5455f, 9.3592f, 81.2560f, 13.0561f, 86.9894f, 16.7400f, 91.4087f, 22.1451f, 93.8800f, 28.4961f, 101.8000f, 30.1601f, 108.1520f, 33.9761f, 112.9440f, 39.9361f, 117.7360f, 45.8881f, 120.0480f, 52.9121f, 119.8800f, 60.9921f,
+    119.5440f, 68.9922f, 116.8160f, 75.8241f, 111.6880f, 81.4961f, 106.5680f, 87.1602f, 100.0080f, 90.5762f, 92.0080f, 91.7442f, 83.6241f, 97.8400f, 82.5362f, 102.5920f, 79.8481f, 106.2560f, 75.5601f,
+    109.9200f, 71.2641f, 111.8400f, 66.1601f, 112.0080f, 60.2481f, 111.9280f, 54.2481f, 110.0880f, 49.0801f, 106.5040f, 44.7441f, 102.9280f, 40.4161f, 98.2160f, 37.6241f, 92.3840f, 36.3681f, 88.0080f, 35.6161f,
+    86.3840f, 31.3681f, 84.5234f, 26.6205f, 81.2221f, 22.5750f, 76.9440f, 19.8001f, 72.6707f, 17.0157f, 67.5968f, 15.7219f, 62.5120f, 16.1201f, 57.3993f, 16.3661f, 52.5065f, 18.2733f, 48.5760f, 21.5521f,
+    44.6138f, 24.8497f, 41.8290f, 29.3442f, 40.6400f, 34.3601f, 39.3840f, 39.3601f, 34.2640f, 40.2401f, 28.8480f, 41.3201f, 24.4720f, 43.8401f, 21.1440f, 47.8001f,
+    17.8080f, 51.7601f, 16.1040f, 56.4881f, 16.0160f, 61.9921f, 16.0960f, 67.9121f, 18.0160f, 72.8881f, 21.7680f, 76.9281f, 25.5200f, 80.9681f, 30.2720f, 83.2801f, 36.0240f, 83.8641f, 36.0000f, 83.8801f,
+    52.0000f, 92.0001f, 50.5850f, 91.9706f, 49.2953f, 91.1821f, 48.6240f, 89.9361f, 47.8776f, 88.7423f, 47.8287f, 87.2399f, 48.4960f, 86.0001f, 64.4960f, 58.0001f,
+    65.2049f, 56.7374f, 66.5522f, 55.9684f, 68.0000f, 56.0001f, 69.4960f, 56.0001f, 70.6400f, 56.6721f, 71.4400f, 58.0001f, 72.2297f, 59.2100f, 72.2546f, 60.7657f, 71.5040f, 62.0001f, 58.8720f, 84.0001f,
+    76.0000f, 77.5040f, 84.0801f, 78.6240f, 84.7761f, 79.3760f, 86.0642f, 80.1199f, 87.2594f, 80.1657f, 88.7618f, 79.4960f, 90.0001f, 63.4960f, 118.0006f,
+    62.9886f, 118.9436f, 62.1046f, 119.6266f, 61.0640f, 119.8806f, 60.0239f, 120.1296f, 58.9278f, 119.9726f, 58.0000f, 119.4406f, 57.0531f, 118.9666f, 56.3667f, 118.0956f, 56.1280f, 117.0646f, 55.8767f, 116.0316f, 56.0074f, 114.9436f, 56.4960f, 114.0006f,
+    69.1200f, 92.0001f, 52.0000f,
+};
+
+static const VGFixedColor svg_lightning_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_lightning_shape_0 = {
+    52, 236,                                                  // numCommands, numPoints
+    svg_lightning_shape_0_commands,                           // commands
+    svg_lightning_shape_0_points,                             // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_lightning_shape_0_fill,                              // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 8.0000f, 8.0376f, 119.8885f, 119.9960f },               // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
 static const uint8_t svg_line_chart_fill_shape_0_commands[] = {
     VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE,
     VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_CLOSE,
@@ -691,6 +1054,174 @@ static const VGShape svg_log_shape_0 = {
     { 2.0000f, 2.0000f, 122.0004f, 122.0004f },               // boundingbox[4]
     { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
     &svg_log_shape_1                                          // next
+};
+
+static const uint8_t svg_paparazzi_shape_2_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_paparazzi_shape_2_points[] = {
+    64.0004f, 95.9998f, 49.8564f, 95.9998f, 38.4004f, 84.5438f, 38.4004f, 70.3998f, 38.4004f, 56.2558f, 49.8564f, 44.7998f, 64.0004f, 44.7998f, 78.1444f, 44.7998f, 89.6004f, 56.2558f, 89.6004f, 70.3998f,
+    89.6004f, 84.5438f, 78.1444f, 95.9998f, 64.0004f, 95.9998f,
+    64.0004f, 51.1998f, 53.4404f, 51.1998f, 44.8004f, 59.8398f, 44.8004f, 70.3998f, 44.8004f, 80.9598f, 53.4404f, 89.5998f, 64.0004f, 89.5998f, 74.5604f, 89.5998f, 83.2004f, 80.9598f, 83.2004f, 70.3998f,
+    83.2004f, 59.8398f, 74.5604f, 51.1998f, 64.0004f, 51.1998f,
+    23.3604f, 50.2398f, 22.0804f, 48.9598f, 22.0804f, 46.9758f, 23.3604f, 45.6958f, 24.6404f, 44.4158f, 26.6244f, 44.4158f, 27.9044f, 45.6958f, 29.1844f, 46.9758f, 29.1844f, 48.9598f, 27.9044f, 50.2398f,
+    26.6244f, 51.5198f, 24.5764f, 51.5198f, 23.3604f, 50.2398f,
+};
+
+static const VGFixedColor svg_paparazzi_shape_2_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_paparazzi_shape_2 = {
+    18, 78,                                                   // numCommands, numPoints
+    svg_paparazzi_shape_2_commands,                           // commands
+    svg_paparazzi_shape_2_points,                             // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_paparazzi_shape_2_fill,                              // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 22.4004f, 44.7358f, 89.6004f, 95.9998f },               // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_paparazzi_shape_1_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_paparazzi_shape_1_points[] = {
+    105.6000f, 112.0000f, 22.4000f, 10.0480f, 112.0000f, 0.0000f, 101.9520f, 0.0000f, 89.6000f, 51.2000f,
+    0.0000f, 38.8480f, 10.0480f, 28.8000f, 22.4000f, 28.8000f, 31.2960f, 32.5120f, 28.8000f, 33.6000f, 28.0960f, 34.1120f, 27.0720f, 36.9920f, 21.3760f,
+    38.5280f, 18.1760f, 41.9200f, 16.0640f, 45.5680f, 16.0640f, 82.4960f, 86.0800f, 16.0640f, 89.4720f, 18.1120f, 91.0720f, 21.3760f, 94.0160f, 27.1360f,
+    94.5280f, 28.1600f, 95.6160f, 28.8000f, 96.8320f, 28.8000f, 105.6000f, 117.9520f, 28.8000f, 128.0000f, 38.8480f, 128.0000f, 51.2000f, 89.6000f,
+    128.0000f, 101.9520f, 117.9520f, 112.0000f, 105.6000f, 112.0000f,
+    22.4000f, 35.2000f, 13.5680f, 35.2000f, 6.4000f, 42.3680f, 6.4000f, 51.2000f, 89.6000f, 6.4000f, 98.4320f, 13.5680f, 105.6000f, 22.4000f, 105.6000f,
+    105.6000f, 114.4320f, 105.6000f, 121.6000f, 98.4320f, 121.6000f, 89.6000f, 51.2000f, 121.6000f, 42.3680f, 114.4320f, 35.2000f, 105.6000f, 35.2000f,
+    96.7680f, 93.1200f, 35.2000f, 89.7280f, 33.0880f, 88.1920f, 29.8880f, 85.3120f, 24.2560f, 84.8000f, 23.1680f, 83.6480f, 22.4640f, 82.4960f, 22.4640f,
+    45.5680f, 44.3520f, 22.4640f, 43.2640f, 23.1040f, 42.7520f, 24.1280f, 42.6880f, 24.1920f, 39.8080f, 29.8880f,
+    38.2080f, 33.0880f, 34.8800f, 35.1360f, 31.2320f, 35.1360f, 22.4000f, 35.2000f,
+};
+
+static const VGFixedColor svg_paparazzi_shape_1_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_paparazzi_shape_1 = {
+    38, 123,                                                  // numCommands, numPoints
+    svg_paparazzi_shape_1_commands,                           // commands
+    svg_paparazzi_shape_1_points,                             // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_paparazzi_shape_1_fill,                              // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 0.0000f, 16.0640f, 128.0000f, 112.0000f },              // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_paparazzi_shape_2                                    // next
+};
+
+static const uint8_t svg_paparazzi_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_paparazzi_shape_0_points[] = {
+    23.3604f, 50.2398f, 22.0804f, 48.9598f, 22.0804f, 46.9758f, 23.3604f, 45.6958f, 24.6404f, 44.4158f, 26.6244f, 44.4158f, 27.9044f, 45.6958f, 29.1844f, 46.9758f, 29.1844f, 48.9598f, 27.9044f, 50.2398f,
+    26.6244f, 51.5198f, 24.5764f, 51.5198f, 23.3604f, 50.2398f,
+};
+
+static const VGFixedColor svg_paparazzi_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_paparazzi_shape_0 = {
+    6, 26,                                                    // numCommands, numPoints
+    svg_paparazzi_shape_0_commands,                           // commands
+    svg_paparazzi_shape_0_points,                             // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_paparazzi_shape_0_fill,                              // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 22.4004f, 44.7358f, 28.8644f, 51.1998f },               // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_paparazzi_shape_1                                    // next
+};
+
+static const uint8_t svg_pulse_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_pulse_shape_0_points[] = {
+    41.2521f, 0.0000f, 43.3532f, 0.0000f, 45.2574f, 1.2804f, 46.0454f, 3.2339f, 68.7479f, 60.0149f, 77.7108f, 37.6078f,
+    78.4977f, 35.6517f, 80.3956f, 34.3712f, 82.5041f, 34.3740f, 104.8460f, 107.6850f, 34.3740f, 110.0000f, 36.6886f, 110.0000f, 39.5284f, 110.0000f, 42.3683f, 107.6850f, 44.6829f, 104.8460f, 44.6829f,
+    85.9842f, 73.5249f, 75.8066f, 72.7380f, 77.7627f, 70.8400f, 79.0432f, 68.7315f, 79.0404f, 66.6304f, 79.0404f, 64.7262f, 77.7600f, 63.9382f, 75.8066f,
+    41.2521f, 19.0419f, 32.2892f, 41.4490f, 31.5023f, 43.4052f, 29.6043f, 44.6856f, 27.4959f, 44.6829f, 5.1544f,
+    2.3146f, 44.6829f, 0.0000f, 42.3683f, 0.0000f, 39.5284f, 0.0000f, 36.6886f, 2.3146f, 34.3740f, 5.1544f, 34.3740f, 23.9994f, 36.4587f, 3.2503f,
+    37.2467f, 1.2804f, 39.1345f, 0.0000f, 41.2521f, 0.0000f,
+};
+
+static const VGFixedColor svg_pulse_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_pulse_shape_0 = {
+    22, 78,                                                   // numCommands, numPoints
+    svg_pulse_shape_0_commands,                               // commands
+    svg_pulse_shape_0_points,                                 // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_pulse_shape_0_fill,                                  // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 0.0000f, 0.0000f, 110.0000f, 79.0404f },                // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
 };
 
 static const uint8_t svg_s_shape_0_commands[] = {
@@ -910,6 +1441,56 @@ static const VGShape svg_translate_shape_0 = {
     0                                                         // next
 };
 
+static const uint8_t svg_tv_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_tv_shape_0_points[] = {
+    66.6660f, 90.6667f, 106.6667f, 86.2847f, 87.2313f, 106.6667f, 87.9993f, 107.8613f, 87.9993f, 109.3333f,
+    87.9993f, 110.8053f, 87.2313f, 112.0000f, 86.2847f, 112.0000f, 41.7140f, 40.7673f, 112.0000f, 39.9993f, 110.8053f, 39.9993f, 109.3333f, 39.9993f, 107.8613f, 40.7673f, 106.6667f, 41.7140f, 106.6667f,
+    61.3327f, 90.6667f, 21.3327f, 15.4416f, 90.6667f, 10.6660f, 85.8910f, 10.6660f, 80.0000f,
+    26.6667f, 10.6660f, 20.7756f, 15.4416f, 16.0000f, 21.3327f, 16.0000f, 106.6660f, 112.5570f, 16.0000f, 117.3330f, 20.7756f, 117.3330f, 26.6667f,
+    80.0000f, 117.3330f, 85.8910f, 112.5570f, 90.6667f, 106.6660f, 90.6667f, 66.6660f,
+    21.3327f, 21.3333f, 18.3872f, 21.3333f, 15.9993f, 23.7211f, 15.9993f, 26.6667f, 80.0000f, 15.9993f, 82.9455f, 18.3872f, 85.3333f, 21.3327f, 85.3333f,
+    106.6660f, 109.6115f, 85.3333f, 111.9990f, 82.9455f, 111.9990f, 80.0000f, 26.6667f, 111.9990f, 23.7211f, 109.6115f, 21.3333f, 106.6660f, 21.3333f,
+    21.3327f,
+    85.3327f, 72.0000f, 85.3327f, 70.5173f, 86.5167f, 69.3333f, 87.9727f, 69.3333f, 98.6927f, 100.1549f, 69.3479f, 101.3327f, 70.5375f, 101.3327f, 72.0000f,
+    101.3327f, 73.4827f, 100.1487f, 74.6667f, 98.6927f, 74.6667f, 87.9727f, 86.5104f, 74.6521f, 85.3327f, 73.4625f, 85.3327f, 72.0000f,
+};
+
+static const VGFixedColor svg_tv_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_tv_shape_0 = {
+    38, 118,                                                  // numCommands, numPoints
+    svg_tv_shape_0_commands,                                  // commands
+    svg_tv_shape_0_points,                                    // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_tv_shape_0_fill,                                     // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 10.6660f, 16.0000f, 117.3330f, 112.0000f },             // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
 static const uint8_t svg_windy_fill_shape_0_commands[] = {
     VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_HLINE,
     VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
@@ -1041,18 +1622,26 @@ static const VGShape svg_xy_shape_0 = {
 };
 
 static const touchgfx::VGObject svg_database[] = {
+    { 18.1992f, 0.0000f, 91.5964f, 126.1154f, 128.0000f, 128.0000f, &svg_badbulbs_shape_0 },
     { 20.0000f, 16.0000f, 184.0000f, 184.0000f, 224.0000f, 224.0000f, &svg_blackb_shape_0 },
     { 0.0000f, 0.0000f, 184.0000f, 184.0000f, 184.0000f, 184.0000f, &svg_blueb_shape_0 },
     { 11.9609f, 8.0049f, 103.0831f, 115.6830f, 128.0000f, 128.0000f, &svg_bluetooth_shape_0 },
     { 0.0000f, 0.0000f, 128.0000f, 128.0000f, 128.0000f, 128.0000f, &svg_dmx_shape_0 },
     { 10.6666f, 10.6667f, 106.6671f, 106.6671f, 128.0000f, 128.0000f, &svg_exchange_funds_fill_shape_0 },
     { -0.0031f, -0.0031f, 124.0062f, 124.0062f, 124.0000f, 124.0000f, &svg_exp_shape_0 },
+    { 2.5996f, 7.4666f, 125.2477f, 112.5330f, 128.0000f, 128.0000f, &svg_explode_shape_0 },
+    { 0.0000f, 0.0000f, 106.6670f, 106.6670f, 106.6667f, 106.6667f, &svg_firework_shape_0 },
+    { 0.0000f, 0.0000f, 94.2000f, 104.0000f, 94.2000f, 104.0000f, &svg_flash_shape_0 },
+    { 8.0000f, 8.0376f, 111.8885f, 111.9584f, 128.0000f, 128.0000f, &svg_lightning_shape_0 },
     { 16.0000f, 16.0000f, 101.6530f, 96.0000f, 128.0000f, 128.0000f, &svg_line_chart_fill_shape_0 },
     { -0.0031f, -0.0031f, 124.0062f, 124.0062f, 124.0000f, 124.0000f, &svg_log_shape_0 },
+    { 0.0000f, 16.0640f, 128.0000f, 95.9360f, 128.0000f, 128.0000f, &svg_paparazzi_shape_0 },
+    { 0.0000f, 0.0000f, 110.0000f, 79.0404f, 110.0000f, 79.0405f, &svg_pulse_shape_0 },
     { 8.6091f, 20.3252f, 110.6280f, 87.6625f, 128.0000f, 128.0000f, &svg_s_shape_0 },
     { 10.6532f, 10.6523f, 106.6945f, 106.6955f, 128.0000f, 128.0000f, &svg_settings_5_fill_shape_0 },
     { 5.3333f, 16.0000f, 117.3330f, 96.0000f, 128.0000f, 128.0000f, &svg_sound_module_fill_shape_0 },
     { 10.6667f, 10.6667f, 108.8000f, 101.3330f, 128.0000f, 128.0000f, &svg_translate_shape_0 },
+    { 10.6660f, 16.0000f, 106.6670f, 96.0000f, 128.0000f, 128.0000f, &svg_tv_shape_0 },
     { 10.6666f, 10.6764f, 106.6614f, 106.6598f, 128.0000f, 128.0000f, &svg_windy_fill_shape_0 },
     { 0.0000f, 0.0000f, 108.8660f, 108.8660f, 108.8662f, 108.8662f, &svg_xy_shape_0 }
 };
@@ -1066,6 +1655,6 @@ const touchgfx::VGObject* getInstance()
 
 uint16_t getInstanceSize()
 {
-    return 14;
+    return 22;
 }
 } // namespace SVGDatabase
