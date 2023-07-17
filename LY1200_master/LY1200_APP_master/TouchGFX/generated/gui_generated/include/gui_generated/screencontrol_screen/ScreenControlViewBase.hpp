@@ -9,8 +9,7 @@
 #include <gui/screencontrol_screen/ScreenControlPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class ScreenControlViewBase : public touchgfx::View<ScreenControlPresenter>
 {
@@ -31,14 +30,22 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::TextArea textArea1;
-    touchgfx::BoxWithBorder box_0;
-    touchgfx::BoxWithBorder box_1;
-    touchgfx::Image image1;
-    touchgfx::Image image1_1;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea2_1;
+    touchgfx::SVGImage svgbg_0;
+    touchgfx::SVGImage svgbg_1;
+    touchgfx::SVGImage box_0;
+    touchgfx::SVGImage box_1;
+    touchgfx::SVGImage svgimage;
+    touchgfx::SVGImage svgimage_1;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

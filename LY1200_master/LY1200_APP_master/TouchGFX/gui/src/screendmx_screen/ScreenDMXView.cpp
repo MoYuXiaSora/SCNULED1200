@@ -25,8 +25,8 @@ extern "C"
 				return DMXcheckFinalCal(Levels);
 			
 			case 0x06:
-				Levels[MenuLevel+1] = 1;
 			  MenuLevel+=1;//层级加1 为3
+				Levels[MenuLevel] = 1;
 				return DMXcheckFinalCal(Levels);
 			
 			case 0x07:

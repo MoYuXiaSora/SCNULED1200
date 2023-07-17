@@ -16,8 +16,8 @@
         <TargetCommonOption>
           <Device>STM32F407ZGTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.2.0</PackID>
-          <PackURL>http://www.keil.com/pack</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.17.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2001BFFF) IRAM2(0x2001C000-0x2001FFFF) IROM(0x8000000-0x80FFFFF)  CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -1691,184 +1691,184 @@
               <FilePath>../touchgfx/generated/fonts/src/cachedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_0.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_10.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_10.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_10.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_10.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_11.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_11.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_11.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_11.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_12.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_12.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_12.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_12.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_13.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_13.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_13.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_13.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_14.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_14.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_14.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_14.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_15.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_15.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_15.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_15.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_16.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_16.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_16.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_16.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_17.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_17.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_17.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_17.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_18.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_18.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_18.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_18.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_19.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_19.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_19.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_19.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_31.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_31.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_31.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_31.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_17_4bpp_9.cpp</FileName>
+              <FileName>Font_Deng_18_4bpp_9.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_17_4bpp_9.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_18_4bpp_9.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_0.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_10.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_10.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_10.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_10.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_11.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_11.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_11.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_11.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_12.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_12.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_12.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_12.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_13.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_13.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_13.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_13.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_14.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_14.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_14.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_14.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_15.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_15.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_15.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_15.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_16.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_16.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_16.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_16.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_18.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_18.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_18.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_18.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_19.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_19.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_19.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_19.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_25_4bpp_9.cpp</FileName>
+              <FileName>Font_Deng_20_4bpp_9.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_25_4bpp_9.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_20_4bpp_9.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_0.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_10.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_10.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_10.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_10.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_11.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_11.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_11.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_11.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_12.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_12.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_12.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_12.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_13.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_13.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_13.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_13.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_14.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_14.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_14.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_14.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_15.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_15.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_15.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_15.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_16.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_16.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_16.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_16.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_17.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_17.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_17.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_17.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_18.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_18.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_18.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_18.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_19.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_19.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_19.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_19.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_simfang_35_4bpp_9.cpp</FileName>
+              <FileName>Font_Deng_25_4bpp_9.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_simfang_35_4bpp_9.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_deng_25_4bpp_9.cpp</FilePath>
             </File>
             <File>
               <FileName>FontCache.cpp</FileName>
@@ -1886,11 +1886,6 @@
               <FilePath>../touchgfx/generated/fonts/src/generatedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.cpp</FilePath>
-            </File>
-            <File>
               <FileName>image_alternate_theme_images_widgets_circleprogress_backgrounds_large.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_circleprogress_backgrounds_large.cpp</FilePath>
@@ -1906,114 +1901,24 @@
               <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_imageprogress_plain_normal_large_active.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_badBulbs.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_badbulbs.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_Bluetooth_reset.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_bluetooth_reset.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_control.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_control.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_curve.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_curve.cpp</FilePath>
-            </File>
-            <File>
               <FileName>image_Dark_ProgressIndicators_bg_large_circle_indicator_bg_line_half.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/image_dark_progressindicators_bg_large_circle_indicator_bg_line_half.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_DMX_press.cpp</FileName>
+              <FileName>Kerning_Deng_18_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_dmx_press.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_deng_18_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_explode.cpp</FileName>
+              <FileName>Kerning_Deng_20_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_explode.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_deng_20_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_fan.cpp</FileName>
+              <FileName>Kerning_Deng_25_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_fan.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_firework.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_firework.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_flash.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_flash.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_language.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_language.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_lightning.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_lightning.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_no.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_no.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_paparazzi.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_paparazzi.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_pulse.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_pulse.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_studio.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_studio.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_tv.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_tv.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_update.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_update.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>image_yes.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_yes.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Kerning_simfang_17_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_17_4bpp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Kerning_simfang_25_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_25_4bpp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Kerning_simfang_35_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_simfang_35_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_deng_25_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>LanguageEn.cpp</FileName>
@@ -2091,19 +1996,19 @@
               <FilePath>../touchgfx/generated/images/src/svgdatabase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_simfang_17_4bpp.cpp</FileName>
+              <FileName>Table_Deng_18_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_simfang_17_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_deng_18_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_simfang_25_4bpp.cpp</FileName>
+              <FileName>Table_Deng_20_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_simfang_25_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_deng_20_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_simfang_35_4bpp.cpp</FileName>
+              <FileName>Table_Deng_25_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_simfang_35_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_deng_25_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>

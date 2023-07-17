@@ -22,6 +22,18 @@
 #include <touchgfx/hal/PaintImpl.hpp>
 #include <touchgfx/hal/PaintRGB565Impl.hpp>
 
+#include <touchgfx/widgets/canvas/CWRVectorRenderer.hpp>
+
+namespace touchgfx
+{
+VectorRenderer* VectorRenderer::getInstance()
+{
+    static CWRVectorRendererRGB565 renderer;
+
+    return &renderer;
+}
+} // namespace touchgfx
+
 #include "stm32f4xx.h"
 
 using namespace touchgfx;

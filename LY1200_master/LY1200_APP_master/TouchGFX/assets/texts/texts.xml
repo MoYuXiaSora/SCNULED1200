@@ -40,12 +40,12 @@
         <Translation Language="EN">badBulbs</Translation>
       </Text>
       <Text Id="__SingleUse_H6ZA" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">   指数型   </Translation>
-        <Translation Language="EN">Exponential</Translation>
-      </Text>
-      <Text Id="__SingleUse_PS7J" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">   对数型   </Translation>
         <Translation Language="EN">Logarithmic</Translation>
+      </Text>
+      <Text Id="__SingleUse_PS7J" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">   指数型   </Translation>
+        <Translation Language="EN">Exponential</Translation>
       </Text>
       <Text Id="__SingleUse_I4E0" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">  S型  </Translation>
@@ -92,22 +92,22 @@
         <Translation Language="EN">Fan Mode</Translation>
       </Text>
       <Text Id="__SingleUse_N8ZP" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">English</Translation>
+        <Translation Language="GB">English Model</Translation>
         <Translation Language="EN">English</Translation>
       </Text>
       <Text Id="__SingleUse_YEAS" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">简体中文</Translation>
+        <Translation Language="GB">中文模式</Translation>
         <Translation Language="EN">Chinese</Translation>
       </Text>
       <Text Id="__SingleUse_M5RJ" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">   语言   </Translation>
+        <Translation Language="GB">   语言模式   </Translation>
         <Translation Language="EN">Language</Translation>
       </Text>
-      <Text Id="__SingleUse_1PPZ" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_1PPZ" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">  蓝牙重置-&gt;  </Translation>
         <Translation Language="EN">Bluetooth reset-&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_8J4R" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_8J4R" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">  蓝牙  </Translation>
         <Translation Language="EN">Bluetooth</Translation>
       </Text>
@@ -196,11 +196,11 @@
         <Translation Language="EN">Effect</Translation>
       </Text>
       <Text Id="__SingleUse_1NZU" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB"> 15</Translation>
+        <Translation Language="GB"> 0.0 </Translation>
         <Translation Language="EN">15</Translation>
       </Text>
       <Text Id="__SingleUse_ZI7U" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB"> &lt;value&gt; % </Translation>
+        <Translation Language="GB">  &lt;value&gt;%    </Translation>
         <Translation Language="EN"> &lt;&gt; %</Translation>
       </Text>
       <Text Id="__SingleUse_7APG" Alignment="Center" TypographyId="Default">
@@ -228,14 +228,14 @@
         <Translation Language="EN">Dimming curve</Translation>
       </Text>
       <Text Id="__SingleUse_LNQG" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">菜单</Translation>
+        <Translation Language="GB">菜 单</Translation>
         <Translation Language="EN">Menu</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="simfang.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters=". %" WildcardCharacterRanges="0-9" />
-    <Typography Id="Large" Font="simfang.ttf" Size="35" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
-    <Typography Id="Small" Font="simfang.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Default" Font="Deng.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters=" . " WildcardCharacterRanges="0-9" />
+    <Typography Id="Large" Font="Deng.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Small" Font="Deng.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

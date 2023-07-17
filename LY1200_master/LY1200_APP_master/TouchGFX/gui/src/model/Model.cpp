@@ -7,12 +7,11 @@
 #include "main.h"
 #include "cmsis_os.h"
 
-Model::Model() : modelListener(0),CCT_Light_count(15),CCT_Temperature_count(2700)
+Model::Model() : modelListener(0),CCT_Light_count(0.0),CCT_Temperature_count(2700)
 ,badBulb_Temperature(2700),explode_Temperature(2700),firework_Temperature(2700)
 ,flash_Temperature(2700),lighting_Frequency(2700),paparazzi_Temperature(2700)
 ,pulse_Temperature(2700),tv_Temperature(2700)//初始化
 {
-
 }
 //周期性地从消息队列中获取数据，并更新其中某些参数，然后再将更新后的数据放回消息队列中
 extern osMessageQueueId_t sysDataQueue_AppHandle;//消息队列
