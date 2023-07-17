@@ -8,8 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/screendmx_screen/ScreenDMXPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/Image.hpp>
 
 class ScreenDMXViewBase : public touchgfx::View<ScreenDMXPresenter>
 {
@@ -28,15 +28,20 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
+    touchgfx::SVGImage svgchoosebg;
+    touchgfx::SVGImage box_1;
+    touchgfx::SVGImage box_0;
     touchgfx::TextArea textArea1;
-    touchgfx::Image image1;
-    touchgfx::Image image1_1;
-    touchgfx::Box box_0;
-    touchgfx::Box box_1;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea2_1;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

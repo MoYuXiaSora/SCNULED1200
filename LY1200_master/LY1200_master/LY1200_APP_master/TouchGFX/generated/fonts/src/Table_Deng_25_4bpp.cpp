@@ -53,7 +53,6 @@ KEEP extern const touchgfx::GlyphNode glyphs_Deng_25_4bpp[] FONT_TABLE_LOCATION_
     {  4203, 0x0079,  12,  18,  12,   0,  12,   0,   0, 0x00 },
     {     0, 0x4E2D,  19,  24,  20,   3,  25,   0,   0, 0x00 },
     {   240, 0x4EF6,  24,  23,  19,   0,  25,   0,   0, 0x00 },
-    {   516, 0x4F53,  24,  24,  20,   0,  25,   0,   0, 0x00 },
     {     0, 0x5149,  23,  24,  20,   1,  25,   0,   0, 0x00 },
     {   288, 0x5236,  21,  24,  20,   2,  25,   0,   0, 0x00 },
     {   552, 0x529F,  22,  24,  20,   1,  25,   0,   0, 0x00 },
@@ -77,12 +76,11 @@ KEEP extern const touchgfx::GlyphNode glyphs_Deng_25_4bpp[] FONT_TABLE_LOCATION_
     {   288, 0x6F14,  22,  24,  20,   1,  25,   0,   0, 0x00 },
     {     0, 0x7259,  23,  22,  18,   1,  25,   0,   0, 0x00 },
     {   264, 0x7279,  25,  24,  20,   0,  25,   0,   0, 0x00 },
-    {     0, 0x7B80,  23,  25,  20,   1,  25,   0,   0, 0x00 },
-    {   300, 0x7CFB,  21,  22,  19,   2,  25,   0,   0, 0x00 },
-    {   542, 0x7EA7,  23,  23,  19,   1,  25,   0,   0, 0x00 },
-    {   818, 0x7EBF,  23,  24,  20,   1,  25,   0,   0, 0x00 },
-    {  1106, 0x7EDF,  23,  24,  20,   1,  25,   0,   0, 0x00 },
-    {  1394, 0x7F6E,  23,  22,  19,   1,  25,   0,   0, 0x00 },
+    {     0, 0x7CFB,  21,  22,  19,   2,  25,   0,   0, 0x00 },
+    {   242, 0x7EA7,  23,  23,  19,   1,  25,   0,   0, 0x00 },
+    {   518, 0x7EBF,  23,  24,  20,   1,  25,   0,   0, 0x00 },
+    {   806, 0x7EDF,  23,  24,  20,   1,  25,   0,   0, 0x00 },
+    {  1094, 0x7F6E,  23,  22,  19,   1,  25,   0,   0, 0x00 },
     {     0, 0x80FD,  23,  23,  20,   1,  25,   0,   0, 0x00 },
     {   276, 0x83DC,  23,  24,  20,   1,  25,   0,   0, 0x00 },
     {   564, 0x84DD,  23,  24,  20,   1,  25,   0,   0, 0x00 },
@@ -150,6 +148,6 @@ touchgfx::GeneratedFont& getFont_Deng_25_4bpp();
 
 touchgfx::GeneratedFont& getFont_Deng_25_4bpp()
 {
-    static touchgfx::GeneratedFont Deng_25_4bpp(glyphs_Deng_25_4bpp, 88, 31, 25, 0, 0, 4, 1, 0, 1, unicodes_Deng_25_4bpp, kerning_Deng_25_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont Deng_25_4bpp(glyphs_Deng_25_4bpp, 86, 31, 25, 0, 0, 4, 1, 0, 1, unicodes_Deng_25_4bpp, kerning_Deng_25_4bpp, 63, 0, 0, 0);
     return Deng_25_4bpp;
 }

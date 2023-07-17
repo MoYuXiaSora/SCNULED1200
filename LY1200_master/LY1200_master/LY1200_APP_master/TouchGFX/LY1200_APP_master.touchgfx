@@ -132,7 +132,7 @@
             "Type": "SvgImage",
             "Name": "svgbg_0",
             "X": 54,
-            "Y": 54,
+            "Y": 55,
             "Width": 102,
             "Height": 101,
             "Image": "blackb.svg",
@@ -2009,6 +2009,7 @@
       },
       {
         "Name": "ScreenDMX",
+        "CanvasBufferSize": 7200,
         "Components": [
           {
             "Type": "Box",
@@ -2020,6 +2021,44 @@
               "Green": 36,
               "Blue": 36
             }
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgchoosebg",
+            "X": 73,
+            "Y": 116,
+            "Width": 334,
+            "Height": 88,
+            "Image": "choosebg.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.5
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "box_1",
+            "X": 73,
+            "Y": 160,
+            "Width": 334,
+            "Height": 44,
+            "Visible": false,
+            "Image": "chooseDown.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.49
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "box_0",
+            "X": 73,
+            "Y": 116,
+            "Width": 334,
+            "Height": 44,
+            "Visible": false,
+            "Image": "chooseUp.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.49
           },
           {
             "Type": "TextArea",
@@ -2038,54 +2077,10 @@
             "AutoSize": true
           },
           {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 76,
-            "Y": 100,
-            "Width": 312,
-            "Height": 60,
-            "RelativeFilename": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 76,
-            "Y": 190,
-            "Width": 312,
-            "Height": 60,
-            "RelativeFilename": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.png"
-          },
-          {
-            "Type": "Box",
-            "Name": "box_0",
-            "X": 137,
-            "Y": 110,
-            "Width": 208,
-            "Height": 40,
-            "Visible": false,
-            "Color": {
-              "Green": 54,
-              "Blue": 74
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box_1",
-            "X": 137,
-            "Y": 200,
-            "Width": 208,
-            "Height": 40,
-            "Visible": false,
-            "Color": {
-              "Green": 54,
-              "Blue": 74
-            }
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 127,
-            "Y": 110,
+            "X": 90,
+            "Y": 126,
             "Width": 144,
             "Height": 27,
             "TextId": "__SingleUse_2KXF",
@@ -2100,8 +2095,8 @@
           {
             "Type": "TextArea",
             "Name": "textArea2_1",
-            "X": 84,
-            "Y": 200,
+            "X": 90,
+            "Y": 169,
             "Width": 194,
             "Height": 27,
             "TextId": "__SingleUse_A3ON",
@@ -2118,6 +2113,7 @@
       },
       {
         "Name": "ScreenBluetooth",
+        "CanvasBufferSize": 7200,
         "Components": [
           {
             "Type": "Box",
@@ -2129,6 +2125,44 @@
               "Green": 36,
               "Blue": 36
             }
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgchoosebg",
+            "X": 73,
+            "Y": 116,
+            "Width": 334,
+            "Height": 88,
+            "Image": "choosebg.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.5
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "box_0",
+            "X": 73,
+            "Y": 116,
+            "Width": 334,
+            "Height": 44,
+            "Visible": false,
+            "Image": "chooseUp.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.49
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "box_1",
+            "X": 73,
+            "Y": 160,
+            "Width": 334,
+            "Height": 44,
+            "Visible": false,
+            "Image": "chooseDown.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.49
           },
           {
             "Type": "TextArea",
@@ -2147,54 +2181,10 @@
             "AutoSize": true
           },
           {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 76,
-            "Y": 100,
-            "Width": 312,
-            "Height": 60,
-            "RelativeFilename": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 76,
-            "Y": 184,
-            "Width": 312,
-            "Height": 60,
-            "RelativeFilename": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.png"
-          },
-          {
-            "Type": "Box",
-            "Name": "box_1",
-            "X": 128,
-            "Y": 194,
-            "Width": 208,
-            "Height": 40,
-            "Visible": false,
-            "Color": {
-              "Green": 54,
-              "Blue": 74
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box_0",
-            "X": 128,
-            "Y": 110,
-            "Width": 208,
-            "Height": 40,
-            "Visible": false,
-            "Color": {
-              "Green": 54,
-              "Blue": 74
-            }
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 162,
-            "Y": 110,
+            "X": 90,
+            "Y": 124,
             "Width": 77,
             "Height": 27,
             "TextId": "__SingleUse_8J4R",
@@ -2209,8 +2199,8 @@
           {
             "Type": "TextArea",
             "Name": "textArea2_1",
-            "X": 110,
-            "Y": 194,
+            "X": 90,
+            "Y": 169,
             "Width": 157,
             "Height": 27,
             "TextId": "__SingleUse_1PPZ",
@@ -2227,6 +2217,7 @@
       },
       {
         "Name": "ScreenLanguage",
+        "CanvasBufferSize": 7200,
         "Components": [
           {
             "Type": "Box",
@@ -2242,9 +2233,9 @@
           {
             "Type": "TextArea",
             "Name": "textArea1",
-            "X": 195,
+            "X": 170,
             "Y": 14,
-            "Width": 91,
+            "Width": 141,
             "Height": 27,
             "TextId": "__SingleUse_M5RJ",
             "TextRotation": "0",
@@ -2256,54 +2247,48 @@
             "AutoSize": true
           },
           {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 76,
-            "Y": 100,
-            "Width": 312,
-            "Height": 60,
-            "RelativeFilename": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.png"
+            "Type": "SvgImage",
+            "Name": "svgchoosebg",
+            "X": 73,
+            "Y": 116,
+            "Width": 334,
+            "Height": 88,
+            "Image": "choosebg.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.5
           },
           {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 76,
-            "Y": 184,
-            "Width": 312,
-            "Height": 60,
-            "RelativeFilename": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.png"
-          },
-          {
-            "Type": "Box",
-            "Name": "box_1",
-            "X": 128,
-            "Y": 194,
-            "Width": 208,
-            "Height": 40,
-            "Visible": false,
-            "Color": {
-              "Green": 54,
-              "Blue": 74
-            }
-          },
-          {
-            "Type": "Box",
+            "Type": "SvgImage",
             "Name": "box_0",
-            "X": 128,
-            "Y": 110,
-            "Width": 208,
-            "Height": 40,
+            "X": 73,
+            "Y": 116,
+            "Width": 334,
+            "Height": 44,
             "Visible": false,
-            "Color": {
-              "Green": 54,
-              "Blue": 74
-            }
+            "Image": "chooseUp.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.49
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "box_1",
+            "X": 73,
+            "Y": 160,
+            "Width": 334,
+            "Height": 44,
+            "Visible": false,
+            "Image": "chooseDown.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.49
           },
           {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 162,
-            "Y": 110,
+            "X": 90,
+            "Y": 125,
             "Width": 100,
             "Height": 27,
             "TextId": "__SingleUse_YEAS",
@@ -2318,9 +2303,9 @@
           {
             "Type": "TextArea",
             "Name": "textArea2_1",
-            "X": 171,
-            "Y": 194,
-            "Width": 76,
+            "X": 90,
+            "Y": 169,
+            "Width": 151,
             "Height": 27,
             "TextId": "__SingleUse_N8ZP",
             "TextRotation": "0",
@@ -2430,6 +2415,7 @@
       },
       {
         "Name": "ScreenUpdate",
+        "CanvasBufferSize": 7200,
         "Components": [
           {
             "Type": "Box",
@@ -2459,32 +2445,35 @@
             "AutoSize": true
           },
           {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 76,
+            "Type": "SvgImage",
+            "Name": "svgchoosebg",
+            "X": 79,
             "Y": 80,
-            "Width": 312,
-            "Height": 60,
-            "RelativeFilename": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.png"
+            "Width": 334,
+            "Height": 88,
+            "Image": "choosebg.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.5
           },
           {
-            "Type": "Box",
+            "Type": "SvgImage",
             "Name": "box_0",
-            "X": 128,
-            "Y": 90,
-            "Width": 208,
-            "Height": 40,
+            "X": 79,
+            "Y": 124,
+            "Width": 334,
+            "Height": 44,
             "Visible": false,
-            "Color": {
-              "Green": 54,
-              "Blue": 74
-            }
+            "Image": "chooseDown.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.5,
+            "ImageVerticalScale": 0.49
           },
           {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 127,
-            "Y": 90,
+            "X": 90,
+            "Y": 133,
             "Width": 127,
             "Height": 27,
             "TextId": "__SingleUse_IUW7",
@@ -2499,8 +2488,8 @@
           {
             "Type": "TextArea",
             "Name": "textArea3",
-            "X": 35,
-            "Y": 170,
+            "X": 34,
+            "Y": 204,
             "Width": 238,
             "Height": 76,
             "TextId": "__SingleUse_ZAPW",

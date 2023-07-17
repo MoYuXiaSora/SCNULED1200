@@ -62,7 +62,7 @@ ScreenMenuViewBase::ScreenMenuViewBase()
     add(textArea2_5);
 
     svgbg_0.setSVG(SVG_BLACKB_ID);
-    svgbg_0.setPosition(54, 54, 102, 101);
+    svgbg_0.setPosition(54, 55, 102, 101);
     svgbg_0.setScale(0.5f, 0.5f);
     svgbg_0.setImagePosition(0, 0);
     svgbg_0.setRotationCenter(0, 0);

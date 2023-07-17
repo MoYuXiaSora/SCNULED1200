@@ -1886,11 +1886,6 @@
               <FilePath>../touchgfx/generated/fonts/src/generatedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_60_medium_round_normal.cpp</FilePath>
-            </File>
-            <File>
               <FileName>image_alternate_theme_images_widgets_circleprogress_backgrounds_large.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/__generated/image_alternate_theme_images_widgets_circleprogress_backgrounds_large.cpp</FilePath>
