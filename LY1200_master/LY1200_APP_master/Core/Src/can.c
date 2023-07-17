@@ -204,8 +204,8 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   if (CanRxData[6]==even_parity(CanRxData, 0, 5))//校验成功读取数据
   {
 /*     drive_State=CanRxData[1];       //驱动板状态码
-    drive_Temperature=CanRxData[2]; //驱动板温???
-    drive_Power=CanRxData[3];        //驱动板功率负?? */
+    drive_Temperature=CanRxData[2]; //驱动板温??
+    drive_Power=CanRxData[3];       //驱动板功率负?? */
   }
   
 }
