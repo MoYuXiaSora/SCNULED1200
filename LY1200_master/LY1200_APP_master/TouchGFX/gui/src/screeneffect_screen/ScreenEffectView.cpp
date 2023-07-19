@@ -24,8 +24,8 @@ extern "C"
 				return EffcheckFinalCal(Levels);
 			
 			case 0x06:								
-				Levels[MenuLevel+1] = 1;
-			  MenuLevel+=1;//层级加1 则为2
+			  MenuLevel+=1;//层级加1 为2
+				Levels[MenuLevel] = 1;
 			  EffectType=Levels[0];//记录选中特效编号0-7.
 				return EffcheckFinalCal(Levels);
 			
@@ -55,11 +55,13 @@ ScreenEffectView::ScreenEffectView()
 void ScreenEffectView::setupScreen()
 {
     ScreenEffectViewBase::setupScreen();
+			EffectType=presenter->getEffectType();//进入时读取type
 }
 
 void ScreenEffectView::tearDownScreen()
 {
     ScreenEffectViewBase::tearDownScreen();
+			presenter->saveEffectType(EffectType);//离开时记录
 }
 void ScreenEffectView::hideBox()
 {

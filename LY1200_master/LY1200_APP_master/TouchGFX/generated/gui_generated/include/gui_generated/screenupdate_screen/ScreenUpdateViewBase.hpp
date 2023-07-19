@@ -9,7 +9,7 @@
 #include <gui/screenupdate_screen/ScreenUpdatePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class ScreenUpdateViewBase : public touchgfx::View<ScreenUpdatePresenter>
 {
@@ -29,12 +29,18 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::TextArea textArea1;
-    touchgfx::Image image1_1;
-    touchgfx::Box box_0;
+    touchgfx::SVGImage svgchoosebg;
+    touchgfx::SVGImage box_0;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea3;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

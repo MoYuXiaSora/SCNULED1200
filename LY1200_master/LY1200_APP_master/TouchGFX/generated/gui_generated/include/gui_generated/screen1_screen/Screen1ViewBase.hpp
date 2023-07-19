@@ -46,7 +46,7 @@ protected:
      */
     static const uint16_t TEMPERATURETEXTPG_SIZE = 5;
     touchgfx::Unicode::UnicodeChar TemperatureTextPgBuffer[TEMPERATURETEXTPG_SIZE];
-    static const uint16_t LIGHTTEXTPG_SIZE = 8;
+    static const uint16_t LIGHTTEXTPG_SIZE = 16;
     touchgfx::Unicode::UnicodeChar LightTextPgBuffer[LIGHTTEXTPG_SIZE];
 
 private:

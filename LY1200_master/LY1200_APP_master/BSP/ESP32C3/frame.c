@@ -31,7 +31,7 @@ volatile static struct OtaFile OtaFile1 ={
 	.PacketOffSet = 0x00000000,
 };
 
-uint8_t BlueFrameManage(uint8_t FrameData[], uint8_t FrameLen){
+uint8_t BlueFrameManage(uint8_t FrameData[], uint8_t FrameLen ,struct SYS_DATA *sys_Data_getQueue){
 	
     uint16_t FrameHead = ((0x0000 | (FrameData[0] << 8)) | FrameData[1]); 
     uint8_t FrameCmd = FrameData[2];
@@ -42,6 +42,7 @@ uint8_t BlueFrameManage(uint8_t FrameData[], uint8_t FrameLen){
         BlueToothCmdManage(FrameData,FrameLen);
         return 0;
     }
+		
     switch (FrameCmd) {
         case 0x01:
             if (CheckSum(FrameData, FrameLen) != FrameData[FrameLen - 1]) {
@@ -76,12 +77,13 @@ uint8_t BlueFrameManage(uint8_t FrameData[], uint8_t FrameLen){
 					  if (CheckSum(FrameData, FrameLen) != FrameData[FrameLen - 1]) {
                 break;
             }
-						LoadFanData(FrameData);
+						LoadFeatureData(FrameData,FrameLen,sys_Data_getQueue);
 				case 0x08:
 					  if (CheckSum(FrameData, FrameLen) != FrameData[FrameLen - 1]) {
                 break;
             }
-						LoadFeatureData(FrameData,FrameLen);
+						LoadFanData(FrameData,sys_Data_getQueue);
+
         case 0xee:
             if (CheckSum(FrameData, FrameLen) != FrameData[FrameLen - 1]) {
                 ReturnFrame(0xff, 0x01, WrongFrame,15);
@@ -237,33 +239,57 @@ uint8_t LoadOTAData(uint8_t FrameData[])
 //    }
 //    return 0;
 
-uint8_t LoadFanData(uint8_t FrameData[])
+uint8_t LoadFanData(uint8_t FrameData[] ,struct SYS_DATA *sys_Data_getQueue)
 {
-    return FrameData[5];
+	sys_Data_getQueue->control_Parament = BLE;
+	  sys_Data_getQueue->fan_Parament.fan_Ratio = FrameData[6];
+    return 0;
 }
 
-uint8_t LoadCCTData(uint8_t FrameData[])
+uint8_t LoadCCTData(uint8_t FrameData[] ,struct SYS_DATA *sys_Data_getQueue)
 {
+	sys_Data_getQueue->control_Parament = BLE;
+	sys_Data_getQueue->model_Parament = CCT ;
+  sys_Data_getQueue->cct_Parament.brightness = ((float)FrameData[10] / 10) + FrameData[9];
+	sys_Data_getQueue->cct_Parament.color_Temperature = (0x0000|(FrameData[7]<<8)|((FrameData[8])));
+	sys_Data_getQueue->cct_Parament.curve = FrameData[11]; //这里需要修改
+	sys_Data_getQueue->cct_Parament.cct_Update_Flag = FLAG_TRUE;
 	return 0 ;
 }
 
-uint8_t LoadLightEffectData(uint8_t FrameData[])
+uint8_t LoadLightEffectData(uint8_t FrameData[] ,struct SYS_DATA *sys_Data_getQueue)
 {
+	uint8_t BLEFXType = FrameData[7];
+	double_t BLEFX_brightness = ((float)FrameData[9] / 10) + FrameData[8];
+	uint16_t BLEFXColorTemperature = (0x0000|(FrameData[10]<<8)|((FrameData[11])));
+	uint8_t BLEFXFREQ = FrameData[12];
+	sys_Data_getQueue->control_Parament = BLE;
+	sys_Data_getQueue->model_Parament = LIGHT_EFFECTS;
+	sys_Data_getQueue->LE_Parament.type = BLEFXType;
+	sys_Data_getQueue->LE_Parament.le_State = SETTING;
+	sys_Data_getQueue->LE_Parament.le_Update_Flag = FLAG_TRUE;
+	sys_Data_getQueue->LE_Parament.brightness = BLEFX_brightness;
+	sys_Data_getQueue->LE_Parament.color_Temperature = BLEFXColorTemperature;
+	sys_Data_getQueue->LE_Parament.freq = BLEFXFREQ;
 	return 0 ;
 }
-
-uint8_t LoadFeatureData(uint8_t FrameData[] , int FrameLen)
+uint8_t LoadFeatureData(uint8_t FrameData[] , int FrameLen ,struct SYS_DATA *sys_Data_getQueue)
 {
-	if(FrameData[6]==0x01){
+	if(FrameLen>=15){ //测试是否粘包
+		return 0 ;
+	}
+	if(FrameData[5]==0x01){
 		//开启睡眠
 		return 0;
 	}
 	else {
-		switch (FrameData[7]) {
+		switch (FrameData[6]) {
 			case 0x00 :
-				LoadCCTData(FrameData);
+				LoadCCTData(FrameData,sys_Data_getQueue);
+			break;
 			case 0x01 :
-				LoadLightEffectData(FrameData);
+				LoadLightEffectData(FrameData ,sys_Data_getQueue);
+			break;
 		}
 	}
 	return 0 ;

@@ -23,8 +23,8 @@
 /* USER CODE BEGIN 0 */
 #include "string.h"
 
-#define USART3_DMA_RX_BUFFER_LENGTH 256 //���û�����DMA������ �ɸ���
-#define USART3_DMA_RX_IT_BUFFER_LENGTH 256 //���û�����DMA_IT������ �ɸ���
+#define USART3_DMA_RX_BUFFER_LENGTH 256 //由用户配置DMA缓存区 可更改
+#define USART3_DMA_RX_IT_BUFFER_LENGTH 256 //由用户配置DMA_IT缓存区 可更改
 __attribute__ ((section(".IRAM1"))) static volatile uint8_t USART3_DMA_Rx_Buffer[USART3_DMA_RX_BUFFER_LENGTH];
 __attribute__ ((section(".IRAM1"))) static volatile uint8_t USART3_DMA_Rx_It_Buffer[USART3_DMA_RX_IT_BUFFER_LENGTH];
 

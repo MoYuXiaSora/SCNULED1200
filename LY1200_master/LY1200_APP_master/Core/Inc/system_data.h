@@ -15,15 +15,16 @@
 enum CONTROL
 {
     BLE,              //蓝牙模式
-	DMX512,           //DMX512模式  
+		DMX512,           //DMX512模式  
     BOX,              //控制盒模式  
     
 };
 
 enum MODEL
 {
-    CCT,              //CCT模式
-	LIGHT_EFFECTS,    //灯效模式   
+		CCT,              //CCT模式
+		LIGHT_EFFECTS,    //灯效模式
+		MODEL_OFF,
     
 };
 

@@ -83,7 +83,7 @@ extern "C"
 				}
 				box_Data_getQueue->key.state = 0;//按键状态复位
 				box_Data_getQueue->key.value = 0x0f;//置为不需要的0x0f 
-			box_Data_getQueue->key.clear_Flag = 1;
+		  	box_Data_getQueue->key.clear_Flag = 1;
 				return CalVariationGFX ;
 			}
 			else return 0;

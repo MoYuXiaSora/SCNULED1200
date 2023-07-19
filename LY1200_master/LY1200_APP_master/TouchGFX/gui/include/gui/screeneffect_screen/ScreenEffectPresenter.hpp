@@ -25,6 +25,17 @@ public:
      */
     virtual void deactivate();
 
+		void saveEffectType(int Type)
+		{
+			 model->saveEffectType(Type);			
+		}
+		
+		
+		int getEffectType()
+		{
+			return model->getEffectType();
+		}	
+
     virtual ~ScreenEffectPresenter() {};
 
 private:

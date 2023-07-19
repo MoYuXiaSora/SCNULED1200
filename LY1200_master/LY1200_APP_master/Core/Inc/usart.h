@@ -23,6 +23,8 @@
 
 #ifdef __cplusplus
 extern "C" {
+	
+	
 #endif
 
 /* Includes ------------------------------------------------------------------*/
@@ -66,6 +68,7 @@ struct UARTEx_FRAME clear_UARTx_Frame();
 #ifdef __cplusplus
 }
 #endif
+
 
 #endif /* __USART_H__ */
 

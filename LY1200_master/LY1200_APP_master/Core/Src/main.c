@@ -130,7 +130,7 @@ int main(void)
 	BSP_W25Qx_Init();
 	esp32c3_Init();
 	
-		/* ��ʼ�� EventRecorder ������ */
+		/* 初始化 EventRecorder 并开启 */
 	EventRecorderInitialize(EventRecordAll, 1U);
 	EventRecorderStart();
 	

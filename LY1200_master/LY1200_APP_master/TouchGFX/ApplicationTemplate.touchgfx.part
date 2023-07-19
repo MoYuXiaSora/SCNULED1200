@@ -24,6 +24,7 @@
     "OptionalComponents": [
     ],
     "AdditionalFeatures": [
+      "Vector"
     ],
   },
   "Version": "4.21.1"

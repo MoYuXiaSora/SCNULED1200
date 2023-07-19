@@ -9,8 +9,7 @@
 #include <gui/screencurve_screen/ScreenCurvePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class ScreenCurveViewBase : public touchgfx::View<ScreenCurvePresenter>
 {
@@ -30,20 +29,34 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::TextArea textArea1;
-    touchgfx::BoxWithBorder box_0;
-    touchgfx::BoxWithBorder box_1;
-    touchgfx::BoxWithBorder box_2;
-    touchgfx::BoxWithBorder box_3;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea2_2;
     touchgfx::TextArea textArea2_3;
     touchgfx::TextArea textArea2_1;
-    touchgfx::Image image_0;
-    touchgfx::Image image_1;
-    touchgfx::Image image_2;
-    touchgfx::Image image_3;
+    touchgfx::SVGImage svgbg_0;
+    touchgfx::SVGImage svgbg_1;
+    touchgfx::SVGImage svgbg_2;
+    touchgfx::SVGImage svgbg_3;
+    touchgfx::SVGImage box_0;
+    touchgfx::SVGImage box_1;
+    touchgfx::SVGImage box_2;
+    touchgfx::SVGImage box_3;
+    touchgfx::Box box2_0;
+    touchgfx::Box box2_1;
+    touchgfx::Box box2_2;
+    touchgfx::Box box2_3;
+    touchgfx::SVGImage svgimage_0;
+    touchgfx::SVGImage svgimage_1;
+    touchgfx::SVGImage svgimage_2;
+    touchgfx::SVGImage svgimage_3;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

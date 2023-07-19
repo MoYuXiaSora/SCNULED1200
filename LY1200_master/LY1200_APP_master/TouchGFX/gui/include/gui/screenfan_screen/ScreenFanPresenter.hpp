@@ -25,6 +25,17 @@ public:
      */
     virtual void deactivate();
 
+		void saveFanType(int Type)
+		{
+			 model->saveFanType(Type);			
+		}
+		
+		
+		int getFanType()
+		{
+			return model->getFanType();
+		}	
+
     virtual ~ScreenFanPresenter() {};
 
 private:

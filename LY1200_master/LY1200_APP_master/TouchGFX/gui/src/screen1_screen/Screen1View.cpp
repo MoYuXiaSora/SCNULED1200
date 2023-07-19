@@ -1,9 +1,12 @@
 #include <gui/screen1_screen/Screen1View.hpp>
 #include "math.h"
 #include "control_box.h"
+#include "system_data.h"
 #include <string.h>
 #define max(x,y) ( x>y?x:y )
 #define min(x,y) ( x<y?x:y )
+
+char TouchGFX_Model_Choose = CCT;
 
 extern "C"
 {	
@@ -49,27 +52,42 @@ Screen1View::Screen1View()
 
 }
 
+char Screen1View::CCT_Model_ON()
+{
+	TouchGFX_Model_Choose = CCT;
+	return TouchGFX_Model_Choose;
+}
+
+char Screen1View::CCT_Model_OFF()
+{
+	TouchGFX_Model_Choose = MODEL_OFF;
+	return TouchGFX_Model_Choose;
+}
+
+
 void Screen1View::setupScreen()
 {
 	Screen1ViewBase::setupScreen();
-    
+	CCT_Model_ON();
 	Temperature_count=presenter->getCCTTemperature();//刷新新界面，用指针presenter 读取记录好的数值
 	Light_count=presenter->getCCTLight();	
+	Light_xn=presenter->getLightxn();	
 
     //通配符显示
-  Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%d", Light_count);
+	Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
 	Unicode::snprintf(TemperatureTextPgBuffer, TEMPERATURETEXTPG_SIZE, "%d", Temperature_count);
 	 //进度器显示
-	LightingProgress.setValue(Light_count);
+	LightingProgress.setValue(Light_count*10);//进度器需要1000步。
 	TemperatureProgress.setValue(Temperature_count);
 }
 
 void Screen1View::tearDownScreen()
 {
 	Screen1ViewBase::tearDownScreen();//离开此界面，用指针presenter 保存修改的数值
-	
+	CCT_Model_OFF();
 	presenter->saveCCTLight(Light_count);
 	presenter->saveCCTTemperature(Temperature_count);
+	presenter->saveLightxn(Light_xn);
 }
 
 void Screen1View::handleKeyEvent(uint8_t key)
@@ -109,39 +127,160 @@ void Screen1View::handleKeyEvent(uint8_t key)
 
 void Screen1View::LightDown()
 {   
-	 Light_count--;
-	 Light_count=max(Light_count,0);
+	switch(CurveType)
+	{
+	 case 0:
+		 Light_count -= 0.1;
+		 Light_count=max(Light_count,0.0);
+	 break;
+
+	 case 1://s
+		Light_xs -=0.001;
+	 	Light_xs = min(max(Light_xs,0),1);
+	  if(Light_xs <= 0.5)
+		{
+			eLight_count = 100*(0.5 - 0.5*pow((1-2*Light_xs),2.2));
+		}
+		else 
+		{
+			eLight_count = 100*(0.5 + 0.5*pow((2*(Light_xs-0.5)),2.2));			
+		}
+	  Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位
+	  Light_count = max(Light_count,0.0);				
+	 break;
+		
+	 case 2://exp Exponential
+		Light_xn -= 0.001;//一共1000步
+		Light_xn = min(max(Light_xn,0.0),1.0);
+		Light_x = Light_xn*log(101);
+		eLight_count =  exp(Light_x)-1;
+		Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位	 
+		Light_count = max(Light_count,0.0);	
+	 break;
+		
+	 case 3://log
+	  Light_xn -= 0.001;//从0开始++
+	  Light_xn = min(max(Light_xn,0.0),1.0);
+	  Light_xl = Light_xn*(pow(2,10)-1)+1;
+	  eLight_count = (log2(Light_xl))*10;
+	  Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位
+	  Light_count = max(Light_count,0.0);
+	 break;
+	 
+		default:
+		break;	
+	}	
+		
 	 presenter->saveCCTLight(Light_count);//通过presenter保存到mode 函数中直接进行采样
-//	 touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
-	 LightingProgress.setValue(Light_count);//给进度条设置亮度的值
+	 presenter->saveLightxn(Light_xn);//保存横坐标
+	 LightingProgress.setValue(Light_count*10);//给进度条设置亮度的值 
 	 LightingProgress.invalidate(); //更新显示进度条的值
 	 //通配符显示
-	 Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%d", Light_count);
+	 
+	 Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
 	 LightTextPg.invalidate();//更新显示		
-	
-//     LightingTextPg.updateValue(Light_count, 1000);
-//     LightingTextPg.invalidate(); //文本进度条
 	
 }
 void Screen1View::LightUp()
 {
-	 Light_count++;
-	 Light_count=min(Light_count,100);
+	switch(CurveType)
+	{
+	 case 0:
+		Light_count+= 0.1; //0线型曲线 
+		Light_count=min(Light_count,100.0);
+	 break;
+
+	 case 1://s
+		Light_xs +=0.001;
+	 	Light_xs = min(max(Light_xs,0),1);
+	  if(Light_xs <= 0.5)
+		{
+			eLight_count = 100*(0.5 - 0.5*pow((1-2*Light_xs),2.2));
+		}
+		else 
+		{
+			eLight_count = 100*(0.5 + 0.5*pow((2*(Light_xs-0.5)),2.2));			
+		}
+	  Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位
+	  Light_count = min(Light_count,100.0);				
+	 break;
+		
+	 case 2://exp
+		Light_xn += 0.001;//一共1000步
+		Light_xn = min(max(Light_xn,0.0),1.0);
+		Light_x = Light_xn*log(101);
+		eLight_count =  exp(Light_x)-1;
+		Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位	 
+	  Light_count = min(Light_count,100.0);
+	 break;
+	 
+	 case 3:
+	  Light_xln += 0.001;//从0开始++
+	  Light_xln = min(max(Light_xln,0),1);
+	  Light_xl = Light_xln*(pow(2,10)-1)+1;
+	  eLight_count = (log2(Light_xl))*10;
+	  Light_count = std::round(eLight_count*10)/10;//round是四舍五入，最后结果剩小数点后一位
+	  Light_count = min(Light_count,100.0);
+	 break;
+	 
+	 default:
+	 break;	 
+	}
+	
 	 presenter->saveCCTLight(Light_count);
-//	 touchgfx_printf("Light_count %d\r\n", Light_count);//打印数据
-	 LightingProgress.setValue(Light_count);//给进度条设置亮度的值
+	 presenter->saveLightxn(Light_xn);//保存横坐标
+	 LightingProgress.setValue(Light_count*10);//给进度条设置亮度的值0-1000步。
 	 LightingProgress.invalidate(); //更新显示进度条的值
 	 //通配符显示
-	 Unicode::snprintf(LightTextPgBuffer, LIGHTTEXTPG_SIZE, "%d", Light_count);
-	 LightTextPg.invalidate();//更新显示	
-//     LightingTextPg.updateValue(Light_count, 1000);
-//     LightingTextPg.invalidate(); //文本进度条	
-
+	 Unicode::snprintfFloat(LightTextPgBuffer,LIGHTTEXTPG_SIZE, "%.1f", float(Light_count));
+	 LightTextPg.invalidate();//更新显示		
 }
+
 void Screen1View::TemperatureDown()
 {
-	 Temperature_count-= 50;
-	 Temperature_count=max(Temperature_count,2700);
+		switch(CurveType)
+	{
+	 case 0:
+		Temperature_count-= 50; //0线型曲线 
+	  Temperature_count=max(Temperature_count,2700);
+	 break;
+
+	 case 1://s
+		Temperature_xs -= (1.0 / 76);
+	 	Temperature_xs = min(max(Temperature_xs,0.0),1.0);
+	  if(Temperature_xs <= 0.5)//横坐标
+		{
+			eTemperature_count = (3800*(0.5 - 0.5*pow((1-2*Temperature_xs),2.2))) + 2700;//y = y'*(6500-2700)+2700.
+		}
+		else 
+		{
+			eTemperature_count = (3800*(0.5 + 0.5*pow((2*(Temperature_xs-0.5)),2.2)))+2700;			
+		}
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入 保留整数
+		Temperature_count = max(Temperature_count,2700);			
+	 break;
+	 
+	 case 2:
+		Temperature_xn -= (1.0/76);//每次-1/76.
+		Temperature_xn = min(max(Temperature_xn,0.0),1.0);
+	  Temperature_x = Temperature_xn*(log(6500)-log(2700))+log(2700);//归一化改变温度的横坐标,C++中log就是loge
+		eTemperature_count =  exp(Temperature_x);//2指数型exp曲线
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入
+		Temperature_count = max(Temperature_count,2700);
+	 break;
+	 
+	 case 3:
+		Temperature_xln -= (1.0/76);//每次增加1/76.
+		Temperature_xln = min(max(Temperature_xln,0.0),1.0);
+	  Temperature_xl = Temperature_xln*(pow(2,6.5)-pow(2,2.7))+pow(2,2.7);
+	  eTemperature_count =  log2 (Temperature_xl)*1000;//3对数型log曲线2700-6500
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入 保留整数
+		Temperature_count = max(Temperature_count,2700);
+	 break;
+	 	 
+	 default:
+	 break;	 
+	}
 	 presenter->saveCCTTemperature(Temperature_count);
 //	 touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
 	 TemperatureProgress.setValue(Temperature_count);//给进度条设置色温的值
@@ -152,8 +291,49 @@ void Screen1View::TemperatureDown()
 }
 void Screen1View::TemperatureUp()
 {
-	 Temperature_count+= 50;
-	 Temperature_count=min(Temperature_count,6500);
+	switch(CurveType)
+	{
+	 case 0:
+		Temperature_count+= 50;//0线型曲线 76步
+		Temperature_count=min(Temperature_count,6500);
+	 break;
+
+	 case 1:	//S型
+		Temperature_xs += (1.0 / 76);
+	 	Temperature_xs = min(max(Temperature_xs,0.0),1.0);
+	  if(Temperature_xs <= 0.5)//横坐标
+		{
+			eTemperature_count = (3800*(0.5 - 0.5*pow((1-2*Temperature_xs),2.2)))+2700;//y = y'*(6500-2700)+2700.
+		}
+		else 
+		{
+			eTemperature_count = (3800*(0.5 + 0.5*pow((2*(Temperature_xs-0.5)),2.2)))+2700;			
+		}
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入 保留整数
+		Temperature_count = min(Temperature_count,6500);		
+	 break;
+
+	 case 2:
+		Temperature_xn += (1.0/76);//每次增加1/76.
+		Temperature_xn = min(max(Temperature_xn,0.0),1.0);
+	  Temperature_x = Temperature_xn*(log(6500)-log(2700))+log(2700);//归一化改变温度的横坐标
+		eTemperature_count =  exp(Temperature_x);//2指数型exp曲线
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入保留整数
+		Temperature_count = min(Temperature_count,6500);
+	 break;
+	 
+	 case 3:
+		Temperature_xln += (1.0/76);//每次增加1/76.
+		Temperature_xln = min(max(Temperature_xln,0.0),1.0);
+	  Temperature_xl = Temperature_xln*(pow(2,6.5)-pow(2,2.7))+pow(2,2.7);
+	  eTemperature_count =  log2 (Temperature_xl)*1000;//3对数型log曲线2700-6500
+		Temperature_count = static_cast<int>(round(eTemperature_count));//四舍五入保留整数
+		Temperature_count = min(Temperature_count,6500);	 
+	 break;
+	 
+	 default:
+	 break;	 
+	}	
 	 presenter->saveCCTTemperature(Temperature_count);
 //	touchgfx_printf("Temperature_count %ld \r\n", Temperature_count);//打印数据
 	TemperatureProgress.setValue(Temperature_count);//给进度条设置色温的值

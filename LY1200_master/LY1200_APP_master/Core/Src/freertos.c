@@ -434,13 +434,13 @@ void canTask_Entry(void *argument)
         can_Tx_User(driver_TxData, DRIVER_TXDATA_LENGTH);
         sys_Data_getQueue.driver_Parament.drive_State_Update = driverSLEEP;
       }
-//			//test code, using end delete!
-//			uint8_t uart_test[4]={0,0,0,0};
-//			uart_test[0]=0xEE;
-//			uart_test[1]=(uint8_t)(sys_Data_getQueue.LE_Parament.cold_Percentage * 100);
-//			uart_test[2]=0xFF;
-//			uart_test[3]=(uint8_t)(sys_Data_getQueue.LE_Parament.warm_Percentage * 100);
-//			HAL_UART_Transmit(&huart1, uart_test, 4, 1000);
+
+			uint8_t uart_test[4]={0,0,0,0};
+			uart_test[0]=0xEE;
+			uart_test[1]=(uint8_t)(sys_Data_getQueue.LE_Parament.cold_Percentage * 100);
+			uart_test[2]=0xFF;
+			uart_test[3]=(uint8_t)(sys_Data_getQueue.LE_Parament.warm_Percentage * 100);
+			HAL_UART_Transmit(&huart1, uart_test, 4, 1000);
     }
     //放入消息
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
@@ -493,14 +493,14 @@ void lightEffectTask_Entry(void *argument)
       {
         //运行 lighteffects_Type_Choose 将输入的特效参数计算为应输出的冷、暖两个通道比例
         lighteffects_Type_Choose(&sys_Data_getQueue.LE_Parament);
-        //唤醒驱动板传输
-        sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;
+//        //唤醒驱动板传输
+//        sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;
         //清除接收到的更新标志位
 			  if(sys_Data_getQueue.LE_Parament.le_Update_Flag == FLAG_TRUE){sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_FALSE;}
       }
 
     }
-    //获取消息
+    //放入消息 
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue_Delete,NULL,portMAX_DELAY)==osOK)
     { //获取消息成功
 		}			
@@ -865,7 +865,7 @@ void wirelessTask_Entry(void *argument)
 			if(USART3_NEW_FRAME==UART3_Frame_Local.new_Frame_Flag)
 			{//新一帧接收成功
 				//发送接收到的数据
-				BleService(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
+				BleService(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length ,&sys_Data_getQueue);
 				//Transmit_To_ESP32C3(UART3_Frame_Local.pData, UART3_Frame_Local.frame_Length);
 				//清除接收标志
 				//UART3_Frame_Local=clear_UARTx_Frame();
@@ -892,7 +892,7 @@ void wirelessTask_Entry(void *argument)
     //放入消息 
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
     {//放入消息成功
-      
+      BleClearSysData(&sys_Data_getQueue);
     }
 		else
 		{//放入消息失败
