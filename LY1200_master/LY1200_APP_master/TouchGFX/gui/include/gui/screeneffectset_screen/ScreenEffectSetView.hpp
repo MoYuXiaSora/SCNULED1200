@@ -21,6 +21,8 @@ public:
 		virtual void FrequencyDown();
 		virtual void GetEffectType(uint8_t ViewEffectType);//更新Get特效类型下的数值
 		virtual void SaveEffectType(uint8_t ViewEffectType);//save
+		virtual char LE_Model_ON();
+		virtual char LE_Model_OFF();	
 protected:
 	 int Light_count;
    int Temperature_count;

@@ -1,10 +1,13 @@
 #include <gui/screeneffectset_screen/ScreenEffectSetView.hpp>
 #include "math.h"
 #include "control_box.h"
+#include "system_data.h"
 #define max(x,y) (x>y?x:y)
 #define min(x,y) (x<y?x:y)
 uint8_t FrequencySeting=0; //频率调节标志位
 uint8_t EffectType;//特效类别标志位
+
+extern char TouchGFX_Model_Choose;
 extern "C"
 {
 	uint32_t EffSetcheckFinalCal(uint8_t Levels[]){	
@@ -81,6 +84,20 @@ ScreenEffectSetView::ScreenEffectSetView()
 {
 
 }
+
+char ScreenEffectSetView::LE_Model_ON()
+{
+	TouchGFX_Model_Choose = LIGHT_EFFECTS;
+	return TouchGFX_Model_Choose;
+};
+
+char ScreenEffectSetView::LE_Model_OFF()
+{
+	TouchGFX_Model_Choose = MODEL_OFF;
+	return TouchGFX_Model_Choose;
+};	
+
+
 
 void ScreenEffectSetView::GetEffectType(uint8_t EffectType)
 {
@@ -198,7 +215,7 @@ void ScreenEffectSetView::SaveEffectType(uint8_t ViewEffectType)
 void ScreenEffectSetView::setupScreen()
 {
 	ScreenEffectSetViewBase::setupScreen();
-	
+	LE_Model_ON();
 	//做标志位判断 确定存具体哪一个特效的.（枚举）
 	GetEffectType(EffectType);	
 ////	Temperature_count=presenter->getTemperature();//刷新新界面，用指针presenter 读取记录好的数值
@@ -218,6 +235,7 @@ void ScreenEffectSetView::setupScreen()
 void ScreenEffectSetView::tearDownScreen()
 {
 	ScreenEffectSetViewBase::tearDownScreen();
+	LE_Model_OFF();
 	//函数保存当前三种值，很多种不同特效的
 	SaveEffectType(EffectType);	
 	

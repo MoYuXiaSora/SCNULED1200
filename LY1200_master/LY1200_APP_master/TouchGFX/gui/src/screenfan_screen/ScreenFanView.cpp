@@ -2,8 +2,10 @@
 #include "math.h"
 #include "control_box.h"
 #include <string.h>
-#define max(x,y) ( x>y?x:y )
+#define max(x,y) ( x>y?x:y ) 
 #define min(x,y) ( x<y?x:y )
+uint8_t FanType;//风扇类别标志位
+
  //层级为第二层 0，1，2，3，4 数组索引
 extern "C"
 {	
@@ -21,12 +23,13 @@ extern "C"
 				return FancheckFinalCal(Levels);//MenuLevel=1
 			case 0x02:
 				Levels[MenuLevel] += (GFXKeys&0x0F);
-			  Levels[MenuLevel] = min(max(Levels[MenuLevel],1),4);//转的范围，应该写成循环？
+			  Levels[MenuLevel] = min(max(Levels[MenuLevel],1),4);//转的范围，应该写成循环
 				return FancheckFinalCal(Levels);
 			
-			case 0x06:
-				Levels[MenuLevel+1] = 1;
+			case 0x06://按下KNOB1
 			  MenuLevel+=1;//层级加1 为2
+				MenuLevel = min(MenuLevel,2);//层级边缘保护！！！
+				Levels[MenuLevel] = 1;
 				return FancheckFinalCal(Levels);
 			case 0x07:
 				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.			
@@ -58,12 +61,15 @@ ScreenFanView::ScreenFanView()
 
 void ScreenFanView::setupScreen()
 {
-    ScreenFanViewBase::setupScreen();
+	ScreenFanViewBase::setupScreen();//刷新显示而已 type还是上次的值（否则默认为0）
+		FanType=presenter->getFanType();//进入时读取type
 }
 
 void ScreenFanView::tearDownScreen()
 {
     ScreenFanViewBase::tearDownScreen();
+		presenter->saveFanType(FanType);//离开时记录
+	
 }
 
 void ScreenFanView::hideBox()
@@ -76,6 +82,14 @@ void ScreenFanView::hideBox()
         box_2.invalidate();
 		    box_3.setVisible(false);
         box_3.invalidate();
+//				image1_0.setVisible(false);
+//        image1_0.invalidate();
+//				image1_1.setVisible(false);
+//        image1_1.invalidate();
+//		    image1_2.setVisible(false);
+//        image1_2.invalidate();
+//		    image1_3.setVisible(false);
+//        image1_3.invalidate();
 }
 
 void ScreenFanView::handleKeyEvent(uint8_t key)
@@ -84,7 +98,7 @@ void ScreenFanView::handleKeyEvent(uint8_t key)
 
      switch (ScreenMenuNumberGFX)  //这里屏幕转换要添加方框清0
    {
-    case 0x00012://BOX
+    case 0x0000012://BOX
 		   	hideBox();
 			  box_0.setVisible(true);
         box_0.invalidate();
@@ -111,9 +125,30 @@ void ScreenFanView::handleKeyEvent(uint8_t key)
 		break;
 		
 		
-		//knob1 pressed  egg
-		case 0x00142:	//选中第四个组件
-			    application().gotoScreen1ScreenNoTransition();
+		//knob1 pressed  
+		case 0x00112:
+			FanType = 0 ;//可以默认为此选项 智能
+			presenter->saveFanType(FanType);
+//		  image1_0.setVisible(true);
+//			image1_0.invalidate();
+		break;
+		case 0x00122:
+			FanType = 1 ;//高速
+			presenter->saveFanType(FanType);
+//		  image1_1.setVisible(true);
+//			image1_1.invalidate();
+		break;
+		case 0x00132:
+			FanType = 2 ;//中速
+			presenter->saveFanType(FanType);
+//		  image1_2.setVisible(true);
+//			image1_2.invalidate();
+		break;			
+		case 0x00142:	//选中第四个组件 静音
+			FanType = 3 ;
+			presenter->saveFanType(FanType);
+//		  image1_3.setVisible(true);
+//			image1_3.invalidate();
 		break;
 		
 		//快捷键

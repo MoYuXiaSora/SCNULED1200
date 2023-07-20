@@ -25,9 +25,10 @@ extern "C"
 				return ConcheckFinalCal(Levels);
 			
 			case 0x06:
-				Levels[MenuLevel+1] = 1;
 			  MenuLevel+=1;//层级加1 为2
+				Levels[MenuLevel] = 1;
 				return ConcheckFinalCal(Levels);
+			
 			case 0x07:
 				Levels[MenuLevel]=0x00;//将该层数组值置为0 该层00000.
 		    MenuLevel=0;				

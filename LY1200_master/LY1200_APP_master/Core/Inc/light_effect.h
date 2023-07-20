@@ -13,20 +13,20 @@
 
 enum LIGHTEFFECTS_TYPE
 {
-	FIRE,                //火焰  
-    BREATH,              //呼吸  ok
-    CLOUND,              //云朵  ok
-    PAPARAZZI,           //狗仔
     FAULT,               //故障
-    TV,                  //电视
-    WELD,                //电焊
     EXPLODE,             //爆炸
+	  FIREWORK,            //烟花
+	  STROBE,              //闪光灯
     LIGHTNING,           //闪电
-	STROBE,              //频闪
-	FIREWORK,            //烟花
+    PAPARAZZI,           //派对
+		WELD,                //电焊
+		TV,                  //电视
+	  FIRE,                //火焰  
+    BREATH,              //呼吸  
+    CLOUND,              //云朵	
     LT_MAX,
-    
 };
+
 
 struct LIGHTEFFECTS
 {   

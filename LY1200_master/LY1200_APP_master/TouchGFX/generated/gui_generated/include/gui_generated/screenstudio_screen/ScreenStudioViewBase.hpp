@@ -9,8 +9,7 @@
 #include <gui/screenstudio_screen/ScreenStudioPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class ScreenStudioViewBase : public touchgfx::View<ScreenStudioPresenter>
 {
@@ -30,10 +29,17 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::TextArea textArea1;
-    touchgfx::BoxWithBorder box_0;
-    touchgfx::Image image1;
+    touchgfx::SVGImage svgbg_0;
+    touchgfx::SVGImage box_0;
+    touchgfx::SVGImage box_0_1;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

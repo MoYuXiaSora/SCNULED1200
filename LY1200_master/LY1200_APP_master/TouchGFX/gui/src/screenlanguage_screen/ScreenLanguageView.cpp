@@ -26,8 +26,8 @@ extern "C"
 				return LancheckFinalCal(Levels);
 			
 			case 0x06:
-				Levels[MenuLevel+1] = 1;
 			  MenuLevel+=1;//层级加1 为2
+				Levels[MenuLevel] = 1;
 				return LancheckFinalCal(Levels);
 			
 			case 0x07:
