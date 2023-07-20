@@ -853,8 +853,6 @@ void wirelessTask_Entry(void *argument)
 		//获取消息
     if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
     {//获取消息成功
-			
-			uint8_t test_array[1]={0x00};//测试数组用完即删�?
 			struct UARTEx_FRAME UART3_Frame_Local={
 				.new_Frame_Flag=USART3_OLD_FRAME,
 				.tx_Frame_Flag=HAL_OK,
@@ -880,7 +878,7 @@ void wirelessTask_Entry(void *argument)
 			}
 			else
 			{//新一帧接收失败 或 无新数据
-				 Transmit_To_ESP32C3(test_array, sizeof(test_array)/sizeof(test_array[0]));
+				 //Transmit_To_ESP32C3(test_array, sizeof(test_array)/sizeof(test_array[0]));
 			}
 
     }
@@ -892,7 +890,7 @@ void wirelessTask_Entry(void *argument)
     //放入消息 
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
     {//放入消息成功
-      BleClearSysData(&sys_Data_getQueue);
+      //BleClearSysData(&sys_Data_getQueue);
     }
 		else
 		{//放入消息失败
