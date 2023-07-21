@@ -163,54 +163,47 @@
           <Name>-U313A02101316303030303032 -O2254 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO131090 -TC168000000 -TT168000000 -TP21 -TDS8053 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO11 -FD20000000 -FC1C000 -FN2 -FF0STM32F4xx_1024.FLM -FS08000000 -FL0100000 -FP0($$Device:STM32F407ZGTx$CMSIS\Flash\STM32F4xx_1024.FLM) -FF1ARMFLY_STM32F407_SPI2_W25Q128 -FS190000000 -FL11000000</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint>
-        <Bp>
-          <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>65</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134242832</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\BSP\ESP32C3\esp32c3.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\LY1200_APP_master\../BSP/ESP32C3/esp32c3.c\65</Expression>
-        </Bp>
-      </Breakpoint>
+      <Breakpoint/>
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>uart_test</ItemText>
+          <ItemText>uart_test,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>sys_Data_getQueue,0x0A</ItemText>
+          <ItemText>BLE_SERVICE_STATUS</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>BLE_SERVICE_STATUS</ItemText>
+          <ItemText>ESP32_DMA_Rx_Buffer</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ESP32_DMA_Rx_Buffer</ItemText>
+          <ItemText>ESP32_Frame_Local.pData</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ESP32_Frame_Local.pData</ItemText>
+          <ItemText>ESP32_Frame_Local</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ESP32_Frame_Local</ItemText>
+          <ItemText>ESP32_DMA_Rx_Buffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>driver_TxData</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>sys_Data_getQueue,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>

@@ -366,6 +366,7 @@ void cctTask_Entry_App(void *argument)
           //运行 cct_User 将输入的亮度和色温计算为应输出的冷暖两通道比例
           cct_User(&(sys_Data_getQueue.cct_Parament),&(sys_Data_getQueue.cct_Parament.cold_Percentage), &(sys_Data_getQueue.cct_Parament.warm_Percentage));
           //清除CCT参数更新标志位
+					sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;
           sys_Data_getQueue.cct_Parament.cct_Update_Flag = FLAG_FALSE;
         }
 
@@ -433,14 +434,18 @@ void canTask_Entry(void *argument)
         //将CAN发�?�数组中的数据进行发�??
         can_Tx_User(driver_TxData, DRIVER_TXDATA_LENGTH);
         sys_Data_getQueue.driver_Parament.drive_State_Update = driverSLEEP;
+				
+				//text code!!!
+				uint8_t uart_test[4]={0,0,0,0};
+				uart_test[0]=0xEE;
+				if(sys_Data_getQueue.model_Parament == CCT) uart_test[1]=(uint8_t)(sys_Data_getQueue.cct_Parament.cold_Percentage * 100);
+				else uart_test[1]=(uint8_t)(sys_Data_getQueue.LE_Parament.cold_Percentage * 100);
+				uart_test[2]=0xFF;
+				if(sys_Data_getQueue.model_Parament == CCT) uart_test[3]=(uint8_t)(sys_Data_getQueue.cct_Parament.warm_Percentage * 100);
+				else uart_test[3]=(uint8_t)(sys_Data_getQueue.LE_Parament.warm_Percentage * 100);
+				HAL_UART_Transmit(&huart1, uart_test, 4, 1000);
+				
       }
-
-			uint8_t uart_test[4]={0,0,0,0};
-			uart_test[0]=0xEE;
-			uart_test[1]=(uint8_t)(sys_Data_getQueue.LE_Parament.cold_Percentage * 100);
-			uart_test[2]=0xFF;
-			uart_test[3]=(uint8_t)(sys_Data_getQueue.LE_Parament.warm_Percentage * 100);
-			HAL_UART_Transmit(&huart1, uart_test, 4, 1000);
     }
     //放入消息
     if(osMessageQueuePut(sysDataQueue_AppHandle, &sys_Data_getQueue,0,portMAX_DELAY)==osOK)
@@ -491,12 +496,15 @@ void lightEffectTask_Entry(void *argument)
 			}
       if(sys_Data_getQueue.model_Parament == LIGHT_EFFECTS)
       {
-        //运行 lighteffects_Type_Choose 将输入的特效参数计算为应输出的冷、暖两个通道比例
-        lighteffects_Type_Choose(&sys_Data_getQueue.LE_Parament);
-//        //唤醒驱动板传输
-//        sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;
-        //清除接收到的更新标志位
-			  if(sys_Data_getQueue.LE_Parament.le_Update_Flag == FLAG_TRUE){sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_FALSE;}
+				//运行 lighteffects_Type_Choose 将输入的特效参数计算为应输出的冷、暖两个通道比例
+				lighteffects_Type_Choose(&sys_Data_getQueue.LE_Parament);
+				//唤醒驱动板传输
+				sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;
+				if(sys_Data_getQueue.LE_Parament.le_Update_Flag == FLAG_TRUE)
+				{
+					//清除接收到的更新标志位
+					sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_FALSE;					
+				}
       }
 
     }
@@ -880,7 +888,7 @@ void wirelessTask_Entry(void *argument)
 			}
 			else
 			{//新一帧接收失败 或 无新数据
-				 Transmit_To_ESP32C3(test_array, sizeof(test_array)/sizeof(test_array[0]));
+				 //Transmit_To_ESP32C3(test_array, sizeof(test_array)/sizeof(test_array[0]));
 			}
 
     }
