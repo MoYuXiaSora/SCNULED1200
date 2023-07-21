@@ -76,7 +76,7 @@ void ScreenBluetoothView::handleKeyEvent(uint8_t key)
 {
 	ScreenMenuNumberGFX = BlucalVarition(key,GFXLevels);	
 
-     switch (ScreenMenuNumberGFX)  //这里屏幕转换要添加方框清0
+    switch (ScreenMenuNumberGFX)  //这里屏幕转换要添加方框清0
    {
     case 0x00110://BOX
 			  box_0.setVisible(true);

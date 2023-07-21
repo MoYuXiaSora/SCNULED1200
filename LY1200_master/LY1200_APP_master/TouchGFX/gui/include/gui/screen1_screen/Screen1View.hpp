@@ -17,6 +17,8 @@ public:
 		virtual void LightUp();//声明亮度大小升降的两个函数
 		virtual void TemperatureUp();
 		virtual void TemperatureDown();	
+		virtual char CCT_Model_ON();
+		virtual char CCT_Model_OFF();
 protected:
 	 float Light_count;
    float eLight_count;//由横坐标直接算出的亮度值（无理数）

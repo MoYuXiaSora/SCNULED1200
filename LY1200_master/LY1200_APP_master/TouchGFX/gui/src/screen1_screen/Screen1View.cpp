@@ -1,9 +1,12 @@
 #include <gui/screen1_screen/Screen1View.hpp>
 #include "math.h"
 #include "control_box.h"
+#include "system_data.h"
 #include <string.h>
 #define max(x,y) ( x>y?x:y )
 #define min(x,y) ( x<y?x:y )
+
+char TouchGFX_Model_Choose = CCT;
 
 extern "C"
 {	
@@ -49,9 +52,23 @@ Screen1View::Screen1View()
 
 }
 
+char Screen1View::CCT_Model_ON()
+{
+	TouchGFX_Model_Choose = CCT;
+	return TouchGFX_Model_Choose;
+}
+
+char Screen1View::CCT_Model_OFF()
+{
+	TouchGFX_Model_Choose = MODEL_OFF;
+	return TouchGFX_Model_Choose;
+}
+
+
 void Screen1View::setupScreen()
 {
 	Screen1ViewBase::setupScreen();
+	CCT_Model_ON();
 	Temperature_count=presenter->getCCTTemperature();//刷新新界面，用指针presenter 读取记录好的数值
 	Light_count=presenter->getCCTLight();	
 	Light_xn=presenter->getLightxn();	
@@ -67,7 +84,7 @@ void Screen1View::setupScreen()
 void Screen1View::tearDownScreen()
 {
 	Screen1ViewBase::tearDownScreen();//离开此界面，用指针presenter 保存修改的数值
-	
+	CCT_Model_OFF();
 	presenter->saveCCTLight(Light_count);
 	presenter->saveCCTTemperature(Temperature_count);
 	presenter->saveLightxn(Light_xn);

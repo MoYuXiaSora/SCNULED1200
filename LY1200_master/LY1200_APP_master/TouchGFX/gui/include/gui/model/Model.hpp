@@ -7,6 +7,11 @@ class Model
 {
 public:
     Model();
+		
+		char LE_Type;  //特效类型
+		float LE_Light;//LE_亮度
+	  int LE_Temperature;//LE_色温
+	  int LE_Frequency;//LE_频率
 
 		//通过模型保存和检索 最新的数据，将受保护的值(温度亮度频率）添加到模型，添加公共函数访问此值
     //CCT界面参数
@@ -26,11 +31,11 @@ public:
 		{
 			return CCT_Temperature_count;
 		}
-		float  getCCTLight()
+		float getCCTLight()
 		{
 			return CCT_Light_count;
 		}
-		float  getLightxn()
+		float getLightxn() //调光曲线的横坐标
 		{
 			return Light_xn;
 		}
@@ -45,19 +50,50 @@ public:
 		{
 			return FanType ;
 		}
+		//effect类型保存
+		void saveEffectType( int saveEffectType)
+		{
+			EffectType = saveEffectType;
+		}
+		int getEffectType()
+		{
+			return EffectType ;
+		}		
+		
+		//effect 参数保存
+		float getLE_Light()
+		{
+			return LE_Light;
+		}
+		int getLE_Temperature()
+		{
+			return LE_Temperature;			
+		}
+		char getLE_Frequency()
+		{
+			return LE_Frequency;
+		}
+		char getLE_Type()
+		{
+			LE_Type = EffectType;
+			return LE_Type;
+		}
 		
 		//effect界面参数 badBulbs
 		void saveMbadBulbsTemperature(int saveTemperature)
 		{
 			badBulb_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMbadBulbsLight(int saveLight)
 		{
-			badBulb_Light=saveLight;
+			badBulb_Light = saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMbadBulbsFrequency(int saveFrequency)
 		{
 			badBulb_Frequency=saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMbadBulbsTemperature()
 		{
@@ -76,14 +112,17 @@ public:
 		void saveMexplodeTemperature(int saveTemperature)
 		{
 			explode_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMexplodeLight(int saveLight)
 		{
 			explode_Light=saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMexplodeFrequency(int saveFrequency)
 		{
 			explode_Frequency=saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMexplodeTemperature()
 		{
@@ -102,14 +141,17 @@ public:
 		void saveMfireworkTemperature(int saveTemperature)
 		{
 			firework_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMfireworkLight(int saveLight)
 		{
-			firework_Light=saveLight;
+			firework_Light = saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMfireworkFrequency(int saveFrequency)
 		{
 			firework_Frequency=saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMfireworkTemperature()
 		{
@@ -128,14 +170,17 @@ public:
 		void saveMflashTemperature(int saveTemperature)
 		{
 			flash_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMflashLight(int saveLight)
 		{
-			flash_Light=saveLight;
+			flash_Light = saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMflashFrequency(int saveFrequency)
 		{
-			flash_Frequency=saveFrequency;
+			flash_Frequency = saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMflashTemperature()
 		{
@@ -154,14 +199,17 @@ public:
 		void saveMlightingTemperature(int saveTemperature)
 		{
 			lighting_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMlightingLight(int saveLight)
 		{
-			lighting_Light=saveLight;
+			lighting_Light = saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMlightingFrequency(int saveFrequency)
 		{
-			lighting_Frequency=saveFrequency;
+			lighting_Frequency = saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMlightingTemperature()
 		{
@@ -180,14 +228,17 @@ public:
 		void saveMpaparazziTemperature(int saveTemperature)
 		{
 			paparazzi_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMpaparazziLight(int saveLight)
 		{
-			paparazzi_Light=saveLight;
+			paparazzi_Light = saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMpaparazziFrequency(int saveFrequency)
 		{
-			paparazzi_Frequency=saveFrequency;
+			paparazzi_Frequency = saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMpaparazziTemperature()
 		{
@@ -206,14 +257,17 @@ public:
 		void saveMpulseTemperature(int saveTemperature)
 		{
 			pulse_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMpulseLight(int saveLight)
 		{
-			pulse_Light=saveLight;
+			pulse_Light = saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMpulseFrequency(int saveFrequency)
 		{
-			pulse_Frequency=saveFrequency;
+			pulse_Frequency = saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMpulseTemperature()
 		{
@@ -233,14 +287,17 @@ public:
 		void saveMtvTemperature(int saveTemperature)
 		{
 			tv_Temperature = saveTemperature;
+			LE_Temperature = saveTemperature;
 		}
 		void saveMtvLight(int saveLight)
 		{
-			tv_Light=saveLight;
+			tv_Light = saveLight;
+			LE_Light = saveLight;
 		}			
 		void saveMtvFrequency(int saveFrequency)
 		{
-			tv_Frequency=saveFrequency;
+			tv_Frequency = saveFrequency;
+			LE_Frequency = saveFrequency;
 		}					
 		int getMtvTemperature()
 		{
@@ -255,7 +312,7 @@ public:
 			return tv_Frequency;
 		}		
 		
-		    void bind(ModelListener* listener)
+		void bind(ModelListener* listener)
     {
         modelListener = listener;
     }
@@ -265,10 +322,11 @@ protected:
 	ModelListener* modelListener; //model有指向当前活动Presenter的指针 其类型是接口ModelListener
 	float CCT_Light_count;//cct界面
 	int CCT_Temperature_count;
+	
   float Light_xn;
 
   int FanType;//Fan类型
-
+  int EffectType;//Effect类型
 	int badBulb_Light;//特效界面
 	int badBulb_Temperature;
 	int badBulb_Frequency;

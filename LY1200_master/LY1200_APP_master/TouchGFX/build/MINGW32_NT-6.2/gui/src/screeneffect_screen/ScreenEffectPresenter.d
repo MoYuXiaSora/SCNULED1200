@@ -1,7 +1,14 @@
+<<<<<<<< HEAD:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screenbluetooth_screen/ScreenBluetoothPresenter.d
+build/MINGW32_NT-6.2/gui/src/screenbluetooth_screen/ScreenBluetoothPresenter.o: \
+ gui/src/screenbluetooth_screen/ScreenBluetoothPresenter.cpp \
+ gui/include/gui/screenbluetooth_screen/ScreenBluetoothView.hpp \
+ generated/gui_generated/include/gui_generated/screenbluetooth_screen/ScreenBluetoothViewBase.hpp \
+========
 build/MINGW32_NT-6.2/gui/src/screeneffect_screen/ScreenEffectPresenter.o: \
  gui/src/screeneffect_screen/ScreenEffectPresenter.cpp \
  gui/include/gui/screeneffect_screen/ScreenEffectView.hpp \
  generated/gui_generated/include/gui_generated/screeneffect_screen/ScreenEffectViewBase.hpp \
+>>>>>>>> guojinyu:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screeneffect_screen/ScreenEffectPresenter.d
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -40,18 +47,30 @@ build/MINGW32_NT-6.2/gui/src/screeneffect_screen/ScreenEffectPresenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  gui/include/gui/model/Model.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
+<<<<<<<< HEAD:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screenbluetooth_screen/ScreenBluetoothPresenter.d
+ gui/include/gui/screenbluetooth_screen/ScreenBluetoothPresenter.hpp \
+========
  gui/include/gui/screeneffect_screen/ScreenEffectPresenter.hpp \
+>>>>>>>> guojinyu:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screeneffect_screen/ScreenEffectPresenter.d
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+<<<<<<<< HEAD:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screenbluetooth_screen/ScreenBluetoothPresenter.d
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+
+gui/include/gui/screenbluetooth_screen/ScreenBluetoothView.hpp:
+
+generated/gui_generated/include/gui_generated/screenbluetooth_screen/ScreenBluetoothViewBase.hpp:
+========
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 
 gui/include/gui/screeneffect_screen/ScreenEffectView.hpp:
 
 generated/gui_generated/include/gui_generated/screeneffect_screen/ScreenEffectViewBase.hpp:
+>>>>>>>> guojinyu:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screeneffect_screen/ScreenEffectPresenter.d
 
 gui/include/gui/common/FrontendApplication.hpp:
 
@@ -129,7 +148,11 @@ gui/include/gui/model/Model.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
+<<<<<<<< HEAD:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screenbluetooth_screen/ScreenBluetoothPresenter.d
+gui/include/gui/screenbluetooth_screen/ScreenBluetoothPresenter.hpp:
+========
 gui/include/gui/screeneffect_screen/ScreenEffectPresenter.hpp:
+>>>>>>>> guojinyu:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screeneffect_screen/ScreenEffectPresenter.d
 
 gui/include/gui/model/ModelListener.hpp:
 
@@ -141,6 +164,9 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
+<<<<<<<< HEAD:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screenbluetooth_screen/ScreenBluetoothPresenter.d
+========
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 
+>>>>>>>> guojinyu:LY1200_master/LY1200_APP_master/TouchGFX/build/MINGW32_NT-6.2/gui/src/screeneffect_screen/ScreenEffectPresenter.d
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:

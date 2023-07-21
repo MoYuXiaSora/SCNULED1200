@@ -265,12 +265,12 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>uart_test</ItemText>
+          <ItemText>uart_test,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>sys_Data_getQueue</ItemText>
+          <ItemText>BLE_SERVICE_STATUS</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
@@ -280,30 +280,60 @@
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ESP32_Frame_Local</ItemText>
+          <ItemText>ESP32_Frame_Local.pData</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>pData</ItemText>
+          <ItemText>ESP32_Frame_Local</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>UART3_Frame_Local</ItemText>
+          <ItemText>ESP32_DMA_Rx_Buffer</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>BLE_SERVICE_STATUS</ItemText>
+          <ItemText>driver_TxData</ItemText>
         </Ww>
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>pData</ItemText>
+          <ItemText>sys_Data_getQueue,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ESP32_DMA_Rx_Buffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ESP32_Frame_Local</ItemText>
+        </Ww>
+        <Ww>
+          <count>10</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pData</ItemText>
+        </Ww>
+        <Ww>
+          <count>11</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>UART3_Frame_Local</ItemText>
+        </Ww>
+        <Ww>
+          <count>12</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>BLE_SERVICE_STATUS</ItemText>
+        </Ww>
+        <Ww>
+          <count>13</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pData</ItemText>
+        </Ww>
+        <Ww>
+          <count>14</count>
           <WinNumber>1</WinNumber>
           <ItemText>pData</ItemText>
         </Ww>

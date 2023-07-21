@@ -250,7 +250,7 @@ uint8_t LoadCCTData(uint8_t FrameData[] ,struct SYS_DATA *sys_Data_getQueue)
 {
 	sys_Data_getQueue->control_Parament = BLE;
 	sys_Data_getQueue->model_Parament = CCT ;
-  sys_Data_getQueue->cct_Parament.brightness = ((float)FrameData[10] / 10) + FrameData[9];
+  sys_Data_getQueue->cct_Parament.brightness = ((float)FrameData[10] / 1000) + ((float)FrameData[9]/100);
 	sys_Data_getQueue->cct_Parament.color_Temperature = (0x0000|(FrameData[7]<<8)|((FrameData[8])));
 	sys_Data_getQueue->cct_Parament.curve = FrameData[11]; //这里需要修改
 	sys_Data_getQueue->cct_Parament.cct_Update_Flag = FLAG_TRUE;
@@ -260,7 +260,7 @@ uint8_t LoadCCTData(uint8_t FrameData[] ,struct SYS_DATA *sys_Data_getQueue)
 uint8_t LoadLightEffectData(uint8_t FrameData[] ,struct SYS_DATA *sys_Data_getQueue)
 {
 	uint8_t BLEFXType = FrameData[7];
-	double_t BLEFX_brightness = ((float)FrameData[9] / 10) + FrameData[8];
+	double_t BLEFX_brightness = ((float)FrameData[9] / 1000) + ((float)FrameData[8]/100);
 	uint16_t BLEFXColorTemperature = (0x0000|(FrameData[10]<<8)|((FrameData[11])));
 	uint8_t BLEFXFREQ = FrameData[12];
 	sys_Data_getQueue->control_Parament = BLE;

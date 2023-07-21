@@ -55,11 +55,13 @@ ScreenEffectView::ScreenEffectView()
 void ScreenEffectView::setupScreen()
 {
     ScreenEffectViewBase::setupScreen();
+			EffectType=presenter->getEffectType();//进入时读取type
 }
 
 void ScreenEffectView::tearDownScreen()
 {
     ScreenEffectViewBase::tearDownScreen();
+			presenter->saveEffectType(EffectType);//离开时记录
 }
 void ScreenEffectView::hideBox()
 {
