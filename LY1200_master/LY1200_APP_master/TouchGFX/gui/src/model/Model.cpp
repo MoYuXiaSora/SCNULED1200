@@ -24,32 +24,32 @@ void Model::tick()//每一帧都会自动调用 保存状态数据
 		//获取消息
 	if(osMessageQueueGet(sysDataQueue_AppHandle, (void *)&sys_Data_getQueue,NULL,portMAX_DELAY)==osOK)
 	{ //获取消息成功
-		
-		switch(TouchGFX_Model_Choose){
-			case CCT:{
-				sys_Data_getQueue.model_Parament = CCT;
-				sys_Data_getQueue.cct_Parament.brightness = (getCCTLight()/100.0);
-				sys_Data_getQueue.cct_Parament.color_Temperature = getCCTTemperature();
-				sys_Data_getQueue.cct_Parament.cct_Update_Flag = FLAG_TRUE;
-				sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;//发送驱动板命令
-			}break;
-			case LIGHT_EFFECTS:{
-				sys_Data_getQueue.model_Parament = LIGHT_EFFECTS;
-				sys_Data_getQueue.LE_Parament.type = getLE_Type();
-				sys_Data_getQueue.LE_Parament.brightness = getLE_Light();
-				sys_Data_getQueue.LE_Parament.color_Temperature = getLE_Temperature();
-				sys_Data_getQueue.LE_Parament.freq = getLE_Frequency();
-				sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_TRUE;
-				sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;//发送驱动板命令
-			}break;
-			default:{
-				sys_Data_getQueue.model_Parament = MODEL_OFF;
-				sys_Data_getQueue.cct_Parament.cct_Update_Flag = FLAG_FALSE;
-				sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_FALSE;
-				sys_Data_getQueue.driver_Parament.drive_State_Update = driverSLEEP;//发送驱动板命令
-			}
+		if(sys_Data_getQueue.control_Parament == BOX){
+			switch(TouchGFX_Model_Choose){
+				case CCT:{
+					sys_Data_getQueue.model_Parament = CCT;
+					sys_Data_getQueue.cct_Parament.brightness = (getCCTLight()/100.0);
+					sys_Data_getQueue.cct_Parament.color_Temperature = getCCTTemperature();
+					sys_Data_getQueue.cct_Parament.cct_Update_Flag = FLAG_TRUE;
+					sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;//发送驱动板命令
+				}break;
+				case LIGHT_EFFECTS:{
+					sys_Data_getQueue.model_Parament = LIGHT_EFFECTS;
+					sys_Data_getQueue.LE_Parament.type = getLE_Type();
+					sys_Data_getQueue.LE_Parament.brightness = getLE_Light();
+					sys_Data_getQueue.LE_Parament.color_Temperature = getLE_Temperature();
+					sys_Data_getQueue.LE_Parament.freq = getLE_Frequency();
+					sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_TRUE;
+					sys_Data_getQueue.driver_Parament.drive_State_Update = driverUPDATE;//发送驱动板命令
+				}break;
+				default:{
+					sys_Data_getQueue.model_Parament = MODEL_OFF;
+					sys_Data_getQueue.cct_Parament.cct_Update_Flag = FLAG_FALSE;
+					sys_Data_getQueue.LE_Parament.le_Update_Flag = FLAG_FALSE;
+					sys_Data_getQueue.driver_Parament.drive_State_Update = driverSLEEP;//发送驱动板命令
+				}
+			}			
 		}
-	  
 	}
 	
 	//放入消息 
